@@ -1,0 +1,2 @@
+<script language="javascript" type="text/javascript" src="http://localhost/muyiwasblog/scripts/js/tinymce/tinymce.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://localhost/muyiwasblog/scripts/js/tinymce/basic_config.js"></script>

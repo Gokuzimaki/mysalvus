@@ -1,0 +1,1175 @@
+<?php include('connection.php');?>
+<form name="<?php echo $formtruetype;?>" data-name="caseassignment" method="POST" class="" onSubmit="return false" enctype="multipart/form-data" action="<?php echo $host_addr?>snippets/basicsignup.php">
+										<input type="hidden" name="entryvariant" value="createcaseadmin"/>
+										<input type="hidden" name="incidentid" value="1"/>
+										
+						                <div class="col-md-12 ">
+						                	<?php 
+						                		$bizarr=getAllBusinessTypes();
+						                		$iid=1;
+						                		$divlock='<div class="col-md-12">';
+						                		$divlock2='</div><div class="col-md-12">';
+						                		$divlock3='</div>';
+					                			// get the total number of assigned cases 
+						                		$incidenttest=getSingleIncident($iid);
+					                			if($incidenttest['caserows']>0){
+						                			$edittype='data-edittype="true"';
+					                				$valset="";
+													echo '<input type="hidden" name="naturecount" value="'.$bizarr['numrows'].'"/>';
+					                			}else{
+													echo '<input type="hidden" name="naturecount" value="'.$bizarr['numrows'].'" data-valset="1,3" data-valcount="1" data-counter="true"/>';
+					                				
+					                			}
+						                		for($i=0;$i<$bizarr['numrows'];$i++){
+						                			$t=$i+1;
+						                			if($i==0){
+						                				echo $divlock;
+						                			}
+						                			if($i%3==0){
+						                				echo $divlock2;
+						                			}
+						                			$curnature=$bizarr['resultdata'][$i]['businessnature'];
+						                			$curicon=$bizarr['resultdata'][$i]['faicon'];
+						                			$id=$bizarr['resultdata'][$i]['id'];
+						                			$incidentdata=getSingleIncident($iid,"$curnature");
+
+						                			// get current reports
+						                			// the status of the current incident
+						                			$statusout="Not Assigned";
+						                			$viewclass="";
+						                			$cspview="";
+						                			$sdview="";
+						                			$ctrlview="hidden";
+						                			$coptview="hidden";
+						                			$coptviewr="hidden";
+						                			$coptviewf="hidden";
+						                			if($incidentdata['caserequestrows']>0){
+						                				$statusout='Request(s) Sent';
+						                				$coptviewr="";
+							                			$coptviewf="";
+							                			$cspview="";
+							                			$ctrlview="";
+							                			$edittype='data-edittype="true"';
+						                			}	
+						                			if($incidentdata['caserows']>0){
+						                				$statusout='Assigned';
+						                				$viewclass="hidden";
+						                				$cspview="hidden";
+							                			$ctrlview="";
+						                				$sdview="hidden";
+						                				$ap=getSingleUserPlain($incidentdata['cases'][0]['spid']);
+						                				$aprov=$ap['businessname'];
+						                				$coptviewr="";
+						                				$coptview="";
+							                			$coptviewf="";
+						                			}
+						                	?>
+								                	<div class="col-md-4 col-md--4 nature-content-hold _<?php echo $t;?> ">
+								                		<h2><i class="fa <?php echo $curicon?>"></i> <?php echo $curnature;?> <small>Status: <?php echo $statusout;?></small></h2>
+								                		<?php 
+								                			$typearr[0]="businessnature";
+								                			$typearr[1]="$curnature";
+								                			$csps=getAllUsers("viewer","","serviceprovider",'',$typearr);
+								                			if($sdview=="hidden"){
+								                				echo '<h4 class="">Assigned Provider: '.$aprov.'</h4>';
+								                			}
+								                		?>
+														<input type="hidden" name="spnature_<?php echo $t;?>" value="<?php echo $curnature;?>"/>
+							                        	<div class="form-group col-md--4 nature-content-left col-md-4 ">
+									                      <div class="input-group <?php echo $viewclass;?>">
+										                      <div class="input-group-addon">
+										                        <i class="fa fa-random"></i>
+										                      </div>
+										                      <select class="form-control" <?php echo $edittype;?> name="casetype_<?php echo $t;?>">
+										                      	  	<option value="">--Assign/Request--</option>
+										                      	  	<option value="Assign">Assign</option>
+										                      	  	<option value="Request">Request</option>
+									                      	  </select>
+									                      </div>
+									                      <div class="input-group <?php echo $viewclass;?>">
+										                      <div class="input-group-addon">
+										                        <i class="fa fa-map-pin"></i>
+										                      </div>
+									                      	  <select class="form-control " <?php echo $edittype;?> name="spstate_<?php echo $t;?>">
+									                      	  	<option value="">Current State: ALL</option>
+									                      	  	<?php $ps=produceStates("",""); echo $ps['selectionoptions']?>
+									                      	  </select>
+										                      <div class="input-group-addon nopadding">
+									                      	  	<a href="##" data-name="sortbusinesses" data-id="<?php echo $t;?>" class="bs-igicon blockdisplay bg-gradient-darkgreen background-color-darkgreen background-color-orangehover bg-orange-gradienthover color-white color-darkredhover">
+											                        <i class="fa fa-arrow-right"></i>	
+											                    </a>
+										                      </div>
+										                  </div>
+										                  <div class="input-group <?php echo $viewclass;?>">
+										                      <div class="input-group-addon">
+										                        <i class="fa fa-briefcase"></i>
+										                      </div>
+									                      	  <select class="form-control <?php echo $cspview;?>" <?php echo $edittype?> name="sp_<?php echo $t;?>">
+										                      	  	<option value="">Choose Service Provider</option>
+									                      	  		<?php echo $csps['selectiontwo'];?>
+									                      	  </select>
+
+										                  </div>
+									                      <div class="loadmask hidden">
+									                      	<img class="loadermini" src="<?php echo $host_addr?>images/loading.gif"/>
+									                      </div>
+									                      <div class="case_extra_options <?php echo $ctrlview;?>" data-id="<?php echo $t;?>">
+										                      	<a href="##" data-name="caseoption" data-value="crrequests" class="caseoption <?php echo $coptviewr;?>">Requests</a>
+										                      	<a href="##" data-name="caseoption" data-value="crcases" class="caseoption <?php echo $coptview;?>">Case Information</a>
+										                      	<a href="##" data-name="caseoption" data-value="crtransfer" class="caseoption <?php echo $coptview;?>">Transfer</a>
+										                      	<a href="##" data-name="caseoption" data-value="crreport" class="caseoption <?php echo $coptview;?>">Reports</a>
+										                      	<a href="##" data-name="loadmorecasedata" class="caseoption <?php echo $coptviewf;?>">View Case Options</a>
+									                      </div>
+									                    </div>
+
+									                    <div class="col-md--8 nature-content-right hidden">
+									                    	<div class="col-md-12 ncr-details">
+									                    		
+									                    	</div>
+									                    	<div class="loadmask hidden">
+									                      		<img class="loadermini" src="<?php echo $host_addr?>images/loading.gif"/>
+									                      	</div>
+									                    </div>
+									                </div>
+							                <?php
+							                		if($i==$bizarr['numrows']-1){
+						                				echo $divlock3;
+						                			}
+						                		}
+							                ?>
+
+								               
+						                </div>
+						               
+						                <input type="hidden" name="formdata" value="<?php echo $formtruetype;?>"/>
+					                    <input type="hidden" name="extraformdata" value="egroup|data-:-[naturecount>|<
+			                      				casetype_-|-select>|<
+			                      				spstate_-|-select>|<
+			                      				sp_-|-select]-:-groupfall[1-3,3-1]"/>
+					                    <input type="hidden" name="errormap" value="egroup|data-:-[Please Specify if this is a case Request or a Direct Assignment>|<NA>|<Specify the service provider]"/>
+						                <div class="col-md-12 clearboth">
+							                <div class="box-footer">
+							                    <input type="button" class="btn btn-danger" name="casesubmit" data-formdata="<?php echo $formtruetype;?>" onclick="submitCustom('<?php echo $formtruetype;?>','complete')" value="Create"/>
+							                </div>
+							            </div>
+						            </form>
+
+
+						            <!-- <h4>State Option</h4>
+						          	<div class="col-md-12 text-center">
+						          		<div class="form-group">
+						          			<div class="input-group">
+						                      <div class="input-group-addon">
+						                        <i class="fa fa-map-marker"></i>
+						                      </div>
+							          			<select name="state" class="form-control">
+							          				<option value="">--All States--</option>
+							          				<?php $ps=produceStates("",""); echo $ps['selectionoptions'];?>
+							          			</select>
+							          			<div class="input-group-addon nopadding">
+							          				<a href="##" data-sp="true" data-sudata="istateview" data-el="select[name=state]" class="bs-igicon blockdisplay bg-gradient-darkgreen background-color-darkgreen background-color-orangehover bg-orange-gradienthover color-white color-darkredhover">
+							                        	<i class="fa fa-arrow-right"></i>
+							          				</a>
+							                    </div>
+							          		</div>
+						          		</div>
+						          	</div> -->
+<div class="box">
+				<div class="box-body clearboth">
+				    <div class="box-group" id="generaldataaccordion">
+						<div class="panel box box-primary">
+						    <div class="box-header with-border">
+						        <h4 class="box-title">
+						          <a data-toggle="collapse" data-parent="#generaldataaccordion" href="#NewPageManagerBlock">
+						            <i class="fa fa-sliders"></i> Cases
+						          </a>
+						        </h4>
+						    </div>
+						    <div id="NewPageManagerBlock" class="panel-collapse collapse in overflowhidden">
+					            <form name="<?php echo $formtruetype;?>" method="POST" onSubmit="return false;" enctype="multipart/form-data" action="<?php echo $host_addr;?>snippets/basicsignup.php">
+									<input type="hidden" name="entryvariant" value="createreport"/>
+									<div class="col-md-12">
+										<div class="box box-solid">
+							                <div class="box-header with-border">
+							                  <i class="fa fa-info-circle"></i>
+							                  <h3 class="box-title">Case Report</h3>
+							                </div><!-- /.box-header -->
+							                <div class="box-body">
+							                	<div class="col-md-12">
+							                		<div class="col-md-12">
+												    	<div class="form-group">
+												          <label>Report Title</label>
+												          <div class="input-group">
+												              <div class="input-group-addon">
+												                <i class="fa fa-file-text"></i>
+												              </div>
+												          	  <input name="reporttitle" class="form-control" placeholder="The report title."/>
+												          </div>
+												        </div>
+												    </div>
+												    <div class="col-md-12">
+												    	<div class="form-group">
+												          <label>Report Details</label>
+												          <div class="input-group">
+												              <div class="input-group-addon">
+												                <i class="fa fa-file-text"></i>
+												              </div>
+												          	  <textarea name="reportdetails" data-mce="true" id="reportdetails" class="form-control" placeholder="The incident details."></textarea>
+												          </div>
+												        </div>
+												    </div>
+							                	</div>
+							                </div><!-- /.box-body -->
+							              </div>
+									</div>
+							        
+									<input type="hidden" name="formdata" value="<?php echo $formtruetype;?>"/>
+
+									<input type="hidden" name="extraformdata" value="reporttitle-:-input<|>reportdetails-:-textarea"/>
+
+									<input type="hidden" name="errormap" value="reporttitle-:-NA<|>reportdetails-:-Please provide a detailed report entry"/>
+
+									<div class="col-md-12">
+										<div class="box-footer">
+							                <input type="button" class="btn btn-danger" name="createcase" data-formdata="<?php echo $formtruetype;?>" onclick="submitCustom('<?php echo $formtruetype;?>','complete')" value="submit">
+							            </div>
+							    	</div>
+					            </form>
+						    </div>
+						    <script data-type="multiscript">
+						    	$(document).ready(function(){
+						        	/*$('input[data-daterangepicker]').daterangepicker({
+							            format: 'YYYY-MM-DD'
+							        });*/
+									var curmceadminposter=[];
+									curmceadminposter['width']="100%";
+									curmceadminposter['height']="500px";
+									curmceadminposter['toolbar1']="undo redo | bold italic underline | fontselect fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect";
+									curmceadminposter['toolbar2']="| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ";
+									callTinyMCEInit("textarea#reportdetails",curmceadminposter);
+									var curmcethreeposter=[];
+									callTinyMCEInit("textarea[id*=postersmallthree]",curmcethreeposter);
+
+							    	$('[data-datetimepicker]').datetimepicker({
+							            format:"YYYY-MM-DD HH:mm",
+							            keepOpen:true
+						        	})
+
+						        	$('[data-datepicker]').datetimepicker({
+							            format:"YYYY-MM-DD",
+							            keepOpen:true
+							            // showClose:true
+							            // debug:true
+						        	});
+						        	$('[data-timepicker]').datetimepicker({
+							            format:"HH:mm",
+							            keepOpen:true
+						        	});
+						        	$('select[name=userlist]').select2({
+				                        theme: "bootstrap"
+				                    });
+						        	$('select[name=userlist]').select2({
+				                        theme: "bootstrap",
+				                        ajax: {
+										    url: "<?php echo $host_addr?>/snippets/display.php",
+										    dataType: 'json',
+										    delay: 250,
+										    data: function (params) {
+										      return {
+										        q: params.term, // search term
+										        page: params.page
+										      };
+										    },
+										    processResults: function (data, params) {
+										      // parse the results into the format expected by Select2
+										      // since we are using custom formatting functions we do not need to
+										      // alter the remote JSON data, except to indicate that infinite
+										      // scrolling can be used
+										      params.page = params.page || 1;
+
+										      return {
+										        results: data.items,
+										        pagination: {
+										          more: (params.page * 30) < data.total_count
+										        }
+										      };
+										    },
+										    cache: true
+										  },
+										  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+										  minimumInputLength: 1
+				                    });
+						    	})
+							</script>
+						</div>
+						<div class="panel box overflowhidden box-primary">
+						    <div class="box-header with-border">
+						      <h4 class="box-title">
+						        <a data-toggle="collapse" data-parent="#generaldataaccordion" href="#EditBlock">
+						          <i class="fa fa-gear"></i> Edit Cases
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="EditBlock" class="panel-collapse collapse ">
+						      <div class="box-body">
+						          <div class="row">
+						          	
+						            <div class="col-md-12">
+
+						              <?php
+						                echo $outsdata['adminoutput2'];
+						              ?>
+						            </div>
+						        </div>
+						      </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<script>
+				
+				</script>
+			</div>
+
+
+
+<div class="box">
+				<div class="box-body clearboth">
+				    <div class="box-group" id="generaldataaccordion">
+						<div class="panel box box-primary">
+						    <div class="box-header with-border">
+						        <h4 class="box-title">
+						          <a data-toggle="collapse" data-parent="#generaldataaccordion" href="#NewPageManagerBlock">
+						            <i class="fa fa-sliders"></i> Incident Export
+						          </a>
+						        </h4>
+						    </div>
+						    <div id="NewPageManagerBlock" class="panel-collapse collapse in">
+						        <div class="col-md-12">
+									<!-- Export Type -->
+							        <div class="form-group">
+							            <label>Export Type:</label>
+							            <div class="input-group">
+							              <div class="input-group-addon">
+							                <i class="fa fa-calendar"></i>
+							              </div>
+							              <select name="rangetype" class="form-control">
+								              	<option value="all">All</option>
+								              	<option value="grouped">Option Group</option>
+							              </select>
+							            </div><!-- /.input group -->
+							            <label>Anonymity Setting:</label>
+
+							            <div class="input-group">
+							              <div class="input-group-addon">
+							                <i class="fa fa-user-secret"></i>
+							              </div>
+							              <select name="anonymitytype" class="form-control">
+								              	<option value="unanonymous">Plain</option>
+								              	<option value="anonymous">Anonymous</option>
+							              </select>
+							            </div><!-- /.input group -->
+							        </div><!-- /.form group -->	
+								</div>
+								<div class="col-md-12 optioncontent hidden">
+									<div class="col-md-6 ">
+										<!-- Date range -->
+									      <div class="form-group">
+									        <label>Date range:</label>
+									        <div class="input-group">
+									          <div class="input-group-addon">
+									          		<i class="fa fa-calendar"></i>
+									          </div>
+									          <input type="text" name="dateperiodold" class="form-control pull-right" id="reservationtime" placeholder="choose the date range" data-datepicker="true"/>
+									          <input type="text" name="dateperiodnew" class="form-control pull-right" id="reservationtime" placeholder="choose the date range" data-datepicker="true"/>
+									        </div><!-- /.input group -->
+									      </div><!-- /.form group -->
+									</div>
+									<div class="col-md-6">
+										<!-- Date range -->
+									      <div class="form-group">
+									        <label>Age range <small>filling only 'Lower age range' produces results for that age and less. The opposite occurs for 'Higher age range'</small>:</label>
+									        <div class="input-group">
+									          <div class="input-group-addon">
+									          		<i class="fa fa-calendar"></i>
+									          </div>
+									          <input type="number" min="1" name="ageold" class="form-control pull-right" placeholder="Lower age range" />
+									          <input type="number" min="1" name="agenew" class="form-control pull-right" placeholder="higher age range" />
+									        </div><!-- /.input group -->
+									      </div><!-- /.form group -->
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>State:</label>
+											<div class="input-group">
+												  <div class="input-group-addon">
+												    <i class="fa fa-map-pin"></i>
+												  </div>
+												  <select class="form-control" name="state">
+													  	<option value="">Current State: ALL</option>
+													  	<?php $ps=produceStates("",""); echo $ps['selectionoptions'];?>
+												  </select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+							        	<div class="form-group">
+							              <label>Gender</label>
+							              <div class="input-group">
+							                  <div class="input-group-addon">
+							                    <i class="fa fa-file-text"></i>
+							                  </div>
+							              	  <select type="text" class="form-control" name="gender" placeholder="First Name">
+							              	  	<option value="">--Choose Gender--</option>
+							              	  	<option value="male">Male</option>
+							              	  	<option value="female">Female</option>
+							              	  	<option value="other">Other</option>
+							              	  </select>
+							              </div>
+							            </div>
+							        </div>
+									<div class="col-md-6">
+								    	<div class="form-group">
+								          <label>Nature of Incident</label>
+								          <div class="input-group">
+								              <div class="input-group-addon">
+								                <i class="fa fa-street-view"></i>
+								              </div>
+								          	  <select class="form-control" name="incidentnature">
+								          	  	<option value="">--Choose--</option>
+								          	  	<option value="rape">Rape</option>
+								          	  	<option value="attempted rape">Attempted Rape</option>
+								          	  	<option value="stalking">Stalking</option>
+								          	  	<option value="sexual harassment">Sexual Harassment</option>
+								          	  	<option value="other">Other</option>
+								          	  </select>
+								          	  <input name="incidentnaturedetails" type="text" class="form-control hidden" placeholder="Specify 'Other' details" />
+								          </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="loadmask hidden">
+									<img class="loadermini" src="<?php echo $host_addr?>images/loading.gif"/>
+								</div>
+								<div class="col-md-12 event_horizon hidden"></div>
+								<div class="col-md-12">
+									<div class="box-footer">
+						                <input type="button" class="btn btn-danger" name="exportincidents" value="Download">
+						            </div>
+						    	</div>
+						    </div>
+						    <script data-type="multiscript">
+						    	$(document).ready(function(){
+						        	/*$('input[data-daterangepicker]').daterangepicker({
+							            format: 'YYYY-MM-DD'
+							        });*/
+							    	$('[data-datetimepicker]').datetimepicker({
+							            format:"YYYY-MM-DD HH:mm",
+							            keepOpen:true
+						        	})
+
+						        	$('[data-datepicker]').datetimepicker({
+							            format:"YYYY-MM-DD",
+							            keepOpen:true
+							            // showClose:true
+							            // debug:true
+						        	});
+						        	$('[data-timepicker]').datetimepicker({
+							            format:"HH:mm",
+							            keepOpen:true
+						        	});
+						        	$('select[name=userlist]').select2({
+				                        theme: "bootstrap"
+				                    });
+						        	$('select[name=userlist]').select2({
+				                        theme: "bootstrap",
+				                        ajax: {
+										    url: "<?php echo $host_addr?>/snippets/display.php",
+										    dataType: 'json',
+										    delay: 250,
+										    data: function (params) {
+										      return {
+										        q: params.term, // search term
+										        page: params.page
+										      };
+										    },
+										    processResults: function (data, params) {
+										      // parse the results into the format expected by Select2
+										      // since we are using custom formatting functions we do not need to
+										      // alter the remote JSON data, except to indicate that infinite
+										      // scrolling can be used
+										      params.page = params.page || 1;
+
+										      return {
+										        results: data.items,
+										        pagination: {
+										          more: (params.page * 30) < data.total_count
+										        }
+										      };
+										    },
+										    cache: true
+										  },
+										  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+										  minimumInputLength: 1
+				                    });
+						    	})
+							</script>
+						</div>
+						<div class="panel box overflowhidden box-primary">
+						    <div class="box-header with-border">
+						      <h4 class="box-title">
+						        <a data-toggle="collapse" data-parent="#generaldataaccordion" href="#EditBlock">
+						          <i class="fa fa-gear"></i> Edit Cases
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="EditBlock" class="panel-collapse collapse">
+						      <div class="box-body">
+						          <div class="row">
+						          	
+						            <div class="col-md-12">
+
+						              <?php
+						                // echo $outsdata['adminoutput'];
+						              ?>
+						            </div>
+						        </div>
+						      </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<script>
+				
+				</script>
+			</div>
+
+
+<!-- Header Starts Here -->
+<header class="clearfix">
+	<div class="navbar navbar-default navbar-white" role="navigation">
+		<div class="top-line">
+			<div class="container-fluid">
+				<p class="top-bar-address">
+					<i class="fa fa-map-marker"></i> <?php echo $defaultmainaddress;?>
+				</p>
+				<ul class="top-bar-menu">
+					<li><a href="tel:+2349051143917"><i class="fa fa-phone"></i> +2349051143917</a></li>
+					<li><a href="<?php echo $host_addr;?>contact.php">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>			
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- Responsive Menu Trigger -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="main-menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- End Responsive Menu Trigger -->
+				<a class="navbar-brand" href="<?php echo $host_addr;?>">
+					<div class="sk-box">
+						<div class="logo-container">
+							<img class="logo" src="<?php echo $host_addr;?>images/logo_text_light.png" alt="logo">
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<!-- Main Menu Starts -->
+			<nav id="main-menu" class="navbar-collapse collapse sf-menu">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="menu-item">
+						<a class="<?php echo $activepage1;?>" href="<?php echo $host_addr;?>">Home</a>
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage6;?>" href="<?php echo $host_addr;?>about.php">About DreamBench</a>								
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage4;?>" href="<?php echo $host_addr;?>services.php">What We Do</a>
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage5;?>" href="<?php echo $host_addr;?>team.php">The Team</a>								
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage2;?>" href="<?php echo $host_addr;?>blog.php">Blog</a>
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage3;?>" href="<?php echo $host_addr;?>portfolio.php">Portfolio</a>
+					</li>
+					<li class="menu-item ">
+						<a class="<?php echo $activepage7;?>" href="<?php echo $host_addr;?>contact.php">Contact Us</a>								
+					</li>
+				</ul>
+			</nav><!-- End Menu -->
+		</div>
+	</div>
+</header>
+
+<!-- End Header -->
+
+
+
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="page-faq.html#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                </span>Content</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body-accordion">
+                <table class="table">
+                    <tbody><tr>
+                        <td>
+                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="page-faq.html#">Articles</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-flash text-success"></span><a href="page-faq.html#">News</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-file text-info"></span><a href="page-faq.html#">Newsletters</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-comment text-success"></span><a href="page-faq.html#">Comments</a>
+                            <span class="badge">42</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="page-faq.html#collapseTwo"><span class="glyphicon glyphicon-th">
+                </span>Modules</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body-accordion">
+                <table class="table">
+                    <tbody><tr>
+                        <td>
+                            <a href="page-faq.html#">Orders</a> <span class="label label-success">$ 320</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="page-faq.html#">Invoices</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="page-faq.html#">Shipments</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="page-faq.html#">Tex</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="page-faq.html#collapseThree"><span class="glyphicon glyphicon-user">
+                </span>Account</a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body-accordion">
+                <table class="table">
+                    <tbody><tr>
+                        <td>
+                            <a href="page-faq.html#">Change Password</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="page-faq.html#">Notifications</a> <span class="label label-info">5</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="page-faq.html#">Import/Export</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-trash text-danger"></span><a href="page-faq.html#" class="text-danger">
+                                Delete Account</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="page-faq.html#collapseFour"><span class="glyphicon glyphicon-file">
+                </span>Reports</a>
+            </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body-accordion">
+                <table class="table">
+                    <tbody><tr>
+                        <td>
+                            <span class="glyphicon glyphicon-usd"></span><a href="page-faq.html#">Sales</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-user"></span><a href="page-faq.html#">Customers</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-tasks"></span><a href="page-faq.html#">Products</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-shopping-cart"></span><a href="page-faq.html#">Shopping Cart</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-classic">
+							<div class="blog-classic-item">
+								<div class="blog-header">
+									<div class="blog-date">
+										<span class="blog-day">
+											<?php echo $cblogdata['day'];?>
+										</span>
+										<span class="blog-month _2">
+											<?php echo $cblogdata['month'];?>
+										</span>
+										<span class="blog-month">
+											<?php echo $cblogdata['year'];?>
+										</span>
+	                      				<span class="blog-type 
+		                      				background-color-indigo 
+		                      				bg-indigo-gradient">
+		                      				<i class="fa <?php echo $contenticon?>"></i>
+		                      			</span>
+
+									</div>
+									<div class="blog-info">
+										<a href="<?php echo $cblogdata['pagelink'];?>"
+											class="blogtitle">
+											<h2 class="blog-title">
+												<?php echo $cblogdata['title'];?>
+											</h2>
+										</a>
+										<div class="blog-details">
+											by <?php echo $cblogdata['poster']['fullname'];?>/ 
+											in <?php echo $cblogdata['blogcatdata']['catname'];?>/ 
+											Comments: <?php echo $comment_count;?>
+											Views: <?php echo number_format($cblogdata['views']);?>
+										</div>
+									</div>
+								</div>
+								<?php echo $covercontent;?>
+								<div class="blog-post-content">
+									<?php echo $cblogdata['introout'];?>
+									<a href="<?php echo $cblogdata['pagelink'];?>"
+									 class="readmore _1">More</a>
+								</div>
+							</div>
+						</div>
+
+
+<!-- default footer -->
+<div class="col-md-4 footer-widget">
+		<h4 class="underlined">More <strong>About</strong> Us</h4>
+		<div>
+			<?php 
+				if(isset($defaultshorttext)&&$defaultshorttext!==""){
+					// var_dump($defaultshorttext);
+					echo $defaultshorttext;
+				}else{
+			?>
+					Dream Bench Tech is a startup concerned with providing web 
+					and mobile based application solutions to companies or 
+					individuals amidst a myriad of other tech based services.
+			<?php
+				}
+			?>
+		</div>
+		
+	</div>
+	<div class="col-md-4 footer-widget">
+		<?php 
+			if(isset($theme_lbpfwidget)){
+				echo $theme_lbpfwidget;
+			}else{
+		?>
+			<h4 class="underlined">Latest <strong>Posts</strong></h4>
+			<ul class="latest-posts">
+				<li class="post-item">
+					<a href="#" class="post-image"><img src="<?php echo $host_addr;?>images/dbrimages/post-thumb-01.jpg" alt="image"></a>
+					<div class="post-content">
+						<h5 class="post-title"><a href="#">Looking into world for you but who cares?</a></h5>
+						<span class="post-date">May 21, 2015</span>
+					</div>
+				</li>
+				<li class="post-item">
+					<a href="#" class="post-image"><img src="<?php echo $host_addr;?>images/dbrimages/post-thumb-02.jpg" alt="image"></a>
+					<div class="post-content">
+						<h5 class="post-title"><a href="#">Dog in the real world is like a friend in your home</a></h5>
+						<span class="post-date">May 20, 2015</span>
+					</div>
+				</li>
+				<li class="post-item">
+					<a href="#" class="post-image"><img src="<?php echo $host_addr;?>images/dbrimages/post-thumb-03.jpg" alt="image"></a>
+					<div class="post-content">
+						<h5 class="post-title"><a href="#">Ageh to ye rooz nabashi, nafasam bala nemiad, chon ke in delam be joz to...</a></h5>
+						<span class="post-date">May 20, 2015</span>
+					</div>
+				</li>
+			</ul>
+		<?php
+			}
+		?>
+	</div>
+	<div class="col-md-4 footer-widget">
+		<h4 class="underlined">Like Us on <strong>Facebook</strong></h4>
+		<div class="tagcloud">
+			<div class="fb-like-box" data-href="https://www.facebook.com/DreamBenchTech/" data-width="320" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+				<?php
+                if((isset($mpagemergedscripts)&&$mpagemergedscripts=="")||
+                	!isset($mpagemergedscripts)){
+                	include($host_tpathplain.'facebooksdksingle.php');
+
+                }
+            ?>
+
+		</div>	
+	</div>
+
+
+	<div class="col-md-3 col-sm-6 bottom-box1">
+                <h4 class="module-title2">About Us </h4> 
+                <p><img alt="" class="mini" src="<?php echo $host_logo_imagemini;?>"></p>
+                <p>
+                	MySalvus is an interactive sexual violence 
+					reporting platform where cases of sexual violence can be reported 
+		  			anonymously.</p>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 bottom-box3">
+            	<h4 class="module-title2">Latest News</h4>		
+                <ul class="latest-news">
+                	<?php
+                		
+                	?>
+                    <li><img src="<?php echo $host_addr;?>images/mysalvusimages/pic01.jpg" width="45" height="45" 
+                    	class="pull-left img-circle img-responsive right-space-for-image" alt="">
+                    	<a href="#">Aliquam consectetur elit feugiat <span>November 27, 2019</span></a></li>
+                    <li><img src="<?php echo $host_addr;?>images/mysalvusimages/pic02.jpg" width="45" height="45" class="pull-left img-circle img-responsive right-space-for-image" alt=""><a href="#">Nunc ornare auctor <span>November 26, 2019</span></a></li>
+                    <li><img src="<?php echo $host_addr;?>images/mysalvusimages/pic03.jpg" width="45" height="45" class="pull-left img-circle img-responsive right-space-for-image" alt=""><a href="#">Cras vestibulum auctor urna <span>November 25, 2019</span></a></li>
+                </ul>
+            </div>
+            
+
+            <div class="col-md-3 col-sm-6 bottom-box4 links">
+            	<h4 class="module-title2">Privacy and Usage</h4>
+                
+                <ul class="link-list-1">
+                    <li><a href="#">
+                    	<i class="fa fa-angle-double-right"></i>Terms of Use</a></li>
+                    <li><a href="#">
+                    	<i class="fa fa-angle-double-right"></i>Privacy</a></li>
+                </ul>
+                
+            </div>
+            <div class="col-md-3 col-sm-6 bottom-box2 pull-left">
+            	<h4 class="module-title2">Contact & Support</h4>
+                <p>
+                  <i class="fa fa-map-marker"></i>
+                  34 Curtis Adeniyi Jones Close off, Adeniran Ogunsanya St, 
+                  101211, Lagos
+                </p>
+                
+                <p>
+                  <i class="fa fa-phone"></i> (+234) 704-683-5377
+                </p>
+
+                <p>
+                	For urgent help, contact the Lagos state Domestic Sexual Violence 
+                	Response Team 
+                  <a href="http://dsvrtlagos.org" target="_blank">'DSVRT'</a>
+                </p>
+            </div>
+<div class="row">
+                                <div class="col-md-12">
+                                <h3 class="page-header"><span><i class="glyphicon glyphicon-comment"></i> Comments (14) </span></h3>
+                                    <ul class="media-list comments">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+<!-- <div class="blog-header">
+								<div class="blog-date">
+									<span class="blog-day">
+										<?php echo $curblogdata['day'];?>
+									</span>
+									<span class="blog-month _2">
+										<?php echo $curblogdata['month'];?>
+
+									</span>
+									<span class="blog-month">
+										<?php echo $curblogdata['year'];?>
+									</span>
+								</div>
+								<div class="blog-info">
+									<h1 class="blog-title">
+										<?php echo $curblogdata['title'];?>
+									</h1>
+									<div class="blog-details">
+										by <?php echo $curblogdata['poster']['fullname'];?>/ 
+										in <?php echo $curblogdata['blogcatdata']['catname'];?>/ 
+										Comments: <?php echo $blog_comment_count;?>
+										Views: <?php echo number_format($curblogdata['views']);?>
+									</div>
+								</div>
+							</div>
+							<div class="full-width-section <?php echo $eclass?>">
+								<?php
+									echo $covercontent;
+								?>
+							
+							</div>
+
+							
+							<div class="blog-post-content">
+								<?php echo $curblogdata['blogpost'];?>
+							</div> -->
+							<!-- <div class="blog-under">
+								<div class="blog-tags">
+									<i class="fa fa-tag"></i>
+									<div class="tags">
+										<?php
+											// the post tags have been stored in an array
+											// $tagcloud
+											// the default url for a tag is
+											// $host/theblogpage?tag=thetagname
+											// unless otherwise changed by the theme
+											// user
+											if(count($tagcloud)>0){
+												$tagvalid=false;
+												for($tc=0;$tc<count($tagcloud);$tc++){
+													$ctag=$tagcloud[$tc];
+													$comma=$tc<count($tagcloud)-1?",":"";
+													if($ctag!==""){
+														$tagvalid=true;
+										?>
+														<a href="<?php echo $host_addr;?>/blog.php?tag=<?php echo $ctag;?>">
+															<?php echo $ctag;?>
+														</a>
+															<?php echo $comma;?>
+										<?php
+													}
+										?>
+										<?php
+												}
+												if($tagvalid==false){
+										?>
+										<a href="#">No tags for this post</a>
+										<?php
+												}
+										 	}else{
+
+										?>
+										<a href="#">No tags for this post</a>
+
+										<?php
+											}
+										?>
+									</div>
+								</div>
+								<div class="blog-share">
+									<i class="fa fa-share-alt"></i>
+									<div class="blog-share-socials">
+										<a href="<?php echo $facebook_url;?>">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a href="<?php echo $twitter_url;?>">
+											<i class="fa fa-twitter"></i>
+										</a> 
+										<a href="<?php echo $googleplus_url;?>">
+											<i class="fa fa-google-plus"></i></a>
+										<a href="<?php echo $googlemail_url;?>">
+											<i class="fa fa-google-plus-official"></i></a>
+										<a href="<?php echo $email_url;?>">
+											<i class="fa fa-envelope-o"></i></a>
+									</div>								
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<h4 class="underlined">
+										You Might <strong>Also Like</strong></h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="related-posts-slider tmq-3-cols">
+									<?php echo $theme_brpwidget;?>
+									</div>
+								</div>
+							</div> -->
+                            
+            			<li class="media">
+                                          <a href="blog-single-post.html#" class="pull-left">
+                                            <img alt="64x64" style="width: 64px; height: 64px;" src="images/pic02.jpg" class="img-circle img-responsive">
+                                          </a>
+                                          <div class="media-body">
+                                            <h4 class="media-heading"><span class="comment-by">John Smith</span><span class="comment-reply pull-right"><a href="blog-single-post.html#"><i class="fa fa-reply"></i> Reply</a></span><span class="comment-date pull-right"><i class="glyphicon glyphicon-time"></i> August 28, 2019 at 10:00 PM</span></h4>
+                                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                                            <!-- Nested media object -->
+                                            <div class="media">
+                                              <a href="blog-single-post.html#" class="pull-left">
+                                                <img alt="64x64" style="width: 64px; height: 64px;" src="images/pic03.jpg" class="img-circle img-responsive">
+                                              </a>
+                                              <div class="media-body">
+                                             	<h4 class="media-heading"><span class="comment-by">Jane Doe</span><span class="comment-reply pull-right"><a href="blog-single-post.html#"><i class="fa fa-reply"></i> Reply</a></span><span class="comment-date pull-right"><i class="glyphicon glyphicon-time"></i> August 28, 2019 at 10:00 PM</span></h4>
+                                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                                                <!-- Nested media object -->
+                                                <div class="media">
+                                                  <a href="blog-single-post.html#" class="pull-left">
+                                                    <img alt="64x64" style="width: 64px; height: 64px;" src="images/pic02.jpg" class="img-circle img-responsive">
+                                                  </a>
+                                                  <div class="media-body">
+                                             		<h4 class="media-heading"><span class="comment-by">John Smith</span><span class="comment-reply pull-right"><a href="blog-single-post.html#"><i class="fa fa-reply"></i> Reply</a></span><span class="comment-date pull-right"><i class="glyphicon glyphicon-time"></i> August 28, 2019 at 10:00 PM</span></h4>
+                                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!-- Nested media object -->
+                                            <div class="media">
+                                              <a href="blog-single-post.html#" class="pull-left">
+                                                <img alt="64x64" style="width: 64px; height: 64px;" src="images/pic01.jpg" class="img-circle img-responsive">
+                                              </a>
+                                              <div class="media-body">
+                                                <h4 class="media-heading"><span class="comment-by">George Brown</span><span class="comment-reply pull-right"><a href="blog-single-post.html#"><i class="fa fa-reply"></i> Reply</a></span><span class="comment-date pull-right"><i class="glyphicon glyphicon-time"></i> August 28, 2019 at 10:00 PM</span></h4>
+                                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+
+
+<div class="tab-content faq-cat-content disable-border">
+                            <div class="tab-pane active in fade" id="faq-cat-20">
+                                <div class="panel-group" id="accordion-cat-20">
+                                    <!-- FAQ Item Start -->
+                                    <div class="panel panel-default panel-faq">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion-cat-20" href="page-faq.html#faq-cat-20-sub-1">
+                                                <h4 class="panel-title">
+                                                    Curabitur risus erat, pellentesque at ornare non
+                                                    <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                                </h4>
+                                            </a>
+                                        </div>
+                                        <div id="faq-cat-20-sub-1" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FAQ Item End -->
+                                    <!-- FAQ Item Start -->
+                                    <div class="panel panel-default panel-faq">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion-cat-20" href="page-faq.html#faq-cat-20-sub-2">
+                                                <h4 class="panel-title">
+                                                    Suspendisse porttitor tortor at libero laoreet, ut volutpat dui posuere.
+                                                    <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                                </h4>
+                                            </a>
+                                        </div>
+                                        <div id="faq-cat-20-sub-2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FAQ Item End -->
+                                    <!-- FAQ Item Start -->
+                                    <div class="panel panel-default panel-faq">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion-cat-20" href="page-faq.html#faq-cat-20-sub-3">
+                                                <h4 class="panel-title">
+                                                    Nulla sodales nisl vel malesuada aliquet. Aenean mollis, massa eu varius sodales
+                                                    <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                                </h4>
+                                            </a>
+                                        </div>
+                                        <div id="faq-cat-20-sub-3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FAQ Item End -->
+                                    <!-- FAQ Item Start -->
+                                    <div class="panel panel-default panel-faq">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion-cat-20" href="page-faq.html#faq-cat-20-sub-4">
+                                                <h4 class="panel-title">
+                                                    Suspendisse porttitor tortor at libero laoreet, ut volutpat dui posuere.
+                                                    <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                                </h4>
+                                            </a>
+                                        </div>
+                                        <div id="faq-cat-20-sub-4" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FAQ Item End -->
+                                    <!-- FAQ Item Start -->
+                                    <div class="panel panel-default panel-faq">
+                                        <div class="panel-heading">
+                                            <a data-toggle="collapse" data-parent="#accordion-cat-20" href="page-faq.html#faq-cat-20-sub-5">
+                                                <h4 class="panel-title">
+                                                    Curabitur risus erat, pellentesque at ornare non
+                                                    <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                                </h4>
+                                            </a>
+                                        </div>
+                                        <div id="faq-cat-20-sub-5" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- FAQ Item End -->
+                                </div>
+                            </div>
+                        </div>

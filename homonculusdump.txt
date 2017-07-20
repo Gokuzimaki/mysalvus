@@ -1,0 +1,1833 @@
+<div class="currency-box">
+                        <div class="btn-group">
+                            <a class="btn cruncy" href="index.html#">$ US Dollar </a>
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="index.html#">
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="fa fa-euro"></i>
+                                        Euro
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="fa fa-gbp"></i>
+                                        Pound
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="fa fa-yen"></i>
+                                        Yen
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="language-box">
+                        <div class="btn-group">
+                            <a class="btn language" href="index.html#">EN</a>
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="index.html#">
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="index.html#">FR</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">Spe</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">chinese</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+<!-- dump css for @font-face bulletproofing -->
+font-family: Delicious;
+  src: url(Delicious-Roman.eot);
+  src: local('Delicious'), local(Delicious'), 
+         url(Delicious-Roman.otf) format('opentype');
+<!-- end -->
+<!-- event countdown element -->
+                                        <div class="eventCountdown event_countdown_1 is-countdown" data-datetime="2017-12-08 13:07:16" data-datetimestop="2017-12-08 17:30:16" data-id="1"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">460</span><span class="countdown-period">Day</span></span><span class="countdown-section"><span class="countdown-amount">11</span><span class="countdown-period">Hrs</span></span><span class="countdown-section"><span class="countdown-amount">53</span><span class="countdown-period">Mins</span></span><span class="countdown-section"><span class="countdown-amount">45</span><span class="countdown-period">Sec</span></span></span></div>
+
+<!-- end -->
+
+<div class="event-time-box">
+                                                    <div class="eventCountdown event_countdown_2 is-countdown" data-datetime="2017-12-08 13:07:16" data-datetimestop="2017-12-08 17:30:16" data-id="2"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">444</span><span class="countdown-period">Day</span></span><span class="countdown-section"><span class="countdown-amount">23</span><span class="countdown-period">Hrs</span></span><span class="countdown-section"><span class="countdown-amount">16</span><span class="countdown-period">Mins</span></span><span class="countdown-section"><span class="countdown-amount">22</span><span class="countdown-period">Sec</span></span></span></div>
+                                                </div>
+
+
+
+<!-- General Modal display section -->      <div id="mainPageModal" class="modal fade" data-backdrop="false" data-show="true" data-role="dialog">        <div class="modal-dialog">            <div class="modal-content">                <div class="modal-header">                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>                    <h4 class="modal-title">Message</h4>                </div>                <div class="modal-body">                </div>                <div class="modal-footer">                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>                </div>            </div>        </div>      </div>
+
+
+.sidebar-menu>li>a {
+    padding: 12px 5px 12px 15px;
+    display: block;
+}
+
+.skin-yellow .sidebar-menu>li>a:hover, .skin-yellow .sidebar-menu>li.active>a {
+    color: #fff;
+    background: #2C1E1E;
+    border-left-color: #f38412;
+}
+
+
+
+<!-- generaldatamodule dump section -->
+// extra form data for products and services 'getSingleGeneralInfo'
+/*$extraformdata='
+                <div class="col-md-12">
+                    '.$prodbannerimgout.'
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Product Banner</label>
+                          <div class="input-group">
+                              <div class="input-group-addon">
+                                <i class="fa fa-file-image-o"></i>
+                              </div>
+                              <input type="hidden" name="prodbannerimgid" value="'.$prodbannerimgid.'">
+                              <input type="file" class="form-control" name="prodbannerimg" Placeholder=""/>
+                           </div><!-- /.input group -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h4>Sub Products Section</h4>
+                    <input type="hidden" name="cursubproductcountedit" value="'.$editcount.'"/>
+                    '.$editprodoutput.'
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label>SUB product/service Title (<b>'.$editcount.'</b>)</label>
+                          <div class="input-group">
+                              <div class="input-group-addon">
+                                <i class="fa fa-file-image-o"></i>
+                              </div>
+                              <input type="hidden" class="form-control" name="subcontentid'.$editcount.'" value="0"/>
+                              <input type="text" class="form-control" name="subcontenttitle'.$editcount.'" value="" Placeholder="Product/Service Title"/>
+                           </div><!-- /.input group -->
+                        </div>
+                    </div>
+                        <div name="entrysubproductpointedit"></div>
+                        <div class="col-md-12">
+                          <a href="##" class="addpoint" name="addextrasubproductsedit">Click to add another sub product</a>
+                        </div>  
+                </div>
+            ';*/
+<!--  -->
+
+We are all asking [|span-green|]Questions[|/span-green|] about our dear[|span-green|] Country[|/span-green|] such as "What is really happening in [|span-green|]Nigeria[|/span-green|], will we keep watching her become a failed state?"
+
+We at [|span-orange|]FVT[|/span-orange|] believe a difference can be made if we [|span-green|]Try[|/span-green|]  This led us to ask ourselves "How do we make this change?"
+
+
+
+
+
+
+parseEdata from basicsignup
+
+        $extraformdata=preg_replace("/[\n\r]/","",$extraformdata);
+        $extraformdata=str_replace("\\r\\n", "", $extraformdata);
+        $extraformdata=str_replace(" ", "", $extraformdata);
+        echo str_replace("<", "&lt;", $extraformdata)." - extraformdata<br><br>";
+        /*// try a for loop to get at the contents of the current entry
+        if (isset($_POST)) {
+            # code...
+            foreach ($_POST as $key => $value) {
+                # code...
+                echo"$key => $value<br>";
+            }
+        }*/
+        // try to get a list of the current entries in the form
+        $fdata=explode("<|>", $extraformdata);
+        // string of K:V pairs for storing extra form data
+        $finaltally="";
+        $concat="<|>";
+        $curgroupcount=0;
+        if(count($fdata)>1){
+            $curgroupdata="";
+            for($i=0;$i<count($fdata);$i++){
+                $curdata=$fdata[$i];
+                // echo str_replace("<", "&lt;", $curdata)." - curdata<br>";
+                $sortdata=strpos($curdata, "egroup|data");
+                if($sortdata!==false||$sortdata===true){
+                    $curgroupcount++;
+                    $curgroupdata="";
+                    $fielddata=array();
+                    $subgroup=explode("egroup|data-:-", $curdata);
+                    
+                    // break off the requirements portion of the map
+                    $subgroup=explode("-:-",$subgroup[1]);
+                    // store requirements data seperate
+                    $reqdata=$subgroup[1];
+                    echo str_replace("<", "&lt;", $reqdata)." - reqdata<br>";
+                    // replace all squarebraces with (| or |)
+                    // $subgroup[0]=str_replace("[", "(|", $subgroup[0]);
+                    // echo $subgroup[0]."- 1<br>";
+
+                    // $subgroup[0]=str_replace("]", "|)", $subgroup[0]);
+                    // echo $subgroup[0]."- 2<br>";
+                    
+                    // get the contents in the current group
+                    preg_match_all("~([^\[\]]{1,})~im", $subgroup[0], $subgroup);
+                    $subgroup=$subgroup[0];
+                    echo str_replace("<", "&lt;", $subgroup[0])." - subgroup<br>";
+                    // split the subgroup
+                    $subgroup=explode(">|<", $subgroup[0]);
+                    
+                    // shift the sentinel counter content from the array
+                    $sentinel=array_shift($subgroup);
+                    $sentinel=str_replace("\\r\\n", "", $sentinel);
+                    // echo $sentinel." - sentinel <br>";
+                    // $sentinel=str_replace("\\r\\n", "", $sentinel);
+                    
+                    // get the value for the current number of entries in the grouped data
+                    $sentinel=isset($_POST[''.$sentinel.''])?$_POST[''.$sentinel.'']:0;
+                    if($sentinel>0){
+                        // split the content into a new array based on the -:- delimiter
+                        for($t=0;$t<count($subgroup);$t++){
+                            // get the name of the form element that carries groupdata 
+                            // content
+                            $splitcurgroup=explode("-|-", $subgroup[$t]);
+                            $fieldname=$splitcurgroup[0];
+                            $fieldtype=$splitcurgroup[1];
+                            $sortfieldtype=strpos("|",$fieldtype);
+                            $fieldentrytype="";
+                            $fieldextension="";
+                            if($sortfieldtype!==false&&$sortfieldtype===true){
+                                $sftexplode=explode("|", $fieldtype);
+                                $fieldtype=$sftexplode[0];
+                                $fieldentrytype=$sftexplode[1];
+                                if(count($sftexplode)>2){
+                                    $fieldextension=$sftexplode[2];
+                                }
+                            }
+                            $fielddata[$t]['fieldname']=$splitcurgroup[0];
+                            $fielddata[$t]['fieldtype']=$fieldtype;
+                            $fielddata[$t]['fieldentrytype']=$fieldentrytype;
+                            $fielddata[$t]['fieldextension']=$fieldextension;
+                        }
+                        // prep storage variables for batch sets of grouped form data
+                        $batcharr=array();
+                        $batchvalues="";
+                        // run through the value of the sentinel with a forloop
+                        for ($x=0; $x < $sentinel; $x++) { 
+                            // reset the curgroupdata string variable to nothing
+                            $curgroupdata="";
+                            # code...
+                            // add one to the increment variable to get the name appended numeric count
+                            // value of the relative form element name in the $_POST array
+                            $xt=$x+1;
+                            $batchvalues="";
+                            // create the batch storage string 
+                            // use a sentinel variable to perform basic data test for each entryset
+                            // ensuring at least one value is present
+                            $scud=0;
+                            $excludecurdata="";
+                            if(isset($_POST['group'.$curgroupcount.'_status'.$xt.''])&&$_POST['group'.$curgroupcount.'_status'.$xt.'']!==""){
+                                $excludecurdata="true";
+                                echo "<br>$excludecurdata <br>".$_POST['group'.$curgroupcount.'_status'.$xt.'']."<br>";
+                            }
+                            for ($z=0; $z < count($fielddata); $z++) { 
+                                # code...
+                                // use the field name of the multiple content accompanied by
+                                // the corresponding xt - count value form above to get the current
+                                // multiple data content POSt element in the set
+                                $noupload="true";
+                                if($excludecurdata==""){
+                                    if($fielddata[$z]['fieldentrytype']!==""){
+                                        if ($fielddata[$z]['fieldentrytype']=="image"||
+                                            $fielddata[$z]['fieldentrytype']=="video"||
+                                            $fielddata[$z]['fieldentrytype']=="office"||
+                                            $fielddata[$z]['fieldentrytype']=="audio"||
+                                            $fielddata[$z]['fieldentrytype']=="pdf") {
+                                            $noupload="false";
+                                            //proceed to carryout the upload and obtain
+                                            // transaction id which would be used to set up the data entry
+                                            // in the form 'media|id' where id is the media table value for
+                                            // the entry.
+
+                                        }
+                                    }
+                                    if($noupload=="true"){
+                                        if($fielddata[$z]['fieldtype']!=="textarea"){
+                                            $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?str_replace('"', "&#34;", mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])):"NA";
+                                        }else{
+                                            $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.'']):"NA";
+                                        }
+
+                                        
+                                    }else{
+
+                                    }
+                                    // increment the sentinel control variable to allow 
+                                    // monitoring of batch entries with no values
+                                    if($fielddata[$z]['fieldvalue']==""){
+                                        $scud++;
+                                    }
+                                    // concatenate the values obtained into a single variable for
+                                    // array storage and later parsing
+                                    if($batchvalues==""){
+                                        $batchvalues=$fielddata[$z]['fieldname']?$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                            
+                                    }else{
+                                        $batchvalues.=$fielddata[$z]['fieldname']?">|<".$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                    }
+                                }else{
+                                    $scud=count($fielddata);
+                                }
+                            }
+                            // remove the entry if no single valid value was found or a
+                            // deletion occured
+                            if($scud==count($fielddata)){
+                                $batchvalues="";
+                                $scud=0;
+                            }
+                            // store the batch storage string in the batcharr variable array
+                            // this array is later used to compile all entries into one delimited string
+                            // echo $batchvalues." - batchvalues<br><br>";
+                            if($batchvalues!==""){
+                                $batcharr[]=$batchvalues;
+                                
+                            }
+                        }
+                        // segregate the multiple data content for the current group
+                        // with a |_| delimiter 
+                        for ($y=0; $y < count($batcharr) ; $y++) { 
+                            # code...
+                            if($curgroupdata==""){
+                                $curgroupdata=isset($batcharr[$y])?$batcharr[$y]:"";
+                            }else{
+                                $curgroupdata.=isset($batcharr[$y])?"|_|".$batcharr[$y]:"";
+                            }                       
+                        }
+                    }
+                    $finaltally.=$finaltally==""?"egroup|data-:-[$curgroupdata]":$concat."egroup|data-:-[$curgroupdata]";
+                    // start sorting through the remaining content for the groupdata
+                }else{
+                    // explode the current content and proceed to join their values to the 
+                    // K:V string output
+                    $subgroup=explode("-:-",$curdata);
+                    // get rid of unnecessary spacing and newlines.
+                    // they tend to mess the post array value up
+                    $fieldname=$subgroup[0];
+                    $fieldtype=$subgroup[1];
+                    $sortfieldtype=strpos("|",$fieldtype);
+                    $fieldentrytype="";
+                    $fieldextension="";
+                    if($sortfieldtype!==false&&$sortfieldtype===true){
+                        $sftexplode=explode("|", $fieldtype);
+                        $fieldtype=$sftexplode[0];
+                        $fieldentrytype=$sftexplode[1];
+                        if(count($sftexplode)>2){
+                            $fieldextension=$sftexplode[2];
+                        }
+                    }
+                    $noupload="true";
+                    if($fieldentrytype!==""){
+                        if ($fieldentrytype=="image"||
+                            $fieldentrytype=="video"||
+                            $fieldentrytype=="office"||
+                            $fieldentrytype=="audio"||
+                            $fieldentrytype=="pdf") {
+                            $noupload="false";
+                            //proceed to carryout the upload and obtain
+                            // transaction id which would be used to set up the data entry
+                            // in the form 'media|id' where id is the media table value for
+                            // the entry.
+
+                        }
+                    }
+                    if($noupload=="true"){
+                        // echo $_POST["icontitle"]."- $fieldname <br>";
+                        if($fieldtype!=="textarea"){
+                            $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?str_replace('"', "&#34;",$_POST[''.$fieldname.'']):"NA";
+                        }else{
+                            $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?$_POST[''.$fieldname.'']:"NA";
+                        }
+                        
+                    }else{
+
+                    }
+                    $finaltally.=$finaltally==""?"$fieldvalue-:-$fieldname":$concat."$fieldvalue-:-$fieldname";
+                }
+
+            }
+        }else{
+            // meaning only one entry is present
+            $curdata=$fdata;
+            // echo str_replace("<", "&lt;", $curdata)." - curdata<br>";
+            $sortdata=strpos($curdata, "egroup|data");
+            if($sortdata!==false||$sortdata===true){
+                $fielddata=array();
+                $subgroup=explode("egroup|data-:-", $curdata);
+                
+                // break off the requirements portion of the map
+                $subgroup=explode("-:-",$subgroup[1]);
+                // store requirements data seperate
+                $reqdata=$subgroup[1];
+                echo str_replace("<", "&lt;", $reqdata)." - reqdata<br>";
+                // replace all squarebraces with (| or |)
+                // $subgroup[0]=str_replace("[", "(|", $subgroup[0]);
+                // echo $subgroup[0]."- 1<br>";
+
+                // $subgroup[0]=str_replace("]", "|)", $subgroup[0]);
+                // echo $subgroup[0]."- 2<br>";
+                
+                // get the contents in the current group
+                preg_match_all("~([^\[\]]{1,})~im", $subgroup[0], $subgroup);
+                $subgroup=$subgroup[0];
+                // echo str_replace("<", "&lt;", $subgroup[0])." - subgroup<br>";
+                // split the subgroup
+                $subgroup=explode(">|<", $subgroup[0]);
+                
+                // shift the sentinel counter content from the array
+                $sentinel=array_shift($subgroup);
+                $sentinel=str_replace("\\r\\n", "", $sentinel);
+                echo $sentinel." - sentinel <br>";
+                // $sentinel=str_replace("\\r\\n", "", $sentinel);
+                
+                // get the value for the current number of entries in the grouped data
+                $sentinel=$_POST[''.$sentinel.''];
+                if($sentinel>0){
+                    // split the content into a new array based on the -:- delimiter
+                    for($t=0;$t<count($subgroup);$t++){
+                        // get the name of the form element that carries groupdata 
+                        // content
+                        $splitcurgroup=explode("-|-", $subgroup[$t]);
+                        $fielddata[$t]['fieldname']=$splitcurgroup[0];
+                        $fieldname=$splitcurgroup[0];
+                        $fieldtype=$splitcurgroup[1];
+                        $sortfieldtype=strpos("|",$fieldtype);
+                        $fieldentrytype="";
+                        $fieldextension="";
+                        if($sortfieldtype!==false&&$sortfieldtype===true){
+                            $sftexplode=explode("|", $fieldtype);
+                            $fieldtype=$sftexplode[0];
+                            $fieldentrytype=$sftexplode[1];
+                            if(count($sftexplode)>2){
+                                $fieldextension=$sftexplode[2];
+                            }
+                        }
+                        $fielddata[$t]['fieldname']=$splitcurgroup[0];
+                        $fielddata[$t]['fieldtype']=$fieldtype;
+                        $fielddata[$t]['fieldentrytype']=$fieldentrytype;
+                        $fielddata[$t]['fieldextension']=$fieldextension;
+                    }
+                    // prep storage variables for batch sets of grouped form data
+                    $batcharr=array();
+                    $batchvalues="";
+                    // run through the value of the sentinel with a forloop
+                    for ($x=0; $x < $sentinel; $x++) { 
+                        // reset the curgroupdata string variable to nothing
+                        $curgroupdata="";
+                        # code...
+                        // add one to the increment variable to get the name appended numeric count
+                        // value of the relative form element name in the $_POST array
+                        $xt=$x+1;
+                        $batchvalues="";
+                        // create the batch storage string 
+                        // use a sentinel variable to perform basic data test for each entryset
+                        // ensuring at least one value is present
+                        $scud=0;
+                        $excludecurdata="";
+                        if(isset($_POST['group'.$curgroupcount.'_status'.$xt.''])&&$_POST['group'.$curgroupcount.'_status'.$xt.'']!==""){
+                            $excludecurdata="true";
+                            echo "<br>$excludecurdafta <br>".$_POST['group'.$curgroupcount.'_status'.$xt.'']."<br>";
+                        }
+                        for ($z=0; $z < count($fielddata); $z++) { 
+                            # code...
+                            // use the field name of the multiple content accompanied by
+                            // the corresponding xt - count value form above to get the current
+                            // multiple data content POSt element in the set
+                            $noupload="true";
+                            if($excludecurdata==""){
+                                if($fielddata[$z]['fieldentrytype']!==""){
+                                    if ($fielddata[$z]['fieldentrytype']=="image"||
+                                        $fielddata[$z]['fieldentrytype']=="video"||
+                                        $fielddata[$z]['fieldentrytype']=="office"||
+                                        $fielddata[$z]['fieldentrytype']=="audio"||
+                                        $fielddata[$z]['fieldentrytype']=="pdf") {
+                                        $noupload="false";
+                                        //proceed to carryout the upload and obtain
+                                        // transaction id which would be used to set up the data entry
+                                        // in the form 'media|id' where id is the media table value for
+                                        // the entry.
+
+                                    }
+                                }
+                                if($noupload=="true"){
+
+                                    if($fielddata[$z]['fieldtype']!=="textarea"){
+                                            $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?str_replace('"', "&#34;", mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])):"NA";
+                                        }else{
+                                            $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.'']):"NA";
+                                        }
+                                }else{
+
+                                }
+                                // increment the sentinel control variable to allow 
+                                // monitoring of batch entries with no values
+                                if($fielddata[$z]['fieldvalue']==""){
+                                    $scud++;
+                                }
+                                // concatenate the values obtained into a single variable for
+                                // array storage and later parsing
+                                if($batchvalues==""){
+                                    $batchvalues=$fielddata[$z]['fieldname']?$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                        
+                                }else{
+                                    $batchvalues.=$fielddata[$z]['fieldname']?">|<".$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                }
+                            }else{
+                                $scud=count($fielddata);
+                            }
+                        }
+                        // remove the entry if no single valid value was found
+                        if($scud==count($fielddata)){
+                            $batchvalues="";
+                            $scud=0;
+                        }
+                        // store the batch storage string in the batcharr variable array
+                        // this array is later used to compile all entries into one delimited string
+                        // echo $batchvalues." - batchvalues<br><br>";
+                        if($batchvalues!==""){
+                            $batcharr[]=$batchvalues;
+                        }
+                    }
+                    // segregate the multiple data content for the current group
+                    // with a |_| delimiter 
+                    for ($y=0; $y < count($batcharr) ; $y++) { 
+                        # code...
+                        if($curgroupdata==""){
+                            $curgroupdata=isset($batcharr[$y])?$batcharr[$y]:"";
+                        }else{
+                            $curgroupdata.=isset($batcharr[$y])?"|_|".$batcharr[$y]:"";
+                        }                       
+                    }
+                }
+                $finaltally.=$finaltally==""?"egroup|data-:-[$curgroupdata]":$concat."egroup|data-:-[$curgroupdata]";
+                // start sorting through the remaining content for the groupdata
+            } else {
+                // explode the current content and proceed to join their values to the 
+                // K:V string output
+                $subgroup=explode("-:-",$curdata);
+                // get rid of unnecessary spacing and newlines.
+                // they tend to mess the post array value up
+                $fieldname=$subgroup[0];
+                $fieldtype=$subgroup[1];
+                $sortfieldtype=strpos("|",$fieldtype);
+                $fieldentrytype="";
+                $fieldextension="";
+                if($sortfieldtype!==false&&$sortfieldtype===true){
+                    $sftexplode=explode("|", $fieldtype);
+                    $fieldtype=$sftexplode[0];
+                    $fieldentrytype=$sftexplode[1];
+                    if(count($sftexplode)>2){
+                        $fieldextension=$sftexplode[2];
+                    }
+                }
+                $noupload="true";
+                if($fieldentrytype!==""){
+                    if ($fieldentrytype=="image"||
+                        $fieldentrytype=="video"||
+                        $fieldentrytype=="office"||
+                        $fieldentrytype=="audio"||
+                        $fieldentrytype=="pdf") {
+                        $noupload="false";
+                        //proceed to carryout the upload and obtain
+                        // transaction id which would be used to set up the data entry
+                        // in the form 'media|id' where id is the media table value for
+                        // the entry.
+
+                    }
+                }
+                if($noupload=="true"){
+                    // ensure that text area fields are excluded from the 
+                    // str_replace function run
+                    if($fieldtype!=="textarea"){
+                        $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?str_replace('"', "&#34;",$_POST[''.$fieldname.'']):"NA";
+                    }else{
+                        $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?$_POST[''.$fieldname.'']:"NA";
+                    }
+                    
+                }else{
+
+                }
+                // echo $_POST["icontitle"]."- $fieldname <br>";
+                $finaltally.=$finaltally==""?"$fieldvalue-:-$fieldname":$concat."$fieldvalue-:-$fieldname";
+            }
+        }   
+        // $fd="testmultiplevaliddata";
+        // echo $_POST[''.$fd.'']."<br>";
+        echo str_replace("<", "&lt;",$finaltally)." - final tally<br>";
+        $extradata=$finaltally;
+
+        
+
+
+
+        <!-- admin dump -->
+        /*$today=date("Y-m-d")." 13:05:50";
+                        $entrydate="20, April 2014 11:34:58";
+                        echo strtotime($today);
+                        $entrydate=strtotime($entrydate);
+                        echo "$entrydate <- entrydate<br>";
+                        echo date("d m Y h:i:s A",strtotime("05 April 2014 22:34:58"));*/
+                        /*$enddate="11-05-2015";
+                        $today=date("d-m-Y");
+                        $tempArr=explode("-", "$enddate");
+                        $enddate2 = date("d-m-Y", mktime(0, 0, 0, $tempArr[1], $tempArr[0], $tempArr[2]));
+                        if(strtotime($today)<strtotime($enddate2))
+                           echo '1 is small='.strtotime($today).','.$today;
+                        else
+                           echo '2 is small='.strtotime($enddate2).','.$enddate2;*/
+                           /*$date1 = new DateTime("$today");
+                            $date2 = new DateTime("2010-07-09");
+
+                            $diff = $date2->diff($date1)->format("%a");
+                            */// echo $diff;
+                            // $clientip=get_client_ip();
+                            // echo $clientip;
+                         // produce the enddate and endtime in a slightly easier to read format
+                        // $datetime = DateTime::createFromFormat('Y-m-d', ''.$enddate.'');
+                        // $dayname=$datetime->format('D');
+                        // $monthname=$datetime->format('M');
+                        // echo $datetime->format('F');
+                        // convert end time to 12hr clock
+                        /*$datedata=explode("-",$entrydate);
+                        $datedata2=implode("", $datedata);
+                        $timedata=explode(":",$endtime);
+                          $periodtime="AM";
+                          $maintimeout=$timedata[0];
+                        if($timedata[0]>12){
+                          $periodtime="PM";
+                          $maintimeout=$timedata[0]-12;
+                        }
+                        $maintimeout=$maintimeout.":".$timedata[1].":".$timedata[2]." ".$periodtime;
+                        $maindayout=date('D, d F, Y', strtotime($entrydate));
+                        $maindateout=$maindayout.". ".$maintimeout;
+                        $endout=$maindayout;*/
+                        $n=-1;
+                        /*$markupdata=array("id"=>$n++,
+                                          "tag"=>"div",
+                                          "attr"=>array(
+                                                        "parid"=>"$n",
+                                                        ""=>
+                                                        );
+
+                                        );*/
+                        $numrows=2;
+                        // $contentname="Videos";
+                        // $contentname2=substr($contentname, 0,strlen($contentname)-1);
+                        // echo $contentname2;
+                        // $outfa=pullFontAwesomeClasses();
+                        /*if($outfa['numrows']>0){
+
+                            for ($x = 0;$x < $outfa['numrows'];$x++) 
+                            { 
+                                // $outfa[$x][$z] = $matchall[$z][$x];
+                                echo  $outfa['famatches'][$x]."<br><br>";
+                            } 
+                        }*/
+                        /*$trusubtypetwo="bla";
+                        $generalvarout='
+                            $showhidetitle="display:none;";
+                            $frameout="WHERE maintype=\'$trusubtypetwo\'";
+                            $formtypeout="submit";
+                        ';
+                        eval($generalvarout);
+                        echo $frameout;*/
+                        // $dataout=getSingleHomeBanner(19,1,$numrows);
+                        // echo $dataout['adminoutputtwo'];
+                        /*$stringtwo='
+                            .fa-star-half:before {
+                              content: "\f089";
+                            }
+                            .fa-heart-o:before {
+                              content: "\f08a";
+                            }
+                            .fa-sign-out:before {
+                              content: "\f08b";
+                            }
+                            .fa-linkedin-square:before {
+                              content: "\f08c";
+                            }
+                            .fa-thumb-tack:before {
+                              content: "\f08d";
+                            }
+                            .fa-external-link:before {
+                              content: "\f08e";
+                            }
+                        ';
+                        $rt=array();
+                        preg_match_all('~(fa(?:-[a-z]{1,})+)~im', $stringtwo, $matchall);
+                        for ($z = 0;$z < count($matchall);$z++) 
+                        { 
+                            for ($x = 0;$x < count($matchall[$z]);$x++) 
+                            { 
+                                in_array($matchall[$z][$x], $rt)?$endor="":$rt[]=$matchall[$z][$x];
+                                // echo  $rt[$x]."<br><br>";
+                            } 
+                        }*/
+                        // $unique = array_keys(array_flip($rt));
+                        // var_dump($unique);
+                        // $rt=array_flip($rt);
+                        /*for ($z = 0;$z < count($rt);$z++) 
+                        { 
+                            for ($x = 0;$x < count($rt[$z]);$x++) 
+                            { 
+                                // $rt[$x][$z] = $matchall[$z][$x];
+                                echo  $rt[$z][$x]."<br><br>";
+                            } 
+                        }*/
+                        /*if(count($rt)>0){
+                            for ($i=0; $i < count($rt) ; $i++) { 
+                                # code...
+                                if (isset($rt[$i])) {
+                                    # code...
+                                    // echo $rt[$i]."<br><br>";
+                                }
+                            }
+                            
+                        }else{
+                            echo "Nothing<br>";
+                        }*/
+                        $parsehighlight=array();
+                        $parsehighlight['span-red']['class']="color-red";
+                        $parsehighlight['span-red']['tag']="span";
+                        $parsehighlight['span-red']['attr']['name']="name";
+                        $parsehighlight['span-orange']['class']="color-orange";
+                        $parsehighlight['span-orange']['tag']="span";
+                        $parsehighlight['span-yellow']['class']="color-yellow";
+                        $parsehighlight['span-yellow']['tag']="span";
+                        $parsehighlight['span-green']['class']="color-green";
+                        $parsehighlight['span-green']['tag']="span";
+                        $parsehighlight['span-blue']['class']="color-blue";
+                        $parsehighlight['span-blue']['tag']="span";
+                        $parsehighlight['span-indigo']['class']="color-indigo";
+                        $parsehighlight['span-indigo']['tag']="span";
+                        $parsehighlight['span-violet']['class']="color-violet";
+                        $parsehighlight['span-violet']['tag']="span";
+                        $keydata=array_keys($parsehighlight);
+                        $strdata='some day at a point over the rainbow, i saw you stare at me at this moment i was 
+                        such as "What is really happening in [|span-green|]Nigeria[|/span-green|], will we keep watching her become a failed state?"
+                        [|span|] some data here[|/span|] goet and in between others[|spanthree|] some data here[|/spanthree|]
+                        [|span-yellow|]lets go there yella[|/span-yellow|] and in between [|span-green|]lets go there greena[|/span-green|]
+                        [|span-green|] lets [|_span-yellow|]go there[|/_span-yellow|][|/span-green|]
+                        [|span-red data-attr-two="yellows-two" data="" data-attr="yellows"  |]lets go there[|/span-red|]
+                        [|span-indigo data-blink="yellows"|]lets go there[|/span-indigo|] 
+                        [|span-blue|] lets go there[|/span-blue|] 
+                        [|span-red-blue-green|]step on you to sip on fire[|/span-red-blue-green|]
+                        We are all asking [|span-green|]Questions[|/span-green|] about our dear [|span-green|] Country[|/span-green|] such as "What is really happening in [|span-green|]Nigeria[|/span-green|], will we keep watching her become a failed state?"
+                        ';
+                        $strdatatwo='We are all asking [|span-green|]Questions[|/span-green|] about our dear [|span-green|] Country[|/span-green|] such as "What is really happening in [|span-green|]Nigeria[|/span-green|], will we keep watching her become a failed state?"';
+                        $attrdata='data-attr-two="yellows-two" data="" data-attr="yellows"';
+                        // echo "$strdata<br>";
+                        // "~(?i)((<($scode)|($scode\s*([a-z0-9][+\-\w])=([\"|'](.*)[\"|']]))>)(.*)(</$scode>))~"
+                        /*<$scode\s+(([a-z]{1,}-[a-z0-9][\w]+?)=\s\"([^\"]*)\")+?\s*? >(.*)?</$scode>*/
+                        // <span-red\s+(([a-z]{1,}(-[a-z0-9][\w])+?)=\s*?"([^"])"\s?)+?\s*? >(.*)?</span-red>
+                        // <$scode\s+(([a-z]{1,}|[a-z]{1,}-[a-z][\w]{1,})\s*=\"\")+\s*>?(.*)</$scode>
+                        // <$scode\s+((\S+)=([\"']?((?:.(?![\"']?\s+(?:\S+)=|[>\"']))+.)[\"']?))+?(.*)</$scode>
+                        // <$scode\s+((\S+)=([\"']?((?:.(?![\"']?\s+(?:\S+)=|[>\"']))+(.*)[\"']?))+?(.*)</$scode>
+                        // \[$shortcode(.*?)?\](?:(.+?)?\[\/$shortcode\])?
+                        // \[([^<>&/\[\]\x00-\x20=]++)
+                        // \[\|(span-[a-z]{1,}([-][\w]){1,})(.*)?\|](.*)\[\|/(span-[a-z][-\w]{1,})\|]
+                        // \[\|([a-z]{1,}(-[^|\]]){1,})?\s+(.*?)?\|\](?:(.+?)?\[\|/([a-z]{1,}(-[^|\]]){1,})?\|\])?
+                        // ((-[^\|\]]){1,})+)?
+                        // gets shortcode attributes in key value pairs
+                        // ([\w-]+)\s*=\s*"([^"]*)"(?:\s|$)|([\w-]+)\s*=\s*\'([^\']*)\'(?:\s|$)|([\w-]+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|(\S+)(?:\s|$)
+                        // current running regex
+                        // \[\|([a-z]{1,})\|\](.*)\[\|/([a-z]{1,})\|\]|\[\|([a-z]{1,}-[^\|\]\"\'=\s]{1,}+)(.*)\|\](.*)\[\|/([a-z]{1,}(?:-[^\|\]]{1,})+)\|\]
+                        // sorted for double quotes
+                        // ([\w-]+)\s*=\s*\"([^\"]*)\"(?:\s|$)|([\w-]+)\s*=\s*'([^']*)'(?:\s|$)|([\w-]+)\s*=\s*([^\s'\"]+)(?:\s|$)|\"([^\"]*)\"(?:\s|$)|(\S+)(?:\s|$)
+                        // $counter=0;
+                        // first half
+                        // \[\|([a-z]{1,})\|\](.*?)\[\|/([a-z]{1,})\|\]
+                        // Second Half
+                        // |\[\|([a-z]{1,}-[^\|\]\"\'=\s\[]{1,}+)(.*?)\|\](.*)\[\|/([a-z]{1,}(?:-[^\|\]]{1,})+)\|\]
+                        $outbuff="";
+                        $outattr="";
+                        /*$outbuff=preg_replace_callback(
+                                    "~\[\|([a-z]{1,})(.*?)?\|\](.*?)\[\|/([a-z]{1,})\|\]|\[\|([a-z]{1,}-[^\|\]\"\'=\s\[]{1,}+)(.*?)\|\](.*?)\[\|/([a-z]{1,}-[^\|\]\"\'=\s\[]{1,}+)\|\]~im",
+                                    function($matches) use($parsehighlight){
+                                        $sibmat=isset($matches[1])?$matches[1]:"";
+                                        $input=$matches;
+                                        $fullmatch="";
+                                        $frcode="";
+                                        $attrgroup="";
+                                        $content="";
+                                        $endcode="";
+                                        $output="";
+                                        $counter1=0;$counter2=0;
+                                        // $scode=$matches[1];
+                                        foreach ($matches as $key => $value) {
+                                            // echo "<br>$value : rCount1=$counter1<br>";
+                                            $counter1++;
+                                            # code...
+                                        }
+
+                                        // $output="<br>Nothing ".count($matches)."<br> count1: $counter1  count2: $counter2";
+                                        if (is_array($input)) {
+                                            $fullmatch=$input[0];
+                                            if(isset($input[5])&&$input[5]!==""){
+                                                $frcode=$input[5];
+                                                $attrgroup=$input[6];
+                                                $content=$input[7];
+                                                $endcode=$input[8];
+                                            }else{
+                                                $frcode=$input[1];
+                                                $attrgroup=$input[2];
+                                                $content=$input[3];
+                                                $endcode=$input[4];
+                                            }
+
+                                            if($frcode==$endcode&&$frcode!==""&&isset($parsehighlight[$frcode])){
+                                                $scodedata=$parsehighlight[$frcode];                    
+                                                $output='<span class="'.$scodedata['class'].'">'.$content.'</span>';
+                                                // $input = '<div style="margin-left: 10px">'.$input[1].'</div>';
+                                                
+                                            }
+                                        }
+                                        // $scodedata=$parsehighlight[$scode];                  
+                                        // $cmarkout='<span class="'.$scodedata['class'].'">'.$matches[1].'</span>';
+                                        // echo "<br>$output<br>";
+                                        return $output;
+                                    },$strdata);*/
+                        // echo "<br>Out buff<br>$outbuff";
+                        // preg_match_all('~([\w-]+)\s*=\s*"([^"]*)"(?:\s|$)|([\w-]+)\s*=\s*\'([^\']*)\'(?:\s|$)|([\w-]+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|(\S+)(?:\s|$)~i', $attrdata, $outattr);
+                        // var_dump($outattr);
+                        // echo $strdata;
+                        // this text was used in 2002
+                        // we want to get this up to date for 2003
+                        $text = "April fools day is 04/01/2002\n<br>";
+                        $text.= "Last christmas was 12/24/2001\n<br>";
+
+                        // the callback function
+                        function next_year($matches)
+                        {
+                          // as usual: $matches[0] is the complete match
+                          // $matches[1] the match for the first subpattern
+                          // enclosed in '(...)' and so on
+                          return $matches[1].($matches[2]+1);
+                        }
+                        /*echo preg_replace_callback(
+                                    "|(\d{2}/\d{2}/)(\d{4})|",
+                                    "next_year",
+                                    $text);*/
+                        /*echo preg_replace_callback(
+                                    "|/\d{4}|",
+                                    function($matches){
+                                        echo $matches[0]."<br>";
+                                        $reald=explode("/", $matches[0]);
+                                        $n=$reald[1]+1;
+                                        $n="/$n";
+                                        echo $n."<br>";
+                                        return $n;
+                                    },
+                                    $text);*/
+                        $input = "plain [indent] deep [indent] deeper [/indent] deep [/indent] plain";
+                        // echo "$input<br>";
+                        function parseTagsRecursive($input)
+                        {
+                            global $parsehighlight;
+                            // gets the code type, attribute group if available, and content;
+                            $regex = "~\[\|([a-z]{1,})\|\](^([\|/([a-z]{1,})\|\]).*?)\[\|/([a-z]{1,})\|\]|\[\|([a-z]{1,}-[^\|\]\"\'=\s]{1,}+)(.*)\|\](.*)\[\|/([a-z]{1,}(?:-[^\|\]]{1,})+)\|\]~i";
+                            $fullmatch="";
+                            $frcode="";
+                            $attrgroup="";
+                            $content="";
+                            $endcode="";
+                            if (is_array($input)) {
+                                if(count($input)==5){
+                                    $fullmatch=$input[0];
+                                    $frcode=$input[1];
+                                    $attrgroup=$input[2];
+                                    $content=$input[3];
+                                    $endcode=$input[4];
+                                }
+                                if(count($input)==3){
+                                    $fullmatch=$input[0];
+                                    $frcode=$input[1];
+                                    $content=$input[2];
+                                    $endcode=$input[3];
+                                }
+
+                                if($frcode==$endcode&&$frcode!==""){
+
+                                    $scodedata=$parsehighlight[$frcode];                    
+                                    $input='<span class="'.$scodedata['class'].'">'.$content.'</span>';
+                                    // $input = '<div style="margin-left: 10px">'.$input[1].'</div>';
+                                    
+                                }
+                            }
+
+                            return preg_replace_callback($regex, 'parseTagsRecursive', $input);
+                        }
+                        // $storematches;
+                        $storedata="[
+                                        testmultiplevaliddata>|< 
+                                        linktitlea-|-input>|<
+                                        linktitleb-|-input>|< 
+                                        linktitlec-|-select
+                                    ]
+                                  ";
+                                  $teststr="saame here";
+                                  $placebo=explode(">|<", $teststr);
+                                  // echo count($placebo);
+                        // $matchtest=preg_match("~\[(.*)\]+~im", $storedata);
+                        // echo $storedata." defore<br>";
+                        // $storedata=preg_replace("~\s\s+~im", " ", $storedata);
+                        // echo $storedata."<br><br>";
+                        // preg_match("~([^\[\]]{1,})~im", $storedata, $storematches);
+                        // echo $storematches[0]." <br>";
+                        /*for ($z = 0;$z < count($storematches);$z++) 
+                        { 
+                            // echo $storematches[$z]." <br>";
+
+                            for ($x = 0; $x < count($storematches[$z]); $x++) 
+                            { 
+                                if(isset($storematches[$z][$x])&&$storematches[$z][$x]!==""){
+                                    echo $storematches[$z][$x]." the subgroup<br>";
+                                }
+                            }
+                        }*/
+                        // $output = parseTagsRecursive($strdata);
+
+                        // echo $output."<br>";
+        $trip='
+                            contenttitle-:-input&lt;|&gt;\\r\\n                     coverimage-:-input|image&lt;|&gt;\\r\\n                     doarticlefiles-:-select&lt;|&gt;\\r\\n                      worddoc-:-input|office|docx-:-[group-|-\\r\\n                                                       doarticlefiles-|-select-|-*any*-|-\\r\\n                                                        pdfdoc-|-input-|-*null*&gt;|&lt;]&lt;|&gt;\\r\\n                        pdfdoc-:-input|pdf-:-[group-|-\\r\\n                                                doarticlefiles-|-select-|-*any*-|-\\r\\n                                                worddoc-|-input-|-*null*]&lt;|&gt;\\r\\n                        contentpost-:-textarea&lt;|&gt;\\r\\n                       dogallery-:-select&lt;|&gt;\\r\\n                       egroup|data-:-[galleryslidescount&gt;|&lt;\\r\\n                                        galimage-|-input|image&gt;|&lt;\\r\\n                                       caption-|-input&gt;|&lt;\\r\\n                                      details-|-textarea\\r\\n                                        ]-:-groupfall[1-2,2-1,1-3,2-3]-:-[single-|-dogallery-|-select-|-*any*-|-galimage]\\r\\n                      - extraformdata
+                        ';
+                        $tripout=preg_replace("/(\n\r)|(\r\n)|(\\\\r\\\\n)/","",$trip); 
+                        // echo $tripout;
+                        $fieldtype="input|image";
+                        $sortfieldtype=strpos($fieldtype,"|");
+                        var_dump($sortfieldtype);
+                        // echo $sortfieldtype."field type sort";
+                        if($sortfieldtype!==false||$sortfieldtype===true){
+                            // echo "ran here";
+                        }
+
+
+<!-- parseEFormData -->
+/*else{
+                // meaning only one entry is present
+                $curdata=$fdata;
+                // echo str_replace("<", "&lt;", $curdata)." - curdata<br>";
+                $sortdata=strpos($curdata, "egroup|data");
+                if($sortdata!==false||$sortdata===true){
+                    $fielddata=array();
+                    $subgroup=explode("egroup|data-:-", $curdata);
+                    
+                    // break off the requirements portion of the map
+                    $subgroup=explode("-:-",$subgroup[1]);
+                    // store requirements data seperate
+                    $reqdata=$subgroup[1];
+                    echo str_replace("<", "&lt;", $reqdata)." - reqdata<br>";
+                    // replace all squarebraces with (| or |)
+                    // $subgroup[0]=str_replace("[", "(|", $subgroup[0]);
+                    // echo $subgroup[0]."- 1<br>";
+
+                    // $subgroup[0]=str_replace("]", "|)", $subgroup[0]);
+                    // echo $subgroup[0]."- 2<br>";
+                    
+                    // get the contents in the current group
+                    preg_match_all("~([^\[\]]{1,})~im", $subgroup[0], $subgroup);
+                    $subgroup=$subgroup[0];
+                    // echo str_replace("<", "&lt;", $subgroup[0])." - subgroup<br>";
+                    // split the subgroup
+                    $subgroup=explode(">|<", $subgroup[0]);
+                    
+                    // shift the sentinel counter content from the array
+                    $sentinel=array_shift($subgroup);
+                    $sentinel=str_replace("\\r\\n", "", $sentinel);
+                    echo $sentinel." - sentinel <br>";
+                    // $sentinel=str_replace("\\r\\n", "", $sentinel);
+                    
+                    // get the value for the current number of entries in the grouped data
+                    $sentinel=$_POST[''.$sentinel.''];
+                    if($sentinel>0){
+                        // split the content into a new array based on the -:- delimiter
+                        for($t=0;$t<count($subgroup);$t++){
+                            // get the name of the form element that carries groupdata 
+                            // content
+                            $splitcurgroup=explode("-|-", $subgroup[$t]);
+                            $fielddata[$t]['fieldname']=$splitcurgroup[0];
+                            $fieldname=$splitcurgroup[0];
+                            $fieldtype=$splitcurgroup[1];
+                            $sortfieldtype=strpos("|",$fieldtype);
+                            $fieldentrytype="";
+                            $fieldextension="";
+                            if($sortfieldtype!==false&&$sortfieldtype===true){
+                                $sftexplode=explode("|", $fieldtype);
+                                $fieldtype=$sftexplode[0];
+                                $fieldentrytype=$sftexplode[1];
+                                if(count($sftexplode)>2){
+                                    $fieldextension=$sftexplode[2];
+                                }
+                            }
+                            $fielddata[$t]['fieldname']=$splitcurgroup[0];
+                            $fielddata[$t]['fieldtype']=$fieldtype;
+                            $fielddata[$t]['fieldentrytype']=$fieldentrytype;
+                            $fielddata[$t]['fieldextension']=$fieldextension;
+                        }
+                        // prep storage variables for batch sets of grouped form data
+                        $batcharr=array();
+                        $batchvalues="";
+                        // run through the value of the sentinel with a forloop
+                        for ($x=0; $x < $sentinel; $x++) { 
+                            // reset the curgroupdata string variable to nothing
+                            $curgroupdata="";
+                            # code...
+                            // add one to the increment variable to get the name appended numeric count
+                            // value of the relative form element name in the $_POST array
+                            $xt=$x+1;
+                            $batchvalues="";
+                            // create the batch storage string 
+                            // use a sentinel variable to perform basic data test for each entryset
+                            // ensuring at least one value is present
+                            $scud=0;
+                            $excludecurdata="";
+                            if(isset($_POST['group'.$curgroupcount.'_status'.$xt.''])&&$_POST['group'.$curgroupcount.'_status'.$xt.'']!==""){
+                                $excludecurdata="true";
+                                echo "<br>$excludecurdafta <br>".$_POST['group'.$curgroupcount.'_status'.$xt.'']."<br>";
+                            }
+                            for ($z=0; $z < count($fielddata); $z++) { 
+                                # code...
+                                // use the field name of the multiple content accompanied by
+                                // the corresponding xt - count value form above to get the current
+                                // multiple data content POSt element in the set
+                                $noupload="true";
+                                if($excludecurdata==""){
+                                    if($fielddata[$z]['fieldentrytype']!==""){
+                                        if ($fielddata[$z]['fieldentrytype']=="image"||
+                                            $fielddata[$z]['fieldentrytype']=="video"||
+                                            $fielddata[$z]['fieldentrytype']=="office"||
+                                            $fielddata[$z]['fieldentrytype']=="audio"||
+                                            $fielddata[$z]['fieldentrytype']=="pdf") {
+                                            $noupload="false";
+                                            //proceed to carryout the upload and obtain
+                                            // transaction id which would be used to set up the data entry
+                                            // in the form 'media|id' where id is the media table value for
+                                            // the entry.
+
+                                        }
+                                    }
+                                    if($noupload=="true"){
+
+                                        if($fielddata[$z]['fieldtype']!=="textarea"){
+                                                $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?str_replace('"', "&#34;", mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])):"NA";
+                                            }else{
+                                                $fielddata[$z]['fieldvalue']=isset($_POST[''.$fielddata[$z]['fieldname'].''.$xt.''])?mysql_real_escape_string($_POST[''.$fielddata[$z]['fieldname'].''.$xt.'']):"NA";
+                                            }
+                                    }else{
+
+                                    }
+                                    // increment the sentinel control variable to allow 
+                                    // monitoring of batch entries with no values
+                                    if($fielddata[$z]['fieldvalue']==""){
+                                        $scud++;
+                                    }
+                                    // concatenate the values obtained into a single variable for
+                                    // array storage and later parsing
+                                    if($batchvalues==""){
+                                        $batchvalues=$fielddata[$z]['fieldname']?$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                            
+                                    }else{
+                                        $batchvalues.=$fielddata[$z]['fieldname']?">|<".$fielddata[$z]['fieldvalue']."-|-".$fielddata[$z]['fieldname']:"";
+                                    }
+                                }else{
+                                    $scud=count($fielddata);
+                                }
+                            }
+                            // remove the entry if no single valid value was found
+                            if($scud==count($fielddata)){
+                                $batchvalues="";
+                                $scud=0;
+                            }
+                            // store the batch storage string in the batcharr variable array
+                            // this array is later used to compile all entries into one delimited string
+                            // echo $batchvalues." - batchvalues<br><br>";
+                            if($batchvalues!==""){
+                                $batcharr[]=$batchvalues;
+                            }
+                        }
+                        // segregate the multiple data content for the current group
+                        // with a |_| delimiter 
+                        for ($y=0; $y < count($batcharr) ; $y++) { 
+                            # code...
+                            if($curgroupdata==""){
+                                $curgroupdata=isset($batcharr[$y])?$batcharr[$y]:"";
+                            }else{
+                                $curgroupdata.=isset($batcharr[$y])?"|_|".$batcharr[$y]:"";
+                            }                       
+                        }
+                    }
+                    $finaltally.=$finaltally==""?"egroup|data-:-[$curgroupdata]":$concat."egroup|data-:-[$curgroupdata]";
+                    // start sorting through the remaining content for the groupdata
+                } else {
+                    // explode the current content and proceed to join their values to the 
+                    // K:V string output
+                    $subgroup=explode("-:-",$curdata);
+                    // get rid of unnecessary spacing and newlines.
+                    // they tend to mess the post array value up
+                    $fieldname=$subgroup[0];
+                    $fieldtype=$subgroup[1];
+                    $sortfieldtype=strpos("|",$fieldtype);
+                    $fieldentrytype="";
+                    $fieldextension="";
+                    if($sortfieldtype!==false&&$sortfieldtype===true){
+                        $sftexplode=explode("|", $fieldtype);
+                        $fieldtype=$sftexplode[0];
+                        $fieldentrytype=$sftexplode[1];
+                        if(count($sftexplode)>2){
+                            $fieldextension=$sftexplode[2];
+                        }
+                    }
+                    $noupload="true";
+                    if($fieldentrytype!==""){
+                        if ($fieldentrytype=="image"||
+                            $fieldentrytype=="video"||
+                            $fieldentrytype=="office"||
+                            $fieldentrytype=="audio"||
+                            $fieldentrytype=="pdf") {
+                            $noupload="false";
+                            //proceed to carryout the upload and obtain
+                            // transaction id which would be used to set up the data entry
+                            // in the form 'media|id' where id is the media table value for
+                            // the entry.
+
+                        }
+                    }
+                    if($noupload=="true"){
+                        // ensure that text area fields are excluded from the 
+                        // str_replace function run
+                        if($fieldtype!=="textarea"){
+                            $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?str_replace('"', "&#34;",$_POST[''.$fieldname.'']):"NA";
+                        }else{
+                            $fieldvalue=isset($_POST[''.$fieldname.''])&&$_POST[''.$fieldname.'']!==""?$_POST[''.$fieldname.'']:"NA";
+                        }
+                        
+                    }else{
+
+                    }
+                    // echo $_POST["icontitle"]."- $fieldname <br>";
+                    $finaltally.=$finaltally==""?"$fieldvalue-:-$fieldname":$concat."$fieldvalue-:-$fieldname";
+                }
+            }*/ 
+
+
+
+<h3>Maximum of 10 images at a time</h3>
+                    <div class="col-md-3 multi_content_hold" data-type="triggerprogenitor" data-cid="1" data-name="galleryslides">
+                        <h4 class="multi_content_countlabels">Gallery (Entry 1)</h4>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Image</label>
+                                <div class="input-group">
+                                  <div class="input-group-addon">
+                                    <i class="fa fa-file-text"></i>
+                                  </div>
+                                  <input type="file" class="form-control" name="galimage1" Placeholder="Choose file"/>
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Caption</label>
+                                <div class="input-group">
+                                  <div class="input-group-addon">
+                                    <i class="fa fa-file-text"></i>
+                                  </div>
+                                  <input type="text" class="form-control" name="caption1" Placeholder="Choose file"/>
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>Details</label>
+                                <div class="input-group">
+                                  <div class="input-group-addon">
+                                    <i class="fa fa-file-text"></i>
+                                  </div>
+                                  <textarea class="form-control" rows="3" name="details1" Placeholder="Give details if any"/></textarea>
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                        </div>
+                    </div>
+                    <div name="galleryslidesentrypoint" data-marker="true"></div>
+                    <input name="galleryslidescount" type="hidden" value="1" data-counter="true"/>
+                    <input name="galleryslidesdatamap" type="hidden" data-map="true" value="galimage-:-input<|>
+                    caption-:-input<|>
+                    details-:-textarea"/>
+                    <a href="##" 
+                       class="generic_addcontent_trigger"
+                       data-type="triggerformadd" 
+                       data-name="galleryslidescount_addlink"
+                       data-i-type=""
+                       data-limit="10"> 
+                        <i class="fa fa-plus"></i>Add More?
+                    </a>
+
+
+
+
+    /*
+                if (isset($_FILES['videomp4']['tmp_name'])&&$_FILES['videomp4']['tmp_name']!=="") {
+                    # code...
+                    $localvideomp4id=$_POST['videomp4id'];
+                    $outsaudio=simpleUpload('videomp4','../files/videos/');
+                    $audiofilepath=$outsaudio['filelocation'];
+                    $len=strlen($audiofilepath);
+                    $audiofilepath=substr($audiofilepath, 1,$len);
+                    $audiofilesize=$outsaudio['filesize'];
+                    if($localvideomp4id>0){
+                        $orderfield[]="ownerid";
+                        $orderfield[]="ownertype";
+                        $orderfield[]="maintype";
+                        $orderfield[]="mediatype";
+                        $ordervalues[]=$entryid;
+                        $ordervalues[]="sermon";
+                        $ordervalues[]="sermonvideo";
+                        $ordervalues[]="videomp4";
+                        genericSingleUpdate("media","location",$imagepath,$orderfield,$ordervalues);
+                        genericSingleUpdate("media","filesize",$filesize,$orderfield,$ordervalues);
+                    }else{
+                        $mediaquery2="INSERT INTO media(ownerid,ownertype,maintype,mediatype,location,filesize)VALUES('$entryid','sermon','sermonvideo','videomp4','$audiofilepath','$audiofilesize')";
+                        $mediarun2=mysql_query($mediaquery2)or die(mysql_error());          
+                    }
+                }
+            */
+
+
+
+
+            <div class="blog-box">
+                                                    <div class="frame">
+                                                        <a href="##">
+                                                            <img src="<?php echo $host_addr;?>images/fvtimages/fvtpostdefault.jpg" alt="img">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <!-- <div class="round">
+                                                            <a href="#">
+                                                                <img src="<?php echo $host_addr;?>images/fvtimages/" alt="img">
+                                                            </a>
+                                                        </div> -->
+                                                        <h2>Lorem ipsum dolor sit amet</h2>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <a href="#" class="mnt">
+                                                                <i class="fa fa-clock-o"></i>
+                                                                February 24, 2016
+                                                            </a>
+                                                        </strong>
+                                                        <p>Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metusm et fermentum.Aenean lacinia bibendum nulla sed....</p>
+                                                        <div class="btn-row">
+                                                            <a href="#" class="pic">
+                                                                <i class="fa fa-file-text-o"></i>
+                                                            </a>
+                                                            <a href="#" class="date">
+                                                                Feb <br>24
+                                                            </a>
+                                                            <a href="#" class="btn-readmore">
+                                                                <i class="fa fa-arrow-circle-right"></i>
+                                                                Read more
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="blog-box gallery-content">
+                                                    <div class="frame frame-gallery">
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" data-title="<h4 class='galimgdetailshigh'>Sentient</h4>: a dip in the blue seeing its depth">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner3.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner3.jpg" data-title="<h4 class='galimgdetailshigh'>Salient</h4>:  too bright to touch baring down on others">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner3.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" data-title="<h4 class='galimgdetailshigh'>Salient</h4>:  too bright to touch baring down on others">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" data-title="<h4 class='galimgdetailshigh'>Serendipity</h4>: warpath mind, bring the pain">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner1.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner1.jpg" data-title="<h4 class='galimgdetailshigh'>Salient</h4>:  too bright to touch baring down on others">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner1.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner4.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner4.jpg" data-title="<h4 class='galimgdetailshigh'>Salient</h4>:  too bright to touch baring down on others">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner4.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-3 gallery-img">
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" class="slide-thumb-holder" data-lightbox="testgallerymain" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" data-title="<h4 class='galimgdetailshigh'>Serendipity</h4>: warpath mind, bring the pain">
+                                                                <img src="images/fvtimages/backgrounds/topbanners/fvttopbanner2.jpg" alt="img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h2>Lorem ipsum dolor sit amet</h2>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <a href="#" class="mnt">
+                                                                February 24, 2016
+                                                                <i class="fa fa-clock-o"></i>
+                                                            </a>
+                                                        </strong>
+                                                        <p>Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metusm et fermentum.Aenean lacinia bibendum nulla sed....</p>
+                                                        <div class="btn-row">
+                                                            <a href="#" class="pic">
+                                                                <i class="fa fa-photo"></i>
+                                                            </a>
+                                                            <a href="#" class="date">
+                                                                Feb <br>24
+                                                            </a>
+                                                            <a href="images/fvtimages/backgrounds/topbanners/fvttopbanner1.jpg" data-src="images/fvtimages/backgrounds/topbanners/fvttopbanner1.jpg" data-lightbox="testgallerymain" data-title="<h4 class='galimgdetailshigh'>Topsy turvy</h4>: stop the whining and dont" class="btn-readmore">
+                                                                <i class="fa fa-arrow-circle-right"></i>
+                                                                View Images
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="blog-box">
+                                                    <div class="frame">
+                                                        <a href="##">
+                                                            <img src="<?php echo $host_addr;?>images/fvtimages/fvtpostdefault.jpg" alt="img">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <!-- <div class="round">
+                                                            <a href="#">
+                                                                <img src="<?php echo $host_addr;?>images/fvtimages/" alt="img">
+                                                            </a>
+                                                        </div> -->
+                                                        <h2>Lorem ipsum dolor sit amet</h2>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <a href="#" class="mnt">
+                                                                <i class="fa fa-clock-o"></i>
+                                                                February 24, 2016
+                                                            </a>
+                                                        </strong>
+                                                        <div class="btn-row">
+                                                            <a href="##" class="pic">
+                                                                <i class="fa fa-download"></i>
+                                                            </a>
+                                                            <a href="#" class="date">
+                                                                Feb <br>24
+                                                            </a>
+                                                            <a href="##" class="btn-readmore" data-download="true">
+                                                                <i class="fa fa-arrow-circle-right"></i>
+                                                                Download
+                                                            </a>
+                                                            <div class="attachment-section" data-name="resourcedownload">
+                                                                <a href="##"  class="color-blue" data-src="../files/doc.docx" data-params="downloadtype=resource" data-name="file-download">
+                                                                    <i class="fa fa-file-word-o"></i>
+                                                                </a>
+                                                                <a href="##" class="color-red" data-name="file-download" data-src="../files/pdf.pdf" data-params="downloadtype=resource">
+                                                                    <i class="fa fa-file-pdf-o"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+<div class="blog-box video">
+                                                    <div class="frame">
+                                                        <video class="frame-video" preload="false" controls poster="<?php echo $host_addr;?>images/fvtimages/fvtvideodefaultposter.jpg">
+                                                            <source src="files/videos/Guavatut4.webm" type="video/webm"/>
+                                                        </video>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h2>Lorem ipsum dolor sit amet</h2>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <a href="#" class="mnt">
+                                                                <i class="fa fa-clock-o"></i>
+                                                                February 24, 2016
+                                                            </a>
+                                                        </strong>
+                                                    </div>
+                                                </div>
+<div class="blog-box case_Study">
+                                                    <div class="frame casestudy_frame">
+                                                        <a href="##">
+                                                            <img src="<?php echo $host_addr;?>images/fvtimages/fvtpostdefault.jpg" alt="img">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box casestudy_text-box">
+                                                        <!-- <div class="round">
+                                                            <a href="#">
+                                                                <img src="<?php echo $host_addr;?>images/fvtimages/" alt="img">
+                                                            </a>
+                                                        </div> -->
+                                                        <h2>Lorem ipsum dolor sit amet</h2>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <a href="#" class="mnt">
+                                                                <i class="fa fa-clock-o"></i>
+                                                                February 24, 2016
+                                                            </a>
+                                                        </strong>
+                                                        <div class="btn-row">
+                                                            <a href="##" class="pic">
+                                                                <i class="fa fa-download"></i>
+                                                            </a>
+                                                            <a href="#" class="date">
+                                                                Feb <br>24
+                                                            </a>
+                                                            <a href="##" class="btn-readmore" data-download="true">
+                                                                <i class="fa fa-arrow-circle-right"></i>
+                                                                Download
+                                                            </a>
+                                                            <div class="attachment-section" data-name="resourcedownload">
+                                                                <a href="##"  class="color-blue" data-src="../files/doc.docx" data-params="downloadtype=resource" data-name="file-download">
+                                                                    <i class="fa fa-file-word-o"></i>
+                                                                </a>
+                                                                <a href="##" class="color-red" data-name="file-download" data-src="../files/pdf.pdf" data-params="downloadtype=resource">
+                                                                    <i class="fa fa-file-pdf-o"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+<div class="blog-box">
+                                                    <div class="text-box seminarbox">
+                                                        
+                                                        <h2 class="sector_heading_main">Lorem ipsum dolor sit amet</h2>
+                                                        <div class="seminardata">
+                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                                                            <h3 class="sector_heading">Participating speakers(15)</h3>
+                                                            
+                                                            <div class=" col-sm-6 speaker_minidata_hold">
+                                                                <div class="col-md-2 speaker_photo_point">
+                                                                    <img class="speaker_photo" src="./images/default.gif"/>
+                                                                </div>
+                                                                <div class="col-md-10">
+                                                                    <h4>Alan Williams</h4>
+                                                                    <h4>Director of Service Brand Global</h4>
+                                                                    <div class="web_social">
+                                                                        <p><b>Website:</b> <a href="http://twitter.com" target="_blank">The persons website</a></p>
+                                                                        <p><b>LinkedIn:</b> <a href="http://linkedin.com" target="_blank">LinkedIn Profile</a></p>
+                                                                    </div> 
+                                                                    <a href="##" data-name="speakerbio" class="speakerbio">View Bio</a>
+                                                                </div>
+                                                                <div class="speaker_bio hidden">
+                                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <strong>
+                                                            <!-- <a href="#">by FVT</a> -->
+                                                            <!-- <a href="#" class="mnt">
+                                                                <i class="fa fa-clock-o"></i>
+                                                                February 24, 2016
+                                                            </a> -->
+                                                        </strong>
+                                                        <div class="btn-row">
+                                                            <a href="##" class="pic">
+                                                                <i class="fa fa-file-text"></i>
+                                                            </a>
+                                                            <a href="#" class="date">
+                                                                Feb <br>24
+                                                            </a>
+                                                            <a href="##" class="btn-readmore" data-download="true">
+                                                                <i class="fa fa-arrow-circle-right"></i>
+                                                                Learn More
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+<div class="comment-box">
+                                    <div class="comment-row-2">
+                                        <strong class="comment">2 comments</strong>
+                                        <a href="blog-detail.html#" class="add-comment">Add a comment</a>
+                                            </div>
+                                <div class="comments">
+                                            <ul>
+                                                <li>
+                                                <div class="text-outer-1">
+                                                            <div class="text">
+                                                                <div class="comment-frame">
+                                                                    <img src="images/empty-img.gif" alt="img">
+                                                                </div>
+                                                                <p>Suspendisse ultricies, dolor nec ornare vestibulum, lectus odio bibendum mi, sed luctus ante lorem porttitor velit. Aenean hendrerit turpis lectus, vitae pulvinar elit dapibus at. Ut ac eleifend sem. Aliquam ut dui lectus. Duis eu egestas diam, at faucibus diam. Nulla placerat lorem nec massa molestie, vitae </p>
+                                                            </div>
+                                                            <strong class="title">
+                                                                Written by <span class="red">Russel Croon,</span>
+                                                                <span class="small">November 6th, 2012 at 7:13 pm</span>
+                                                            </strong>
+                                                            <a href="blog-detail.html#" class="reply">reply</a>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="text-outer-1">
+                                                                    <div class="text">
+                                                                        <div class="comment-frame">
+                                                                            <img src="images/empty-img.gif" alt="img">
+                                                                        </div>
+                                                                        <p>Suspendisse ultricies, dolor nec ornare vestibulum, lectus odio bibendum mi, sed luctus ante lorem porttitor velit. Aenean hendrerit turpis lectus, vitae pulvinar elit dapibus at. Ut ac eleifend sem. Aliquam ut dui lectus. Duis eu egestas diam, at faucibus diam. Nulla placerat lorem nec massa molestie, vitae </p>
+                                                                    </div>
+                                                                    <strong class="title">
+                                                                        Written by <span class="red">Russel Croon,</span>
+                                                                        <span class="small">November 6th, 2012 at 7:13 pm</span>
+                                                                    </strong>
+                                                                    <a href="blog-detail.html#" class="reply">reply</a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <form action="form-3.htm" method="post" class="comment-form">
+                                                <div class="comment-row">
+                                                    <h4>Leave a Comment</h4>
+                                                    <strong class="marked">
+                                                        Required fields are marked <span class="red">*</span>
+                                                    </strong>
+                                                </div>
+                                                <input name="name" required pattern="[a-zA-Z ]+" type="text" class="no-margin" placeholder="Name*">
+                                                <input name="email" required pattern="^[a-zA-Z0-9-\_.]+@[a-zA-Z0-9-\_.]+\.[a-zA-Z0-9.]{2,5}$" type="text" placeholder="E-mail*">
+                                                <input name="website" required type="text" placeholder="Website*">
+                                                <textarea name="comment" required cols="10" rows="10" placeholder="Comments*"></textarea>
+                                                <button class="btn-submit2">Submit</button>
+                                            </form>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-4 col-sm-6 col-xs-12 event_default_container">
+                                    <div class="next-event">
+                                        <div class="frame event_<?php echo $i;?>">
+                                            <a href="#">
+                                                <img src="images/fvtimages/next-event-img.jpg" alt="img">
+                                            </a>
+                                            <div class="caption-2">
+                                                <strong class="title">online tree care workshops 2015</strong>
+                                            </div>
+                                            <div class="caption-3 event-start-date">
+                                                <strong class="title">Our Time Left:</strong>
+                                            </div>
+                                            <div class="caption">
+                                                <a href="##">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="time-box">
+                                            <div class="eventCountdown event_countdown_<?php echo $i;?>" data-datetime="2017-12-08 13:07:16" data-datetimestop="2017-12-08 17:30:16" data-id="<?php echo $i;?>"></div>
+                                            <a href="##" class="plus">
+                                                <i class="fa fa-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+<li>
+                                            <div class="top">
+                                                <div class="frame">
+                                                    <img src="images/fvtimages/next-event-img.jpg" alt="img">
+                                                </div>
+                                                <div class="text-box">
+                                                    <h2>An Evening With Paul Farmer</h2>
+                                                    <strong class="title">Liporttitor mauris sit amet orean dignis</strong>
+                                                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus dignisiim equie lipor titor alseuqm.</p>
+                                                    <a href="##">
+                                                        more<i class="fa fa-plus-circle"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="time-area">
+                                                    <strong class="time">9:00am to 11:00am</strong>
+                                                    <strong class="date">23 September, 2014</strong>
+                                                </div>
+                                                <div class="event-time-box">                                                    
+                                                    <div class="eventCountdown event_countdown_<?php echo $i;?>" data-datetime="2016-11-17 13:00:00" data-datetimestop="2017-12-16 17:30:16" data-id="<?php echo $i;?>">
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="event-time-box">
+                                                    <span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">444</span><span class="countdown-period">Day</span></span><span class="countdown-section"><span class="countdown-amount">23</span><span class="countdown-period">Hrs</span></span><span class="countdown-section"><span class="countdown-amount">16</span><span class="countdown-period">Mins</span></span><span class="countdown-section"><span class="countdown-amount">22</span><span class="countdown-period">Sec</span></span></span>
+                                                </div> -->
+                                                <a href="#" class="btn-register event-register">REGISTER</a>
+                                            </div>
+                                        </li>
+<ul class="gallery">
+                                        <li>
+                                            <div class="top full_display">
+                                                <div class="frame">
+                                                    <img src="images/fvtimages/next-event-img.jpg" alt="img">
+                                                </div>
+                                                <div class="text-box text-center">
+                                                    <h2>An Evening With Paul Farmer</h2>
+                                                </div>
+                                                <div class="text-area">
+                                                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus dignisiim equie lipor titor alseuqm.</p>
+                                                    <p>Pellentesque tristique a arcu sit amet asti facilisis. Sed molestie vulputate justo sed dictum. Duis volutpat lorem odio. Doneci tincidunt leo a dapibus varius velit neque blandit felis scelerisque aliquam.Pellentesque tristique a arcu sit amet asti facilisis. Sed molestie vulputate justo sed dictum. Duis volutpat lorem odio. Doneci tincidunt leo a dapibus varius velit neque blandit felis scelerisque aliquam.Pellentesque tristique a arcu sit amet asti facilisis.</p>
+                                                    <p>Sed molestie vulputate justo sed dictum. Duis volutpat lorem odio. Doneci tincidunt leo a dapibus varius velit neque blandit felis scelerisque aliquam.Pellentesque tristique a arcu sit amet asti facilisis. Sed molestie vulputate justo sed dictum. Duis volutpat lorem odio. Doneci tincidunt leo a dapibus varius velit neque blandit felis scelerisque aliquam.Pellentesque tristique a arcu sit amet asti facilisis. Sed molestie vulputate justo sed dictum. Duis volutpat lorem odio. Doneci tincidunt leo a dapibus varius velit neque blandit felis scelerisque aliquam.</p>
+                                                </div>
+                                            </div>
+                                            <div class="bottom full_display">
+                                                <div class="time-area">
+                                                    <strong class="time">9:00am to 11:00am</strong>
+                                                    <strong class="date">23 September, 2014</strong>
+                                                </div>
+                                                <div class="event-time-box">
+                                                    <div class="event_1">
+                                                        <div class="caption-3 event-start-date">
+                                                            <strong class="title">Time till Event Starts:</strong>
+                                                        </div>                                                  
+                                                    </div>
+                                                    <div class="eventCountdown event_countdown_1" data-datetime="2017-12-08 13:07:16" data-datetimestop="2017-12-08 17:30:16" data-id="1">
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="event-time-box">
+                                                    <span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">444</span><span class="countdown-period">Day</span></span><span class="countdown-section"><span class="countdown-amount">23</span><span class="countdown-period">Hrs</span></span><span class="countdown-section"><span class="countdown-amount">16</span><span class="countdown-period">Mins</span></span><span class="countdown-section"><span class="countdown-amount">22</span><span class="countdown-period">Sec</span></span></span>
+                                                </div> -->
+                                                <!-- <a href="#" class="btn-register event-register">REGISTER</a> -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="map-box">
+                                        <h2 class="heading">Event Venue</h2>
+                                        <div id="map_contact_3" class="map_canvas active"></div>
+                                        <div class="caption">
+                                            <h3 class="sub-heading">Location Address</h3>
+                                            <div class="addr-content">
+                                                plot 25, hakeem balogun close, idera, fiction avenue,
+                                                somewhere in lagos state
+                                            </div>
+                                            <!-- <a href="#" class="location">
+                                                <i class="fa fa-map-marker"></i>
+                                                Location Map
+                                            </a> -->
+                                        </div>
+                                    </div>
+
+<!-- isotop portfolio gallery content -->
+/*$dimdefault[]="3,5";
+$dimdefault[]="2,3";
+$dimdefault[]="1,2";
+$dimdefault[]="1,2";
+$dimdefault[]="2,3";
+$dimdefault[]="3,3";
+$dimdefault[]="1,2";
+$dimdefault[]="1,2";
+$dimdefault[]="1,2";
+$dimdefault[]="1,2";
+$dimdefault[]="1,2";
+$dimdefault[]="3,3";
+$dimdefault[]="2,3";
+$dimdefault[]="2,4";
+$dimdefault[]="3,4";*/
+
+
+<aside class="sidebar">
+                                    
+                                    <div class="sidebar-default bg-purple-gradient">
+                                        <div class="head">
+                                            <h3 class="color-white">Membership and Partnerships</h3>
+                                        </div>
+                                        <div class="sidebar-default-content">
+                                            <img class="partnership-poster" src="images/fvtimages/partnership.jpg">
+                                            <p>Want to join or partner with us, follow the link below</p>
+                                            <a href="##" class="readmore lead-on-btn color-purple">Learn more</a>
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-default bg-orange-gradient">
+                                        <div class="head">
+                                            <h3 class="color-white text-shadow-color-white"><i class="fa fa-spin fa-star"></i> Our Values</h3>
+                                        </div>
+                                        <div class="sidebar-default-content">
+                                            <span class="values-pan">Transparency</span><br>
+                                            <span class="values-pan">Committment</span><br>
+                                            <span class="values-pan">Making a difference</span><br>
+                                            <span class="values-pan">Leadership</span><br>
+                                            <span class="values-pan">Strategic Alliance</span><br>
+                                            <span class="values-pan">Financial Stability</span>
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-default">
+                                        <div class="head">
+                                            <h3 class="">Upcoming event</h3>
+                                        </div>
+                                        <div class="sidebar-default-content">
+                                            <div class="next-event">
+                                                <div class="frame event_1">
+                                                    <a href="index.html#">
+                                                        <img src="images/fvtimages/next-event-img.jpg" alt="img">
+                                                    </a>
+                                                    <div class="caption-2">
+                                                        <strong class="title">online tree care workshops 2015</strong>
+                                                    </div>
+                                                    <div class="caption-3 event-start-date">
+                                                        <strong class="title">Our Time Left:</strong>
+                                                    </div>
+                                                    <div class="caption">
+                                                        <a href="event-detail.html">
+                                                            <i class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="time-box">
+                                                    <div class="eventCountdown event_countdown_1" data-datetime="2017-12-08 13:07:16" data-datetimestop="2017-12-08 17:30:16" data-id="1"></div>
+                                                    <a href="event.html" class="plus">
+                                                        <i class="fa fa-plus"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-testimonial">
+                                        <div class="head">
+                                            <h3>Testimonials</h3>
+                                        </div>
+                                        <ul id="sidebar-testimonial">
+                                            <?php
+                                                for($i=1;$i<=12;$i++){  
+                                            ?>
+                                            <li>
+                                                <div class="testimonial-mini-hold">
+                                                    <div class="testimonial-mini">
+                                                        <div class="testimony">
+                                                            <blockquote>
+                                                                <q>
+                                                                <i class="fa fa-quote-left"></i>
+                                                                Lorem ipsum dolor sit amet, 
+                                                                consectetuer adipiscing elit.
+                                                                Aenean commodo ligula eget dolor. 
+                                                                Aenean massa. Cum sociis natoque penatibus
+                                                                et magnis dis parturient montes, 
+                                                                nascetur ridiculus mus. Donec quam felis, 
+                                                                ultricies nec, pellentesque eu, pretium quis, 
+                                                                sem. Nulla consequat massa quis enim. 
+                                                                Donec pede justo, fringilla vel, aliquet nec, 
+                                                                vulputate eget, arcu.
+                                                            </blockquote>
+                                                        </div>
+                                                        <div class="testimoner">
+                                                            <div class="user-detail">
+                                                                <a href="#" class="user">
+                                                                    <img src="images/default.gif"/>
+                                                                </a>
+                                                                <strong class="name">Adam Dale</strong>
+                                                                <a href="#" class="web">CEO James blockade</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <?php
+                                                }
+                                            ?>
+                                        </ul>
+                                    </div>
+
+                                </aside>
+<div class="col-sm-4 page_result_set">
+                                                                <h3 class="result_heading">
+                                                                    <b>Home Page</b>
+                                                                </h3>
+                                                                <div class="page_result_content">
+                                                                    <h4 class="page_title">title</h4>
+                                                                    <h4 class="page_subtitle">subtitle</h4>
+                                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. 
+                                                                    <br><a href="##" class="search_visit_page">Visit Page.</a>
+                                                                </div>
+                                                            </div>
+
+<li class="treeparent treeview">
+                        <a href="#">
+                            <i class="fa fa-sliders"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu treeview-menu-parent">
+                            <li class="treeview treeparent-child">
+                              <a href="#" appdata-otype="mainlink" >
+                                <i class="fa fa-sliders"></i> <span>Blog Type</span> <i class="fa fa-angle-left pull-right"></i>
+                              </a>
+                              <ul class="treeview-menu">
+                                <li><a href="#New" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="newblogtype" appdata-fa='<i class="fa fa-sliders"></i>' appdata-pcrumb="Blog Type"><i class="fa fa-plus"></i> New</a></li>
+                                <li><a href="#Edit" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="editblogtype" appdata-fa='<i class="fa fa-sliders"></i>' appdata-pcrumb="Blog Type"><i class="fa fa-gear"></i> Edit</a></li>
+                              </ul>
+                            </li>
+                            <li class="treeview treeparent-child">
+                              <a href="#" appdata-otype="mainlink" >
+                                <i class="fa fa-sitemap"></i> <span>Blog Category</span> <i class="fa fa-angle-left pull-right"></i>
+                              </a>
+                              <ul class="treeview-menu">
+                                <li><a href="#New" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="newblogcategory" appdata-fa='<i class="fa fa-sitemap"></i>' appdata-pcrumb="Blog Category"><i class="fa fa-plus"></i> New</a></li>
+                                <li><a href="#Edit" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="editblogcategory" appdata-fa='<i class="fa fa-sitemap"></i>' appdata-pcrumb="Blog Category"><i class="fa fa-gear"></i> Edit</a></li>
+                              </ul>
+                            </li>
+                            <li class="treeview treeparent-child">
+                              <a href="#" appdata-otype="mainlink" >
+                                <i class="fa fa-newspaper-o"></i> <span>Blog Post</span> <i class="fa fa-angle-left pull-right"></i>
+                              </a>
+                              <ul class="treeview-menu">
+                                <li><a href="#New" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="newblogpost" appdata-fa='<i class="fa fa-text"></i>' appdata-pcrumb="Blog Post"><i class="fa fa-plus"></i> New</a></li>
+                                <li><a href="#Edit" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="editblogposts" appdata-fa='<i class="fa fa-text"></i>' appdata-pcrumb="Blog Post"><i class="fa fa-gear"></i> Edit</a></li>
+                                <li><a href="#Edit Scheduled Posts" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="editscheduledposts" appdata-fa='<i class="fa fa-text"></i>' appdata-pcrumb="Blog Post"><i class="fa fa-clock-o"></i> Scheduled Posts</a></li>
+                              </ul>
+                            </li>
+                            <li class="treeview treeparent-child">
+                              <a href="#" appdata-otype="mainlink" >
+                                <i class="fa fa-comment-o"></i> <span>Comments</span> 
+                                    <?php echo $fullcomout;?>
+                                <i class="fa fa-angle-left pull-right"></i>
+                              </a>
+                              <ul class="treeview-menu">
+                                <li><a href="#AllComments" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="allcomments" appdata-fa='<i class="fa fa-comments-o"></i>' appdata-pcrumb="Comments"><i class="fa fa-cubes"></i> All</a></li>
+                                <li><a href="#ActiveComments" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="activecomments" appdata-fa='<i class="fa fa-comments-o"></i>' appdata-pcrumb="Comments"><i class="fa fa-asterisk"></i> Active</a></li>
+                                <li><a href="#PendingComments" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="inactivecomments" appdata-fa='<i class="fa fa-comments-o"></i>' appdata-pcrumb="Comments"><i class="fa fa-clock-o"></i> Pending</a></li>
+                                <li><a href="#Disabledcomments" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="disabledcomments" appdata-fa='<i class="fa fa-comments-o"></i>' appdata-pcrumb="Comments"><i class="fa fa-ban"></i> Disabled</a></li>
+                              </ul>
+                            </li>
+                        </ul>
+                    </li>
+    <!-- light green -->
+<!-- <link rel="alternate stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-1.css" title="styles1" media="screen"/> -->
+<!-- red -->
+<!-- <link rel="alternate stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-2.css" title="styles2" media="screen"/> -->
+<!-- light brown -->
+<!-- <link rel="alternate stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-3.css" title="styles3" media="screen"/> -->
+<!-- blue -->
+<!-- <link rel="alternate stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-4.css" title="styles4" media="screen"/> -->
+<!-- orange- FVT -->
+<link rel="stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-5.css" title="styles5" media="screen"/>
+<!-- dark green -->
+<!-- <link rel="alternate stylesheet" type="text/css" href="<?php echo $host_addr;?>stylesheets/fvtcss/color-6.css" title="styles6" media="screen"/> -->
+<iframe  width="765" height="550" frameborder="0"
+    src="filemanager/dialog.php?type=0">
+</iframe>
+{"logic":["OR","AND"],
+"column":["email","username"],
+"value":["som@gma.com","andmoins"]}

@@ -1,0 +1,117 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Responsive
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Responsive Styles start
+ * ====================================================================================================================*/
+ 
+/* Breakpoints
+----------------------------------------------------------------------------------------------------*/
+
+/* All except Large devices - Desktops (≥1200px) */
+@media (min-width: 1200px) {
+
+}
+
+/* Medium devices - Desktops (≥992px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+/* Only Phones and Tablets (Portrait) */
+@media (max-width: 991px) {
+	
+}
+
+/* Only Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-default .navbar-nav > li > a,
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus { }
+}
+
+/* Only Tablets (Portrait) and Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 991px) {
+
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+	/* Navigation */
+	.navbar-default,
+	.navbar-collapse in { width: 100%; overflow: hidden; overflow-y: hidden; overflow-x: hidden;}
+	
+	.navbar-default .navbar-nav > li > a,
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus { height:40px; background: #3C3C3C; border-bottom: 1px solid #474747; padding-top:9px; margin-left: 8px; margin-right: 8px; text-shadow: none; }
+	
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus { color: #909090;}
+	
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus { height:40px; background: #3C3C3C; border-bottom: 1px solid #474747; padding-top:9px; text-shadow: none; }
+	
+	.navbar-default .navbar-nav > .active > a { color: #efefef; }
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus { color: #ccc; }
+	
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus { color: #ffffff;}
+	.navbar-collapse { background: #333; width: 100%; clear: both; max-height: 340px; /*margin-top: 8px;*/}
+	
+	.dropdown-menu > li > a { border-bottom: 1px solid #474747; }
+	
+	/* Navigation Hover */
+	/*.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover, 
+	.navbar-default .navbar-nav > .active > a:focus,*/
+	.navbar-default .navbar-nav > li > a.dropdown-toggle,
+	.navbar-default .navbar-nav > li > a.dropdown-toggle:hover, 
+	.navbar-default .navbar-nav > li > a:focus { background: #292929 !important; text-shadow: none !important;}
+	
+	/* For MegaMenu Dropdown Links */
+	.megamenu .megamenu-content .list-unstyled > li { color: #fff; border-bottom: 1px solid #474747 !important; padding: 0px !important; margin: 0px !important; }
+	.megamenu .megamenu-content .list-unstyled > li:hover, 
+	.megamenu .megamenu-content .list-unstyled > li:focus { background-color: transparent !important; color: #909090; margin-right: 0px !important}
+	.megamenu .megamenu-content .list-unstyled > li > a { color: #747474 !important; padding: 0 0 0 15px !important; margin: 0px !important;}
+	.megamenu .megamenu-content .list-unstyled > li > a:hover { color: #fff !important; }
+	
+	/* for Breadcrumb */
+	.breadcrumb {display: none;}
+	
+	/* for Centered Menu */
+	.centered { width: 100% !important; }
+	
+}
+
+/* Only Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 767px) {
+	
+}
+
+/* Only Phones (Portrait) */
+@media (max-width: 479px) {
+	
+}
+
+/* ====================================================================================================================
+ * Responsive Styles end
+ * ====================================================================================================================*/

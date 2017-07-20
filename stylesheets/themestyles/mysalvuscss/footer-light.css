@@ -1,0 +1,136 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Footer Light Styles
+	- MainBottom
+	- Footer
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Footer Light Styles start
+ * ====================================================================================================================*/
+ 
+@import url("fonts.css");
+
+/* MainBottom start */
+/* --------------------------------------------------------------------- */
+.mainbottom {
+   background: #f5f5f5;
+   font-family: 'Open Sans',sans-serif;
+}
+.mainbottom .container {
+      /*background: url("../../../images/world-map-light.png") no-repeat center 15px;*/
+	  padding: 30px 0;
+}
+.mainbottom .bottom-box1,
+.mainbottom .bottom-box2,
+.mainbottom .bottom-box3,
+.mainbottom .bottom-box4 {margin-top: 30px; margin-bottom: 30px;}
+
+.mainbottom .container p, 
+.mainbottom .container address {color: #b1b9bd;}
+
+.mainbottom .container a:hover { color: #A3B5C2; text-decoration: none;}
+
+.mainbottom .container h1,
+.mainbottom .container h2,
+.mainbottom .container h3,
+.mainbottom .container h4,
+.mainbottom .container h5,
+.mainbottom .container h6 { margin-bottom: 20px; text-transform: uppercase; }
+
+.mainbottom .container .slogan-title {
+      text-align: center;
+      font-size: 44px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      color: #b1b9bd;
+      letter-spacing: -2px;
+      margin-top: 15px;
+	  line-height:75px;
+}
+.mainbottom .container .slogan-subtitle {
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      color: #b1b9bd;
+      margin-top: -15px;
+	  margin-bottom: 20px;
+	  letter-spacing: 0px;
+}
+
+.mainbottom input { background: #efefef; border: 1px solid #fff !important; color: #536266; height: 34px;}
+
+.mainbottom i {
+	  color: #999;
+	  width: 30px;
+	  height: 30px;
+	  margin-right: 5px;
+	  padding-top: 7px;
+	  text-align: center;
+	  font-size: 14px;
+}
+
+/* MainBottom - Footer Links */
+
+.links ul {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.links a { color: #69767f;}
+.links a:hover { color: #A3B5C2;}
+
+.links .link-list-1 {
+  float: left;
+  margin-right: 40px;
+}
+
+.links .link-list-2 {
+  margin-right: 0;
+}
+
+/* MainBottom end */
+/* --------------------------------------------------------------------- */
+
+/* footer start */
+/* --------------------------------------------------------------------- */
+.footer {
+      background: #fff; 
+      height: 60px;
+	  color: #69767F;
+	  font-family: 'Open Sans', sans-serif;
+}
+.footer a { font-size: 11px; color: #69767F;}
+.footer .container {padding-top: 10px;}
+.footer .nav > li > a:hover, 
+.footer .nav > li > a:focus {
+	  background-color: #374246;
+	  text-decoration: none;
+}
+.footer .copyright { font-size: 11px; color: #69767F; padding-top: 10px;}
+
+/* footer end */
+/* --------------------------------------------------------------------- */
+
+/* ====================================================================================================================
+ * Footer Light Styles end
+ * ====================================================================================================================*/
+

@@ -1,0 +1,101 @@
+[02-Oct-2016 13:54:47 Africa/Lagos] PHP Notice:  Undefined variable: fullposition in /home/fvtafric/public_html/about.php on line 31
+[02-Oct-2016 13:55:41 Africa/Lagos] PHP Notice:  Undefined variable: fullposition in /home/fvtafric/public_html/about.php on line 31
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:29 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:30 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:44 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:11:47 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:25:13 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 696
+[19-Nov-2016 15:25:13 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 701
+[19-Nov-2016 15:25:13 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 702
+[19-Nov-2016 15:25:13 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 703
+[19-Nov-2016 15:25:13 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1042
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1199
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1294
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1403
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 696
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 701
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 702
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 703
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1042
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1199
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1294
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1403
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 696
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 701
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 702
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 703
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1042
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1199
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1294
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1403
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 696
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 701
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 702
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Warning:  strtoupper() expects parameter 1 to be string, array given in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 703
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1042
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1199
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1294
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Array to string conversion in /home/fvtafric/public_html/snippets/generaldatamodule.php on line 1403
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: outputtype in /home/fvtafric/public_html/resources.php on line 68
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: num_pages in /home/fvtafric/public_html/resources.php on line 69
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: chiefquery in /home/fvtafric/public_html/resources.php on line 69
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: outputtype in /home/fvtafric/public_html/resources.php on line 75
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: num_pages in /home/fvtafric/public_html/resources.php on line 76
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: chiefquery in /home/fvtafric/public_html/resources.php on line 76
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: outputtype in /home/fvtafric/public_html/resources.php on line 82
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: num_pages in /home/fvtafric/public_html/resources.php on line 83
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: chiefquery in /home/fvtafric/public_html/resources.php on line 83
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: outputtype in /home/fvtafric/public_html/resources.php on line 89
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: num_pages in /home/fvtafric/public_html/resources.php on line 90
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined index: chiefquery in /home/fvtafric/public_html/resources.php on line 90
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined variable: rweldata in /home/fvtafric/public_html/resources.php on line 102
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined variable: rweldata in /home/fvtafric/public_html/resources.php on line 114
+[19-Nov-2016 15:25:14 Africa/Lagos] PHP Notice:  Undefined variable: mpagedefaultsidebar in /home/fvtafric/public_html/resources.php on line 236
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:27:15 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 22
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Notice:  Undefined variable: hwdata in /home/fvtafric/public_html/index.php on line 34
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 112
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Warning:  Illegal string offset 'vieweroutputmini' in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:27:16 Africa/Lagos] PHP Notice:  Uninitialized string offset: 0 in /home/fvtafric/public_html/index.php on line 302
+[19-Nov-2016 15:34:44 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:44:25 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:47:00 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:47:07 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:47:08 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:47:19 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:47:37 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:48:42 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:57:47 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:57:51 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:57:53 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:57:59 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 15:58:00 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 16:04:08 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 16:05:14 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89
+[19-Nov-2016 16:08:30 Africa/Lagos] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/fvtafric/public_html/snippets/connection.php:83) in /home/fvtafric/public_html/snippets/connection.php on line 89

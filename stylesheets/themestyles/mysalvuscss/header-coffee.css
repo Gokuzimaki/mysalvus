@@ -1,0 +1,219 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Header Styles
+	- Logo
+	+ Toolbar
+		- Search Box
+	+ Header
+		- Sticky Header
+	- HeaderBar
+	- SubHeader
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Header Styles start
+ * ====================================================================================================================*/
+
+/* logo start */
+/* --------------------------------------------------------------------- */
+.logo {
+      padding-top: 25px;
+      padding-left: 0px;
+}
+/* logo end */
+/* --------------------------------------------------------------------- */
+
+/* toolbar start */
+/* --------------------------------------------------------------------- */
+.toolbar {
+      z-index:10;
+	  position:absolute;
+	  width:100%;
+	  padding-top: 16px;
+}
+.toolbar a {color:#ccc;}
+.toolbar a:hover {color:#fff; text-decoration:none;}
+.toolbar .container {
+      height: 34px;
+	  padding-top: 8px; 
+      font-size: 12px; 
+      font-family: Arial,Helvetica,sans-serif; 
+      color: #f4f4f4;
+      background: rgba(255, 255, 255, 0.3);
+}
+.toolbar .separator {
+  border-left: 1px solid #777777;
+  display: inline-block;
+  height: 10px;
+  margin: 0 20px;
+  width: 1px;
+}
+
+
+/* Search Box start */
+.search .form-control {
+  margin-bottom: 0px;
+}
+.search form {
+	position: relative;
+}
+.search input {
+	background: transparent;
+	padding: 0 10px;
+	line-height: 21px;
+	height: 21px;
+	border: 1px solid #333;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	font-size: 11px;
+	color: #9E9E9E;
+	cursor: default;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.search input:focus {
+	background: url(../../../images/mysalvusimages/search-input-bg.png) 0 -1px repeat-x;
+	-moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	color: #9E9E9E;
+}
+.search:hover button {
+	color: #676767
+}
+.search button {
+	position: absolute;
+	top: 1px;
+	right: 19px;
+	background: none;
+	border: 0;
+	color: #DDD;
+	font-size: 11px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.search button:hover {
+	color: #676767;
+}
+/* Search Box end */
+
+/* toolbar end */
+/* --------------------------------------------------------------------- */
+
+/* header start */
+/* --------------------------------------------------------------------- */
+.header-main {
+      background: transparent;
+	  height: 87px;
+	  z-index:9;
+	  position:absolute;
+	  width:100%;
+	  top: 50px;
+}
+.header-main .container {
+      background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sticky Header */
+header {
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    -webkit-transition: linear .3s;
+    -moz-transition: linear .3s;
+    -ms-transition: linear .3s;
+    -o-transition: linear .3s;
+    transition: linear .3s;
+}
+.sticky-for-header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    -webkit-transition: linear .3s;
+    -moz-transition: linear .3s;
+    -ms-transition: linear .3s;
+    -o-transition: linear .3s;
+    transition: linear .3s;
+    /*border-bottom: 1px solid #C6C4C4; */
+}
+.sticky-for-header .header-main {
+    top: 0;
+	background: transparent;
+}
+
+.sticky-for-header .header-main .container {
+      background: rgba(96, 79, 70, 0.6);
+}
+
+.sticky-for-body {
+    margin-top: 0px;
+}
+.toolbar_hidden {
+    display: none !important;
+}
+/* header end */
+/* --------------------------------------------------------------------- */
+
+/* headerbar start */
+/* --------------------------------------------------------------------- */
+.headerbar {
+      background: #F6F8F8;
+	  border: 1px solid #ececec;
+      height: 33px;
+}
+.headerbar .container { color: #8A8A8A;}
+.headlines {
+	  color: #a2a2a2;
+	  font-family: Arial,Helvetica,sans-serif;
+	  font-size: 12px;
+	  font-weight: normal;
+	  text-shadow:0px 1px 0px #fff;
+	  padding-top: 6px;
+}
+/* headerbar end */
+/* --------------------------------------------------------------------- */
+
+/* Subheader start */
+/* --------------------------------------------------------------------- */
+.subheader { background: url(../../../images/mysalvusimages/textures/wide2.jpg) center top repeat; margin: 0px; padding: 137px 0 0 0px;}
+.subheader .container { background: url(../../../images/mysalvusimages/page-header-dots.png) no-repeat center top; height: 140px; }
+
+.subheader2 { background: url(../../../images/mysalvusimages/textures/texture02.png) center top repeat; margin: 0px; padding: 137px 0 0 0px;}
+.subheader2 .container { background: url(../../../images/mysalvusimages/page-header-dots.png) no-repeat center top; height: 140px; }
+
+.subheader3 { background: url(../../../images/mysalvusimages/textures/texture07.png) center top repeat; margin: 0px; padding: 137px 0 0 0px;}
+.subheader3 .container { background: url(../../../images/mysalvusimages/page-header-dots.png) no-repeat center top; height: 140px; }
+
+.subheader4 { background: url(../../../images/mysalvusimages/textures/texture08.png) center top repeat; margin: 0px; padding: 137px 0 0 0px;}
+.subheader4 .container { background: transparent; height: 140px; }
+
+.custom-page-header { border-bottom: none; margin: 72px 0 0px; padding: 0px;}
+.custom-page-header h1 { color: #ffffff; font-size: 24px; text-transform: uppercase; background: rgba(0, 0, 0, 0.3); display: inline; padding:3px 10px; moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.custom-page-header h1 small { color: #fff; text-transform: none; padding-left: 10px;}
+/* --------------------------------------------------------------------- */
+
+/* ====================================================================================================================
+ * Header Styles end
+ * ====================================================================================================================*/
+

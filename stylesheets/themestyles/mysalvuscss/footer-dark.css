@@ -1,0 +1,145 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Footer Dark Styles
+	- MainBottom
+	- Footer
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Footer Dark Styles start
+ * ====================================================================================================================*/
+ 
+@import url("fonts.css");
+
+/* MainBottom start */
+/* --------------------------------------------------------------------- */
+.mainbottom {
+	background: #051312;
+	font-family: 'Open Sans',sans-serif;
+}
+.mainbottom .container {
+      background: url("../../../images/mysalvusimages/world-map-dark.png") no-repeat center 15px;
+	  padding: 30px 0;
+}
+
+.mainbottom .bottom-box1,
+.mainbottom .bottom-box2,
+.mainbottom .bottom-box3,
+.mainbottom .bottom-box4 {margin-top: 30px; margin-bottom: 30px;}
+
+.mainbottom .container p, 
+.mainbottom .container address {color: #b4c7b6;}
+
+.mainbottom .container 
+ img.mini {
+    height: 58px;
+    margin: auto;
+    position: relative;
+    display: block;
+}
+
+.mainbottom .container a:hover { color: #A3B5C2; text-decoration: none;}
+
+.mainbottom .container h1,
+.mainbottom .container h2,
+.mainbottom .container h3,
+.mainbottom .container h4,
+.mainbottom .container h5,
+.mainbottom .container h6 { color: #A3B5C2; margin-bottom: 20px; text-transform: uppercase; }
+
+.mainbottom .container .slogan-title {
+      text-align: center;
+      font-size: 44px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100;
+      color: #606F78;
+      letter-spacing: -2px;
+      margin-top: 15px;
+	  line-height:75px;
+}
+.mainbottom .container .slogan-subtitle {
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100;
+      color: #3B444B;
+      margin-top: -15px;
+	  letter-spacing: 0px;
+}
+
+.mainbottom input { background: #252B2F; border: 1px solid #2E363A; color: #536266;}
+
+.mainbottom i {
+	  color: #999;
+	  width: 30px;
+	  height: 30px;
+	  margin-right: 5px;
+	  padding-top: 7px;
+	  text-align: center;
+	  font-size: 14px;
+}
+
+/* MainBottom - Footer Links */
+
+.links ul {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.links a { color: #69767f;}
+.links a:hover { color: #A3B5C2;}
+
+.links .link-list-1 {
+  float: left;
+  margin-right: 40px;
+}
+
+.links .link-list-2 {
+  margin-right: 0;
+}
+
+/* MainBottom end */
+/* --------------------------------------------------------------------- */
+
+/* footer start */
+/* --------------------------------------------------------------------- */
+.footer {
+      background: #293034;
+      min-height: 60px;
+      border-top: 1px solid #3D474C;
+      color: #69767F;
+      font-family: 'Open Sans', sans-serif;
+}
+.footer a { font-size: 11px; color: #69767F;}
+.footer .container {padding-top: 10px;}
+.footer .nav > li > a:hover, 
+.footer .nav > li > a:focus {
+	  background-color: #374246;
+	  text-decoration: none;
+}
+.footer .copyright {font-size: 11px;color: #69767F;padding-top: 10px;position: relative;margin: auto;float: left;overflow: hidden;}
+
+/* footer end */
+/* --------------------------------------------------------------------- */
+
+/* ====================================================================================================================
+ * Footer Dark Styles end
+ * ====================================================================================================================*/
+

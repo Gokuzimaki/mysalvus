@@ -1,0 +1,298 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Turquoise Color Styles
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Turquoise Color Styles start
+ * ====================================================================================================================*/
+
+/* Default Turquoise Color: #00BD9C; */
+
+h1, h2, h3, h4, h5, h6 { color:#00BD9C;}
+
+.module-title {
+  line-height: 29px;
+  margin: 0 0 15px 0;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid #e1e1e1;
+}
+.module-title:after {
+	background: #00BD9C;
+	width: 11px;
+	content: "";
+	right:15px;
+	margin-top: 24px;
+	height: 11px;
+	position: absolute;
+	-moz-border-radius: 11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+}
+
+.module-title2 {
+  line-height: 29px;
+  margin: 0 0 15px 0;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px dotted #69767f;
+}
+.module-title2:after {
+	background: #00BD9C;
+	width: 11px;
+	content: "";
+	right:15px;
+	margin-top: 24px;
+	height: 11px;
+	position: absolute;
+	-moz-border-radius: 11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+}
+
+.module-title3 {
+  line-height: 30px;
+  margin: 0 0 15px 0;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px dotted #69767f;
+}
+.module-title3:after {
+	background: #007EE1;
+	width: 30px;
+	content: "";
+	right:15px;
+	margin-top: 27px;
+	height: 4px;
+	position: absolute;
+}
+
+/* flash-wrapper start */
+/* --------------------------------------------------------------------- */
+.flash-wrap {
+	  background: #00BD9C;
+}
+
+/* flash-wrapper end */
+/* --------------------------------------------------------------------- */
+
+.inner-bottom { background:#00BD9C; border-bottom: 1px solid #00F5CA; }
+
+/* Buttons start */
+/* --------------------------------------------------------------------- */
+
+.btn-primary {
+  background:#00BD9C;
+  background-repeat: no-repeat;
+  border: none;
+  moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+}
+.btn-primary:hover {
+  background:#222;
+}
+
+/* Buttons end */
+/* --------------------------------------------------------------------- */
+
+.panel-default > .panel-heading {
+	moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+	background-color: #f5f5f5;
+    border-color: #dddddd;
+    color: #fff;
+}
+.panel-title > a { color: #555;}
+.panel-default > .panel-heading a:hover, a:focus { color: #777 !important; text-decoration: none;}
+
+/* ShowBiz Elements Light Skin Start */
+li.sb-light-skin { border-bottom: 3px solid #00BD9C; } 
+.style-title {color: #00BD9C !important; }
+
+.sb-navigation-left i, 
+.sb-navigation-right i, 
+.sb-navigation-play i { color:#00BD9C !important; }
+
+#parallax3 .sb-navigation-left i, 
+#parallax3 .sb-navigation-right i, 
+#parallax3 .sb-navigation-play i { color:#fff !important; }
+
+/* ShowBiz Elements Light Skin End */
+
+/* Navbar Colors start */
+/* --------------------------------------------------------------------- */
+.navbar-default .navbar-nav > li > a { color: #fff;} /* Default Menu Item Color */
+.navbar-default .navbar-nav > .dropdown > a .caret { border-bottom-color: #00BD9C; border-top-color: #00BD9C; } /* Dropdown Caret Color */
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus { border-bottom: 3px solid #00BD9C; color: #fff;}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus { border-bottom: 3px solid #00BD9C; color: #fff;}
+
+.dropdown-menu { background-color: #00BD9C; font-size: 12px; border: none; }
+.dropdown-menu > li > a { color: #fff; border-bottom: 1px solid #5AD1B9; padding: 10px; margin: 0 10px; }
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus { background-color: #5AD1B9; color: #fff; }
+.dropdown-header { color: #fff; font-size: 14px; text-transform: uppercase; background: #5AD1B9;}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover { background: #BF0203; moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }
+
+/* Sidebar Navbar Colors */
+/* --------------------------------------------------------------------- */
+.nav-sidebar a,
+.nav-sidebar .active a:hover {
+    color: #00BD9C; 
+}
+.nav-sidebar a:hover {
+    color: #333; 
+}
+
+/* --------------------------------------------------------------------- */
+
+/* navbar under the Logo start */
+/* --------------------------------------------------------------------- */
+.headerbar .navbar-default .navbar-nav > .active > a, 
+.headerbar .navbar-default .navbar-nav > .active > a:hover, 
+.headerbar .navbar-default .navbar-nav > .active > a:focus { border-bottom: 1px solid #00BD9C; color: #00BD9C;}
+
+.headerbar .navbar-default .navbar-nav > li > a:hover, 
+.headerbar .navbar-default .navbar-nav > li > a:focus { border-bottom: 1px solid #00BD9C; color: #00BD9C;}
+/* --------------------------------------------------------------------- */
+
+/* General Colors start */
+/* --------------------------------------------------------------------- */
+a { color: #00BD9C; text-decoration: none;}
+a:hover, a:focus { color: #00A789; text-decoration: none;}
+
+/* Blog Item Styles */
+.blog-item img {
+  border-top: 5px solid #00BD9C;
+}
+
+/*i.fa { color: #00BD9C; }  for Font Awesome Icons */
+
+.pagination > .active > a, 
+.pagination > .active > span, 
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+  background-color: #00BD9C;
+  border-color: #00BD9C;
+}
+
+/* DropCap style */
+p.drop-caps:first-child:first-letter { color: #00BD9C; }
+p.drop-caps.secundary:first-child:first-letter { background-color: #00BD9C; }
+/* --------------------------------------------------------------------- */
+
+/* Elements Start */
+/* --------------------------------------------------------------------- */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border-top: 2px solid #00BD9C;
+}
+/* --------------------------------------------------------------------- */
+
+/* MegaMenu Thumbnail */
+/* --------------------------------------------------------------------- */
+.megamenu .megamenu-content .thumbnail { 
+  background-color: #00A789;
+  border: 1px solid #5AD1B9;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  padding: 4px;
+}
+.megamenu .megamenu-content h3 { color: #fff; margin-top: 10px !important;}
+.megamenu .megamenu-content p { color: #fff;}
+/* --------------------------------------------------------------------- */
+
+/* for Mega Menu */
+/* --------------------------------------------------------------------- */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus { border-bottom: 2px solid #00BD9C; color: #00BD9C;}
+
+.megamenu .megamenu-content .list-unstyled > li { border-bottom: 1px solid #5AD1B9; }
+.megamenu .megamenu-content .list-unstyled > li:hover, 
+.megamenu .megamenu-content .list-unstyled > li:focus { background-color: #5AD1B9; }
+
+.megamenu .megamenu-content .list-unstyled ul > li { border-bottom: 1px solid #5AD1B9;  }
+.megamenu .megamenu-content .list-unstyled ul > li > a:hover, 
+.megamenu .megamenu-content .list-unstyled ul > li > a:focus { background-color: #5AD1B9; }
+/* --------------------------------------------------------------------- */
+
+/* Glyphicons */
+/* --------------------------------------------------------------------- */
+.bs-glyphicons li:hover {
+  background-color: #00BD9C;
+}
+/* --------------------------------------------------------------------- */
+
+/* Parallax Header Modules Style */
+/* --------------------------------------------------------------------- */
+.box1 > .icon > .image { background: #00BD9C; }
+.box1 > .icon > .info > .more > a { background-color: #00BD9C; }
+.box1 > .icon:hover > .info > .more > a { background-color: #fff; }
+/* --------------------------------------------------------------------- */
+
+/* Show Biz Elements start */
+/* --------------------------------------------------------------------- */
+.product-select-options p.small a, 
+.product-select-options p.small a:visited, 
+.product-select-options p.small a:hover { color: #00BD9C;}
+/* Show Biz Elements end */
+/* --------------------------------------------------------------------- */
+
+/* Shopping Order Status start
+/* ================================================================================ */
+.shop-tracking-status .order-status-timeline .order-status-timeline-completion { background:#00BD9C;}
+.shop-tracking-status .image-order-status.active .status { color:#00BD9C;}
+
+/* Shopping Order Status end
+/* ================================================================================ */
+
+/* General Styles
+/* ================================================================================ */
+
+.panel-dark > .panel-heading { background-color: #00BD9C; color: #FFFFFF; }
+.panel-light > .panel-heading { background-color: #00BD9C; color: #FFFFFF; }
+
+/* Tab Syles */
+#myTab .nav-tabs  > li.active > a,
+#myTab .nav-tabs  > li.active > a:hover,
+#myTab .nav-tabs  > li.active > a:focus {
+	background-color:#00BD9C;
+}
+
+/* Breadcrumb start */
+/* --------------------------------------------------------------------- */
+.breadcrumb { background: #030303; margin-bottom: 0; margin-top: 120px; padding: 8px 15px; font-size: 12px; }
+.breadcrumb a { color: #888;}
+.breadcrumb a:hover { color: #fff;}
+.breadcrumb > .active { color: #fff;}
+/* --------------------------------------------------------------------- */
+
+/* CONTENT BLOCK HOLDERS */
+/* --------------------------------------------------------------------- */
+.underlined-title hr {
+  border-color: #00BD9C;
+  border-width: 2px;
+  width: 10%;
+}
+/* --------------------------------------------------------------------- */
+
+/* ====================================================================================================================
+ * Turquoise Color Styles end
+ * ====================================================================================================================*/

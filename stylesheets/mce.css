@@ -1,0 +1,44 @@
+@font-face{
+font-family:KhmerUI;
+src:url("../fonts/KhmerUI.ttf");
+}
+@font-face{
+font-family:KhmerUIBold;
+src:url("../fonts/KhmerUIb.ttf");
+}
+@font-face{
+font-family:Microsoft Tai Le;
+src:url("../fonts/taile.ttf");
+}
+@font-face{
+font-family:Ebrima;
+src:url("../fonts/ebrima.ttf");
+}
+@font-face{
+font-family:EbrimaBold;
+src:url("../fonts/ebrimabd.ttf");
+}
+@font-face{
+font-family:ScriptinaPro;
+src:url("../fonts/Scriptina%20Pro.otf");
+}
+@font-face{
+font-family:fancycard;
+src:url("../fonts/FancyCardText.ttf");
+}
+@font-face{
+font-family:mtcorsiva;
+src:url("../fonts/MTCORSVA.TTF");
+}
+@font-face{
+font-family:felixti;
+src:url("../fonts/FELIXTI.TTF");
+}
+body{
+	margin:auto;
+	font-size: 14px;
+}
+div.mce-container{
+	margin:auto;
+
+}

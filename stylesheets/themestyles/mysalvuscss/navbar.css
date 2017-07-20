@@ -1,0 +1,161 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ Navbar Styles
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * Navbar Styles start
+ * ====================================================================================================================*/
+
+.navbar-brand { padding: 21px 15px 15px;}
+
+/* navbar start */
+/* --------------------------------------------------------------------- */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {/* background-image: url(../../../images/mysalvusimages/menubg.png); */background-color: #ffffff;}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {/* background-image: url(../../../images/mysalvusimages/menubg.png); */background-color: #fff;}
+
+.navbar-default {
+      background-color: transparent; 
+      border: 0px;
+} 
+.navbar {
+      margin-bottom: 0px;
+      border-radius:0px;
+      clear: both;
+      position: relative;
+}
+.navbar-default .navbar-nav > li > a {
+      height: 87px;
+      padding-top: 45px;
+	  text-transform: uppercase;
+	  font-family: "Open Sans",Arial,sans-serif;
+	  font-size:12px;
+	  font-weight: 600;
+}
+
+.dropdown-menu > li > a { font-family: "Open Sans",Arial,sans-serif; } /* Dropdown menu item font family */
+
+.navbar label{ color:#CCC; }
+
+/* navbar end */
+/* --------------------------------------------------------------------- */
+
+/* navbar under the Logo start */
+/* --------------------------------------------------------------------- */
+.headerbar .navbar-default .navbar-nav > li > a {
+    height: 32px;
+    padding-top: 6px;
+	text-transform: uppercase;
+	font-family: "Open Sans",Arial,sans-serif;
+	font-size:12px;
+	font-weight: 600;
+}
+.headerbar .navbar { min-height: 29px;}
+/* navbar under the Logo end */
+/* --------------------------------------------------------------------- */
+
+/* for Navigation Toggle Menu start */
+/* --------------------------------------------------------------------- */
+.navbar-toggle {
+  background-color: #333;
+  border: 1px solid #fff !important;
+  margin-top: 30px;
+  color: #fff;
+}
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+  background-color: #555;
+}
+.container > .navbar-header, .container > .navbar-collapse { margin-left: 0px; margin-right: 0px;} /* For toggle menu alignment */
+/* --------------------------------------------------------------------- */
+
+/* for Mega Menu */
+/* --------------------------------------------------------------------- */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus { background:#FFF url(../../../images/mysalvusimages/menubg.png) repeat 0 0;}
+/* --------------------------------------------------------------------- */
+
+/* for Navigation Sidebar */
+/* --------------------------------------------------------------------- */
+.nav-sidebar { 
+    width: 100%;
+    padding: 0; 
+}
+.nav-sidebar a {
+    /*color: #777;*/
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+    -webkit-border-radius: none; 
+    -moz-border-radius: none; 
+    border-radius: none; 
+	padding-left: 0px !important;
+	border-bottom: 1px solid #e1e1e1;
+}
+.nav-sidebar .active a { 
+    color: #333; 
+	background-color: #fff;
+	border-bottom: 1px solid #e1e1e1;
+}
+.nav-sidebar a:hover {
+    background-color: #fff !important;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+.nav-sidebar ul > li > ul > li { 
+    list-style: none;
+}
+
+.nav-sidebar ul > li > ul > li > a { 
+    padding: 10px 0;
+	display: block;
+}
+
+/* Right-aligned sidebar */
+/* --------------------------------------------------------------------- */
+.nav-sidebar.pull-right { 
+    border-right: 0; 
+    border-left: 1px solid #ddd; 
+}
+.nav-sidebar.pull-right a {
+    -webkit-border-radius: 0 4px 4px 0; 
+    -moz-border-radius: 0 4px 4px 0; 
+    border-radius: 0 4px 4px 0; 
+}
+/* --------------------------------------------------------------------- */
+
+/* Centered Navbar for Header Three Version */
+/* --------------------------------------------------------------------- */
+.centered { margin: 0 auto !important; float: none !important; display: table;}
+/* --------------------------------------------------------------------- */
+
+/* ====================================================================================================================
+ * Navbar Styles end
+ * ====================================================================================================================*/

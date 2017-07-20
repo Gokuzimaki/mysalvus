@@ -1,0 +1,131 @@
+/*
+
+Theme Name:  ProFlex
+Theme URI:   http://demo.artofthemes.com/html/proflex
+Description: ProFlex Multi-Purpose Responsive Template is powerful multipurpose theme that will help you to build practically any site. Each one can be made unique with just a few clicks.
+Author:      ArtofThemes
+Author URI:  http://www.artofthemes.com
+Version:     1.0.0
+License:     GPL 2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, magazine, parallax, portfolio, restaurant, shop, spa, sports, sticky
+
+*/
+
+/*--------------------------------------------------------------
+==>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
++ MegaMenu Styles
+	- MainBottom
+	- Footer
+--------------------------------------------------------------*/
+
+/* ====================================================================================================================
+ * MegaMenu Styles start
+ * ====================================================================================================================*/
+.megamenu .nav,
+.megamenu .collapse,
+.megamenu .dropup,
+.megamenu .dropdown {
+  position: static;
+}
+
+ul.nav.navbar-nav {
+    margin-left: 50px;
+}
+.megamenu .container {
+  position: relative;
+}
+.megamenu .dropdown-menu {
+  left: auto;
+}
+.megamenu .nav.navbar-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.megamenu .megamenu-content {
+  padding: 20px 30px;
+}
+.megamenu .dropdown.megamenu-fw .dropdown-menu {
+  left: 0;
+  right: 0;
+}
+
+/* Additional Css Styles */
+/* --------------------------------------------------------------------- */
+
+.megamenu .megamenu-content { padding: 10px 15px !important; color: #fff; }
+.megamenu .megamenu-content a { color: #fff; }
+.megamenu .megamenu-content .media-heading { color: #fff; }
+.megamenu .megamenu-content .media-body { color: #fff; }
+
+.megamenu .megamenu-content .list-unstyled, 
+.megamenu .megamenu-content .list-unstyled ul { min-width: 120px; padding-left: 10px; padding-right: 10px;}
+
+.megamenu .megamenu-content .list-unstyled > li { color: #fff; padding: 10px !important; margin: 0px !important; }
+.megamenu .megamenu-content .list-unstyled > li:hover, 
+.megamenu .megamenu-content .list-unstyled > li:focus { color: #fff; margin-right: 0px !important}
+
+.megamenu .megamenu-content .list-unstyled ul > li { color: #fff; padding: 10px !important; margin: 0px !important; }
+.megamenu .megamenu-content .list-unstyled ul > li > a:hover, 
+.megamenu .megamenu-content .list-unstyled ul > li > a:focus { color: #fff; margin-right: 0px !important;}
+
+.megamenu .megamenu-content .btn-default { color: #333;}
+
+.low-padding { padding-left: 5px; padding-right: 5px;}
+
+/* Multi Level Menu */
+/* --------------------------------------------------------------------- */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* ====================================================================================================================
+ * MegaMenu Styles end
+ * ====================================================================================================================*/
+
+

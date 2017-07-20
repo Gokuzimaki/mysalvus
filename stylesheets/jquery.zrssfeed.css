@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/*
+ * Example of zRSSFeed Styling (Optional)
+ *
+ * Version: 1.2.0
+ * (c) Copyright 2011-2013, Zazar Ltd
+ *
+ */
+
+/*body {
+	margin: 1em 3em;
+	font-family: Tahoma, Genevam, sans-serif;
+}*/
+
+.rssFeed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	margin: 2em 3em;
+}
+.rssFeed a {
+	color: #E7AF1D;
+	text-decoration: none;
+	text-align: left;
+	text-shadow: 0px 0px 3px #FD0000;
+}
+.rssFeed a:hover {
+	color: #D84949;
+text-decoration: underline;
+text-shadow: 0px 0px 3px #8C0000;
+
+}
+.odd .rssTextAlignRight,.even .rssTextAlignRight{
+	text-align: right;
+}
+.odd .rssTextAlignLeft, .even .rssTextAlignLeft{
+	text-align: left;
+}
+.rssHeader { padding: 0.2em 0; }
+
+.rssHeader {}
+
+.rssBody { border:1px solid rgba(144, 19, 19, 0.33); }
+.rssBody ul { list-style: none; }
+.rssBody ul, .rssRow, .rssRow h4, .rssRow p {
+	margin: 0;
+	padding: 0;
+}
+
+.rssRow { padding: 0.8em; }
+.rssRow h4 { font-size: 1.1em; }
+.rssRow div {
+	font-size: 90%;
+	color: #FFB0B0;
+	text-align: right;
+	margin: 0.2em 0 0.4em 0;
+}
+
+.odd { background-color: transparent;
+	background:url(../images/dropdown.png);
+ }
+.even {background-color: rgba(136, 14, 14, 0.4); }
+
+.rssRow .rssMedia {
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+
+
+
+/*control block for seperate news feed content*/
+	/*start reuters fjc*/
+		div[appdata-name="reutersnewshold"].rssFeed {
+			font-family: roboto, Helvetica, sans-serif;
+			/* font-size: 90%; */
+			margin: auto;
+		}
+		div[appdata-name="reutersnewshold"].rssFeed a {
+			color: #29E71D;
+			text-decoration: none;
+			text-align: left;
+			text-shadow: 1px 1px 0px #062105;
+			font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="reutersnewshold"].rssFeed .rssRow.even a {
+		    color: #FFE497;
+		}
+
+		div[appdata-name="reutersnewshold"].rssFeed .rssRow.even a:hover {
+		    color: #FFA51D;
+		}
+		div[appdata-name="reutersnewshold"].rssFeed .rssHeader a {
+		    color: #E80E0E;
+		    text-shadow: none;
+		    font-weight: bold;
+		    font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="reutersnewshold"].rssFeed a:hover {
+			color: #FF0505;
+			/* text-decoration: underline; */
+			text-shadow: 1px 1px 0px #3A0202;
+		}
+		div[appdata-name="reutersnewshold"] .odd .rssTextAlignRight,div[appdata-name="reutersnewshold"] .even .rssTextAlignRight{
+			text-align: right;
+		}
+		div[appdata-name="reutersnewshold"] .odd .rssTextAlignLeft, div[appdata-name="reutersnewshold"] .even .rssTextAlignLeft{
+			text-align: left;
+		}
+		div[appdata-name=reutersnewshold] .rssHeader { padding: 0.2em 0; text-shadow: 0px 0px 1px transparent;}
+
+		div[appdata-name=reutersnewshold] .rssHeader {
+		    font-size: 18px;
+		    text-align: center;
+		}
+
+		div[appdata-name=reutersnewshold] .rssBody { border: 1px solid rgb(44, 216, 32); }
+		div[appdata-name=reutersnewshold] .rssBody ul { list-style: none; }
+		div[appdata-name=reutersnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div[appdata-name=reutersnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow.even p {}
+
+		div[appdata-name=reutersnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow.odd p {
+		    color: #fefefe;
+		}
+
+		div[appdata-name=reutersnewshold] .rssRow { padding: 0.8em; }
+		div[appdata-name=reutersnewshold] .rssRow h4 { font-size: 1.1em; }
+		div[appdata-name=reutersnewshold] .rssRow div {
+			font-size: 90%;
+			color: #FF8A26;
+			text-align: right;
+			margin: 0.2em 0 0.4em 0;
+		}
+
+		div[appdata-name=reutersnewshold] .rssRow.even div {}
+
+		div[appdata-name=reutersnewshold] .rssRow.odd div {
+		    color: #E6E6E6;
+		}
+
+		div[appdata-name="reutersnewshold"] .odd {
+			background-color: #014800;
+			/* background:url(../images/dropdown.png); */
+			/* background: none; */
+			}
+		div[appdata-name="reutersnewshold"] .even {background-color: rgb(138, 19, 13); }
+
+		div[appdata-name=reutersnewshold] .rssRow .rssMedia {
+			padding: 0.5em;
+			font-size: 1em;
+		}
+	/*end reuters fjc*/
+	/*start bbc fjc*/
+		div[appdata-name="bbcnewshold"].rssFeed {
+			font-family: roboto, Helvetica, sans-serif;
+			/* font-size: 90%; */
+			margin: auto;
+		}
+		div[appdata-name="bbcnewshold"].rssFeed a {
+			color: #424242;
+			text-decoration: none;
+			text-align: left;
+			text-shadow: 1px 1px 0px transparent;
+			font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="bbcnewshold"].rssFeed .rssRow.even a {
+		    color: #3C3B3B;
+		    text-shadow: 0px 0px 0px transparent;
+		}
+
+		div[appdata-name="bbcnewshold"].rssFeed .rssRow.even a:hover {
+		    color: #FFCD82;
+		}
+		div[appdata-name="bbcnewshold"].rssFeed .rssHeader a {
+		    color: #E80E0E;
+		    text-shadow: none;
+		    font-weight: bold;
+		    font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="bbcnewshold"].rssFeed a:hover {
+			color: #FF0505;
+			/* text-decoration: underline; */
+			text-shadow: 1px 1px 0px #3A0202;
+		}
+		div[appdata-name="bbcnewshold"] .odd .rssTextAlignRight,div[appdata-name="bbcnewshold"] .even .rssTextAlignRight{
+			text-align: right;
+		}
+		div[appdata-name="bbcnewshold"] .odd .rssTextAlignLeft, div[appdata-name="bbcnewshold"] .even .rssTextAlignLeft{
+			text-align: left;
+		}
+		div[appdata-name=bbcnewshold] .rssHeader { padding: 0.2em 0; text-shadow: 0px 0px 1px transparent;}
+
+		div[appdata-name=bbcnewshold] .rssHeader {
+		    font-size: 18px;
+		    text-align: center;
+		}
+
+		div[appdata-name=bbcnewshold] .rssBody { border: none; }
+		div[appdata-name=bbcnewshold] .rssBody ul { list-style: none; }
+		div[appdata-name=bbcnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div[appdata-name=bbcnewshold] .rssBody ul, div[appdata-name=bbcnewshold] .rssRow, div[appdata-name=bbcnewshold] .rssRow h4, div[appdata-name=bbcnewshold] .rssRow.even p {
+		    color: #2F2F2F;
+		}
+
+		div[appdata-name=bbcnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow.odd p {
+		    color: #000000;
+		}
+
+		div[appdata-name=bbcnewshold] .rssRow { padding: 0.8em; }
+		div[appdata-name=bbcnewshold] .rssRow h4 { font-size: 1.1em; }
+		div[appdata-name=bbcnewshold] .rssRow div {
+			font-size: 90%;
+			color: #929292;
+			text-align: right;
+			margin: 0.2em 0 0.4em 0;
+		}
+
+		div[appdata-name=bbcnewshold] .rssRow.even div {}
+
+		div[appdata-name=bbcnewshold] .rssRow.odd div {
+		    color: #545454;
+		}
+
+		div[appdata-name="bbcnewshold"] .odd {
+			background-color: #FFFFFF;
+			/* background:url(../images/dropdown.png); */
+			/* background: none; */
+			padding: 2px 2px 0px 4px !important;
+			background-image: none!important;
+			}
+		div[appdata-name="bbcnewshold"][appdata-assist="ticker"] .even {background-color: rgb(255, 255, 255); padding: 2px 2px 0px 4px !important;}
+
+		div[appdata-name=bbcnewshold] .rssRow .rssMedia {
+			padding: 0.5em;
+			font-size: 1em;
+		}
+	/*end bbc fjc*/
+	/*start marketwatch fjc*/
+		div[appdata-name="marketwatchnewshold"].rssFeed {
+			font-family: roboto, Helvetica, sans-serif;
+			/* font-size: 90%; */
+			margin: auto;
+		}
+		div[appdata-name="marketwatchnewshold"].rssFeed a {
+			color: #424242;
+			text-decoration: none;
+			text-align: left;
+			text-shadow: 1px 1px 0px transparent;
+			font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="marketwatchnewshold"].rssFeed .rssRow.even a {
+		    color: #3C3B3B;
+		    text-shadow: 0px 0px 0px transparent;
+		}
+
+		div[appdata-name="marketwatchnewshold"].rssFeed .rssRow.even a:hover {
+		    color: #FFCD82;
+		}
+		div[appdata-name="marketwatchnewshold"].rssFeed .rssHeader a {
+		    color: #E80E0E;
+		    text-shadow: none;
+		    font-weight: bold;
+		    font-family: "Roboto Condensed";
+		}
+
+		div[appdata-name="marketwatchnewshold"].rssFeed a:hover {
+			color: #FF0505;
+			/* text-decoration: underline; */
+			text-shadow: 1px 1px 0px #3A0202;
+		}
+		div[appdata-name="marketwatchnewshold"] .odd .rssTextAlignRight,div[appdata-name="marketwatchnewshold"] .even .rssTextAlignRight{
+			text-align: right;
+		}
+		div[appdata-name="marketwatchnewshold"] .odd .rssTextAlignLeft, div[appdata-name="marketwatchnewshold"] .even .rssTextAlignLeft{
+			text-align: left;
+		}
+		div[appdata-name=marketwatchnewshold] .rssHeader { padding: 0.2em 0; text-shadow: 0px 0px 1px transparent;}
+
+		div[appdata-name=marketwatchnewshold] .rssHeader {
+		    font-size: 15px;
+		    text-align: center;
+		}
+
+		div[appdata-name=marketwatchnewshold] .rssBody { border: none; }
+		div[appdata-name=marketwatchnewshold] .rssBody ul { list-style: none; }
+		div[appdata-name=marketwatchnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div[appdata-name=marketwatchnewshold] .rssBody ul, div[appdata-name=marketwatchnewshold] .rssRow, div[appdata-name=marketwatchnewshold] .rssRow h4, div[appdata-name=marketwatchnewshold] .rssRow.even p {
+		    color: #2F2F2F;
+		}
+
+		div[appdata-name=marketwatchnewshold] .rssBody ul, .rssRow, .rssRow h4, .rssRow.odd p {
+		    color: #000000;
+		}
+
+		div[appdata-name=marketwatchnewshold] .rssRow { padding: 0.8em; }
+		div[appdata-name=marketwatchnewshold] .rssRow h4 { font-size: 1.1em; }
+		div[appdata-name=marketwatchnewshold] .rssRow div {
+			font-size: 90%;
+			color: #929292;
+			text-align: right;
+			margin: 0.2em 0 0.4em 0;
+		}
+
+		div[appdata-name=marketwatchnewshold] .rssRow.even div {}
+
+		div[appdata-name=marketwatchnewshold] .rssRow.odd div {
+		    color: #545454;
+		}
+
+		div[appdata-name="marketwatchnewshold"] .odd {
+			background-color: #FFFFFF;
+			/* background:url(../images/dropdown.png); */
+			/* background: none; */
+			padding: 2px 2px 0px 4px !important;
+			background-image: none!important;
+			}
+		div[appdata-name="marketwatchnewshold"][appdata-assist="ticker"] .even {background-color: rgb(255, 255, 255); padding: 2px 2px 0px 4px !important;}
+
+		div[appdata-name=marketwatchnewshold] .rssRow .rssMedia {
+			padding: 0.5em;
+			font-size: 1em;
+		}
+	/*end marketwatch fjc*/
+/*end*/
