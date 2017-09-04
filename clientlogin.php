@@ -54,6 +54,11 @@ include('./snippets/connection.php');
             <div class="col-xs-4">
               <input type="button" name="adminloginsubmit" value="Log In" class="btn btn-primary btn-block btn-flat"/>
             </div><!-- /.col -->
+            <div class="col-xs-7 text-center pull-right">
+              <a href="<?php echo $host_addr?>" class="btn btn-success back_web">
+                Return to Salvus Website.
+              </a>
+            </div>
           </div>
         </form>
 

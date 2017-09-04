@@ -415,7 +415,38 @@
 				<?php
 					}
 				?>
+				<?php
+					if($b_options['type']=="maincontenthomeblog"){
+						// this is for multiple related posts on the main blog post
+						// view
+				?>
+					<!-- AN ENTRY HERE -->
+                            <li class="sb-light-skin">
+                                <div class="mediaholder ">
+                                  <div class="mediaholder_innerwrap">
+                                    <img alt="" src="<?php echo $coverimgmedsizeurl;?>">
+                                    <div class="hovercover" data-maxopacity="0.85">
+                                      <a class="fancybox" href="<?php echo $cblogdata['pagelink'];?>"><div class="lupeicon"><i class="sb-icon-search"></i></div></a>
 
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="detailholder">
+	                                <div class="divide15"></div>
+	                                <h4 class="showbiz-title txt-center"><a href="<?php echo $cblogdata['pagelink'];?>"
+	                                	title="<?php echo $cblogdata['title'];?>"><?php echo $cblogdata['title'];?></a>
+	                                </h4>
+	                                <div class="divide5"></div>
+	                                <div class="txt-center">
+	                                	<?php echo $cblogdata['plaindescription'];?>
+	                                </div>
+                                </div>
+                          	</li>
+
+				<?php
+					}
+				?>
 				<?php
 					if($b_options['type']=="mainsidebar"){
 						// this is for single blog side bar view

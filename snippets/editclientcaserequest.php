@@ -63,13 +63,15 @@ if(isset($userset)&&$userset=="true"&&$casercount>0){
 	                    <dt>Date Incident Reported on Platform</dt>
 	                    <dd><?php echo $incdata['eddatefancy'];?></dd>
 
-	                    <dt>Number of Abusers</dt>
-	                    <dd><?php echo $incdata['abusercount'];?></dd>
-	                    <dt>Incident Details</dt>
-	                    <dd><?php echo $incdata['rdetails'];?></dd>
-
 	                    <dt>Incident Nature</dt>
 	                    <dd><?php echo $incdata['incidentnature'];?></dd>
+	                    
+	                    <dt>Number of Abusers</dt>
+	                    <dd><?php echo $incdata['abusercount'];?></dd>
+
+
+	                    <dt>Incident Details</dt>
+	                    <dd><?php echo $incdata['rdetails'];?></dd>
 
 	                  </dl>
 	                </div><!-- /.box-body -->

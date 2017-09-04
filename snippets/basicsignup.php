@@ -950,7 +950,7 @@ if ($entryvariant=="franklyspeakingblogsubscription"||$entryvariant=="franklyspe
 	$contentdata['logic'][0]=" AND";// OR | AND | LIKE
     $contentdata['column'][0]="usertype";
     $contentdata['value'][0]="$usertype";
-    echo $usertype;
+    // echo $usertype;
 	if($extradata!==""){
 		// parse the extra data as key value pairs representing db table column and 
 		// table column value 
@@ -966,7 +966,7 @@ if ($entryvariant=="franklyspeakingblogsubscription"||$entryvariant=="franklyspe
         // store the current entry in the resetpassword table
 	    $query="INSERT INTO resetpassword (userid,checksum,entrydate)
 	    VALUES('$uid','$checksum',CURRENT_TIMESTAMP)";
-		echo $query;
+		// echo $query;
 		$run=briefquery($query,__LINE__,"mysqli","true");
 		$notid=$run['resultdata'][0]['id'];
 
@@ -998,9 +998,9 @@ if ($entryvariant=="franklyspeakingblogsubscription"||$entryvariant=="franklyspe
             	die('could not send Your email, something went wrong and we are handling it, meantime you could click the back button in your browser to get you out of here, we are really sorry');
           	}
 
-	        $notrdtype="none";//stops redirection
+	        // $notrdtype="none";//stops redirection
 
-			$nonottype="none";// stops notification table update
+			// $nonottype="none";// stops notification table update
         }else{
         	$notrdtype="none";//stops redirection
 			$nonottype="none";// stops notification table update	
@@ -1016,7 +1016,7 @@ if ($entryvariant=="franklyspeakingblogsubscription"||$entryvariant=="franklyspe
     	
     	$appendedparams="&t=resetemailfail";
 		$nonottype="none";// stops notification table update
-		$notrdtype="none";//stops redirection
+		// $notrdtype="none";//stops redirection
 
     }
 
@@ -1855,10 +1855,34 @@ if ($entryvariant=="franklyspeakingblogsubscription"||$entryvariant=="franklyspe
 	$bntype=isset($_POST['bntype'])?mysql_real_escape_string($_POST['bntype']):"";
 	$dataurl=isset($_POST['dataurl'])?mysql_real_escape_string($_POST['dataurl']):"";
 	$references=isset($_POST['references'])?mysql_real_escape_string($_POST['references']):"";
+	if(isset($_POST['refereedatacount'])&&$_POST['refereedatacount']>0){
+		$refereedata=array();
+		$refereedata['total']=$_POST['refereedatacount'];
+		for($i=1;$i<=$_POST['refereedatacount'];$i++){
+			$t=$i-1;
+			if(isset($_POST['refereeorgname'.$i.''])){
+				$reforgname=$_POST['refereeorgname'.$i.''];
+				$reforgemail=$_POST['refereeemail'.$i.''];
+				$reforgphone=$_POST['refereephone'.$i.''];
+				$refcontactname=$_POST['refereename'.$i.''];
+
+				$refereedata['data'][$t]['reforgname']=$reforgname;
+				$refereedata['data'][$t]['reforgemail']=$reforgemail;
+				$refereedata['data'][$t]['reforgphone']=$reforgphone;
+				$refereedata['data'][$t]['refcontactname']=$refcontactname;
+			}
+		}
+		$references=json_encode($refereedata);
+	}
+
 	$email=mysql_real_escape_string($_POST['email']);
 	$username=isset($_POST['username'])?mysql_real_escape_string($_POST['username']):"";
 	$pword=mysql_real_escape_string($_POST['pword']);
 	$phonenumber=mysql_real_escape_string($_POST['phonenumber']);
+	$phonetwo=isset($_POST['phonetwo'])?mysql_real_escape_string($_POST['phonetwo']):"";
+	if($phonetwo!==""&&str_replace(" ", "", $phonetwo)!==""){
+		$phonenumber.="[|><|]$phonetwo";
+	}
 	$contactname=mysql_real_escape_string($_POST['fullname']);
 	$contactemail=mysql_real_escape_string($_POST['contactemail']);
 	$contactphonenumber=mysql_real_escape_string($_POST['contactphonenumber']);

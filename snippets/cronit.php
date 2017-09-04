@@ -22,8 +22,10 @@
 	}
 	// next delete duplicate entries from users table that are users
 	// first test if the table exists
-	if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'recruits'"))==1) {
-		$queryuserd="DELETE email1 FROM recruits email1, recruits email2 WHERE email1.id < email2.id AND email1.email = email2.email";
+	if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'users'"))==1) {
+		$queryuserd="DELETE email1 FROM users email1, users email2 WHERE 
+		(email1.id < email2.id AND email1.email = email2.email AND 
+		email1.usertype=email2.usertype)";
 		$runuserd=mysql_query($queryuserd)or die(mysql_error()." Real number: ".__LINE__);		
 	}
 ?>

@@ -76,6 +76,10 @@ body {
 	color: #747474;
 }
 
+a.sidebar-lg-link {
+    font-size: 1.6rem;
+}
+
 .input-group-addon.rel {
     position: relative;
     min-width: 37px;
@@ -143,6 +147,15 @@ img.loadermini._igloader {
 
 .clear-both {
     clear: both;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+._howitworksvid {
+    float: none;
+    height: 360px;
 }
 
 .alert-danger .page-heading {
@@ -301,6 +314,10 @@ a.login-link:hover {}
     text-align: center;
 }
 
+.salvus-intro-content.text-left {
+    text-align: left;
+}
+
 ._salvus-img-container {
     text-align: center;
     margin-top: 25px;
@@ -313,6 +330,7 @@ a.login-link:hover {}
     float: none;
     clear: both;
     display: block;
+    height: 166px;
 }
 
 ._salvustextcontainer {
@@ -2076,8 +2094,8 @@ ul.project-details {
 	background-color: #e1e1e1;
 	width: 50%;
 	margin-left: 25%;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 18px;
+	margin-bottom: 18px;
 }
 .separator-style {
 	background-color: #FCFCFC;
@@ -2742,6 +2760,14 @@ i.fa:hover { /*top:-5px; */
     font-size: 3.5rem;
 }
 
+.salvus-intro-header.text-right {
+    text-align: right;
+}
+
+.salvus-intro-header.text-left {
+    text-align: left;
+}
+
 .salvus-intro-header._2 {
     color: #fff;
     /* margin-bottom: 0px; */
@@ -2805,7 +2831,7 @@ i.fa:hover { /*top:-5px; */
 .horizontal-process-builder li h1, 
 .horizontal-process-builder li img{
 	border: 2px solid #12561e;
-	outline: 5px solid #fff;
+	outline: 5px solid rgba(255, 255, 255, 0);
 	background-color: #fff;
 	color: #006d0e;
 }
@@ -3538,4 +3564,4 @@ ul.dropdown-cart li .item-right button{
 }
   /* ====================================================================================================================
  * OnePage Styles start
- * ====================================================================================================================*/
+ * ====================================================================================================================*/

@@ -26,9 +26,13 @@
       			</div>
 	            <div class="col-sm-6 hidden-xs">
               		<div class="social-media-icons pull-right">
-	                    <a href="#" title="Facebook" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-facebook"></span></a>
-	                    <a href="#" title="Twitter" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-twitter-alt"></span></a>
-	                    <a href="#" title="Linkedin" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-linkedin"></span></a>
+	                    <a href="<?php echo $defaultfacebook;?>" title="Facebook" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-facebook"></span></a>
+                      <a href="<?php echo $defaulttwitter;?>" title="Twitter" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-twitter-alt"></span></a>
+	                    <a href="<?php echo $defaultinstagram;?>" title="Instagram" 
+                        class="tooltip-bottom" 
+                        data-toggle="tooltip"
+                        ><span aria-hidden="true" class="fa fa-instagram"></span></a>
+	                    <!-- <a href="#" title="Linkedin" class="tooltip-bottom" data-toggle="tooltip"><span aria-hidden="true" class="mk-social-linkedin"></span></a> -->
 	                </div>
 	            </div>
     		</div>

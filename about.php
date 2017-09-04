@@ -3,6 +3,7 @@ session_start();
 include('snippets/connection.php');
 // include('login.php');
 $activepage2="active";
+
 include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php');
 
 ?>
@@ -37,9 +38,9 @@ include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php
 				          alt="Information Access MySalvus">
 				          <h5 class="text-center top30 mod1">Information Access</h5>
 				          <p class="text-center concrete">
-				          	Easy, secure transmission and archiving of information from victims to 
-				          	service providers and dissemination of support services information
-				          	to anyone via the platfrom
+				          	Ease of access and secure transmission of information to 
+				          	service providers; dissemination of information on sexual 
+				          	violence and support services to users
 				          </p>
 				        </div>
 
@@ -49,9 +50,9 @@ include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php
 				          alt="MySalvus Record">
 				          <h5 class="text-center top30 mod1">Support/Aid Requests</h5>
 				          <p class="text-center concrete">
-				          	Users can access service providers they require help from by 
-				          	sending requests to as many as possible on any number of
-				          	support services they are in need of.</p>
+				          	Access to service providers required by users by sending 
+				          	requests to as many as needed on any number of support 
+				          	services they are in need of.</p>
 				        </div>
 
 				        <div class="col-sm-4">
@@ -60,13 +61,16 @@ include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php
 				          alt="MySalvus Feedback">
 				          <h5 class="text-center top30 mod1">Service Provider Interaction</h5>
 				          <p class="text-center concrete">
-				          	Service providers can connect with each other to provide
-				          	comprehensive care to victims on the platform, cases can also 
-				          	be transfered to more suitable service providers if need be.</p>
+				          	Service providers connecting and collaborating with each other 
+				          	to provide comprehensive care to survivors on the platform and 
+				          	share knowledge.</p>
 				        </div>
 				    </div>
 				</div>
 				<div class="col-md-12">
+					<div class="col-sm-6 clear-both _howitworksvid margin-auto text-center bg-darkgrey-gradient">
+
+					</div>
 					<h2 class="text-center page-header _1">
 						<small>How MySalvus works for Users</small> 
 					</h2>
@@ -162,41 +166,7 @@ include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php
   			</div>
 
   		</div>
-  		<section id="content-1-6" class="content-1-6 content-block">
-                
-	        <div class="col-lg-12 bottom50 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-	        	<h2 class="page-header text-center">
-	        		Our Partners<br>
-	        		<small></small>
-	        	</h2>
-	        </div>
-	                
-	        <div class="row client-row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-	            <div class="row-wrapper">
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://starsfoundation.org.uk/" target="_blank">
-		                    <img alt="Stars Foundation" 
-		                    src="<?php echo $host_addr?>images/mysalvusimages/stars-foundation-logo.png">
-		                </a>
-	                </div>
-	            
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://empowerweb.org/" target="_blank">
-		                    <img alt="Empower" 
-		                    src="<?php echo $host_addr?>images/mysalvusimages/empower-logo.jpg">
-		                </a>
-	                </div>
-	            
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://dsvrtlagos.org/" target="_blank">
-	                    	<img alt="DSVRT" 
-	                    	src="<?php echo $host_addr?>images/mysalvusimages/dsvrt.jpg">
-		                </a>
-	                </div>
-	            
-	            </div>
-	        </div><!-- /.row -->			
-       	</section>
+  		
 	    <!-- Content End -->
 	    <?php
 			include($host_tpathplain.'themesnippets/mysalvussnippets/footermysalvus.php');

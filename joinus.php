@@ -48,7 +48,19 @@ $bizarr=getAllBusinessTypes();
 	    <!-- Content start -->
 	    <div class="container">
 	  		<div class="row content" id="signup">
+	  			<div class="col-md-12 _salvus-intro-container ">
+	  				
+	  				<div class="salvus-intro-content text-left">
+	  					By filling the form below, your organization will be added to our 
+	  					directory of sexual violence support service providers who are 
+	  					willing and able to render one or more crucial service for 
+	  					survivors of sexual violence. 
+	  					Please note that you will be able to render help through this 
+	  					platform after your organization has been verified.<br> 
+						Please join the platform by filling the information boxes below:
 
+	  				</div>
+				</div>
 				<h2 class="page-header">Become a Salvus Service Provider 
 				<i class="fa fa-briefcase"></i></h2>	
 
@@ -134,7 +146,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
+	                <div class="col-md-3">
 	                	<div class="form-group">
 	                      <label>Organization Phone Number</label>
 	                      <div class="input-group">
@@ -147,7 +159,20 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
+	                <div class="col-md-3">
+	                	<div class="form-group">
+	                      <label>Organization Hotline <small>For emergencies</small></label>
+	                      <div class="input-group">
+		                      <div class="input-group-addon">
+		                        <i class="fa fa-phone"></i>
+		                      </div>
+	                      	  <input type="text" class="form-control" 
+	                      	  name="phonetwo" data-telvalidate="true" 
+	                      	  placeholder="Phone Number"/>
+	                      </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-3">
 	                	<div class="form-group">
 	                      <label>Contact Name</label>
 	                      <div class="input-group">
@@ -158,7 +183,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
+	                <div class="col-md-3">
 	                	<div class="form-group">
 	                      <label>Contact Email</label>
 	                      <div class="input-group">
@@ -169,6 +194,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
+
 	                <div class="col-md-3">
 	                	<div class="form-group">
 	                      <label>Contact Phone Number</label>
@@ -221,7 +247,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
+	                <div class="col-md-6">
 	                	<div class="form-group">
 	                      <label>Organization Address</label>
 	                      <div class="input-group">
@@ -272,7 +298,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
+	                <div class="col-md-6">
 	                	<div class="form-group">
 	                      <label>Organization Bio(max of 100 words)</label>
 	                      <div class="input-group">
@@ -285,18 +311,7 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
-	                	<div class="form-group">
-	                      <label>References</label>
-	                      <div class="input-group">
-		                      <div class="input-group-addon">
-		                        <i class="fa fa-users"></i>
-		                      </div>
-	                      	  <textarea class="form-control" rows="6" name="references" 
-	                      	  placeholder="References" ></textarea>
-	                      </div>
-	                    </div>
-	                </div>
+	                
 	                <div class="col-md-4 clear-both">
 	                	<div class="form-group">
 	                      <label>Organization Profile</label>
@@ -332,6 +347,38 @@ $bizarr=getAllBusinessTypes();
 	                      </div>
 	                    </div>
 	                </div>
+
+	                <div class="col-md-12">
+	                	<div class="col-md-6">
+	                		<input type="hidden" name="refereedatacount" value="2"/>
+		                	<div class="form-group">
+		                      	<label>References Data(1)</label>
+		                      	<div class="input-group">
+			                      <div class="input-group-addon">
+			                        <i class="fa fa-users"></i>
+			                      </div>
+			                      <input name="refereeorgname1" type="text" class="form-control" placeholder="Orgainsation Name">
+			                      <input name="refereemail1" type="text" data-evalidate="true" class="form-control" placeholder="Email Address">
+			                      <input name="refereephone1" type="text" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+			                      <input name="refereename1" type="text" class="form-control" placeholder="Contact Name">
+		                      	</div>
+		                	</div>
+	                    </div>
+	                    <div class="col-md-6">
+		                	<div class="form-group">
+		                      	<label>References Data(2)</label>
+		                      	<div class="input-group">
+			                      <div class="input-group-addon">
+			                        <i class="fa fa-users"></i>
+			                      </div>
+			                      <input name="refereeorgname2" type="text" class="form-control" placeholder="Orgainsation Name">
+			                      <input name="refereemail2" type="text" data-evalidate="true" class="form-control" placeholder="Email Address">
+			                      <input name="refereephone2" type="text" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+			                      <input name="refereename2" type="text" class="form-control" placeholder="Contact Name">
+		                      	</div>
+		                	</div>
+	                    </div>
+	                </div>
 	                <input type="hidden" name="formdata" value="<?php echo $formtruetype;?>"/>
 	                <input type="hidden" name="extraformdata" value="businessname-:-input<|>
 	                  email-:-input<|>
@@ -346,7 +393,12 @@ $bizarr=getAllBusinessTypes();
 	                  address-:-textarea<|>
 	                  bio-:-textarea<|>
 	                  orgprofile-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]<|>
-	                  orgcac-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]"/>
+	                  orgcac-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]<|>
+	                  egroup|data-:-[refereedatacount>|<
+					  refereeorgname-|-input>|<
+					  refereeemail-|-input>|<
+					  refereephone-|-input>|<
+					  refereename-|-input]-:-groupfall[1,2,3,4]"/>
 	                <input type="hidden" name="errormap" value="businessname-:-Please provide Organization name<|>
 	                    email-:-Provide a valid email address<|>
 	                    pword-:-Provide a good password of at least 8 characters in length.<|>
@@ -360,7 +412,11 @@ $bizarr=getAllBusinessTypes();
 	                    address-:-Please Provide an address.<|>
 	                    bio-:-Please give a short detailed description of the organization<|>
 	                    orgprofile-:-NA<|>
-	                    orgcac-:-Choose a valid image, document or pdf file containing the organization cac certificate"/>
+	                    orgcac-:-Choose a valid image, document or pdf file containing the organization cac certificate<|>
+	                    egroup|data-:-[Please Provide the reference organisation name>|<
+	                    Please Provide the reference organisation email>|<
+	                    Please Provide the reference organisation phone number>|<
+	                    Please Provide the reference organisation contact Person]"/>
 	                <div class="col-md-12 clearboth">
 		                <div class="box-footer text-center">
 		                    <input type="button" class="btn btn-success _salvsubmit" name="user" data-formdata="<?php echo $formtruetype;?>" onclick="submitCustom('<?php echo $formtruetype;?>','complete')" value="Create Service Provider Account"/>

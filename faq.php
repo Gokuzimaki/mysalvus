@@ -117,6 +117,10 @@ if(isset($_GET['qid'])&&$_GET['qid']>0){
 						include($host_tpathplain.'themesnippets/mysalvussnippets/modules/sidebarparser.php');
 
 					?>	
+					<div class="row custom-search">
+						<h5 class="underlined"><strong>Check</strong> Resources</h5>
+						<a href="##Resources" class="sidebar-lg-link">Resources</a>
+					</div>
 				</div>
 
   			</div>

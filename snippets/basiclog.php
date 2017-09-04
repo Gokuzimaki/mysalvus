@@ -3,8 +3,8 @@ include('connection.php');
 $logtype=$_POST['logtype'];
 // echo $logtype;
 if($logtype=="adminlogin"){
-	$username=mysql_real_escape_string($_POST['username']);
-	$password=mysql_real_escape_string($_POST['password']);
+	$username=mysqli_real_escape_string($host_connli,$_POST['username']);
+	$password=mysqli_real_escape_string($host_connli,$_POST['password']);
 	$iniquery="SELECT * FROM admin WHERE username='$username' AND password='$password' AND status='active'";
 	$inirun=briefquery($iniquery,__LINE__,"mysqli");
 	$numrows=$inirun['numrows'];
@@ -27,17 +27,22 @@ if($logtype=="adminlogin"){
 		$logtype=="adminlogin"?header('location:../admin/index.php?error=true'):header('location:../fjcadmin/index.php?error=true');
 	}
 }elseif($logtype=="user"||$logtype=="serviceprovider"){
-	$username=mysql_real_escape_string($_POST['username']);
-	$password=mysql_real_escape_string($_POST['password']);
-	$weblog=isset($_POST['weblog'])?mysql_real_escape_string($_POST['weblog']):"";
+	$username=mysqli_real_escape_string($host_connli,$_POST['username']);
+	$password=mysqli_real_escape_string($host_connli,$_POST['password']);
+	$weblog=isset($_POST['weblog'])?
+	mysqli_real_escape_string($host_connli,$_POST['weblog']):"";
+
 	$iniquery="SELECT * FROM users WHERE (email='$username' OR username='$username') 
 	AND pword='$password' AND usertype='$logtype' AND status='active'";
-	$inirun=mysql_query($iniquery)or die(mysql_error());
-	$numrows=mysql_num_rows($inirun);
+	$inirun=mysqli_query($host_connli,$iniquery)or die(mysqli_error($host_connli));
+	$numrows=mysqli_num_rows($inirun);
+	// echo $iniquery;
 	if($numrows>0){
-		$row=mysql_fetch_assoc($inirun);
+		$row=mysqli_fetch_assoc($inirun);
 		$id=$row['id'];
-		session_start();
+		if(session_id() == ''){
+			session_start();
+		}
 		$md5id=md5($id);
 
 		if($row['usertype']=="business"||$row['usertype']=="serviceprovider"){
@@ -54,6 +59,7 @@ if($logtype=="adminlogin"){
 			$_SESSION['userimysalvus'.$md5id.'']=$row['id'];
 			$_SESSION['userhmysalvus']=$md5id;
 			if($weblog==""){
+				// echo $id;
 				header('location:../userdashboard.php');
 			}else{
 				$success="true";
@@ -62,10 +68,11 @@ if($logtype=="adminlogin"){
 			}
 		}
 	}else{
-		if($row['usertype']=="business"||$row['usertype']=="serviceprovider"){
+		if($logtype=="business"||$logtype=="serviceprovider"){
 			//	echo $_SESSION['adminerror'];
 			header('location:../clientlogin.php?ctype=logerror');
 		}else{
+			// echo "Failure";
 			header('location:../login.php?ctype=logerror');
 
 		}

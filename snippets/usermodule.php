@@ -34,6 +34,7 @@
 		global $host_addr;
 		$row=array();
 		$query="SELECT * FROM users where id=$id";
+		// echo $query;
 		$run=mysql_query($query)or die(mysql_error()." Line ".__LINE__);
 		$numrows=mysql_num_rows($run);
 		
@@ -92,8 +93,8 @@
 				$phonearr=explode("[|><|]", $phonenumber);
 				if(count($phonearr)>1){
 					$phoneone=strlen($phonearr[0])==11?substr($phonearr[0], 1,9):$phonearr[0];
-					$phonetwo=isset($phonearr[1])&&strlen($phonearr[1])==11?substr($phonearr[1], 1,9):$phonearr[1];
-					$phonethree=isset($phonearr[2])&&strlen($phonearr[2])==11?substr($phonearr[2], 1,9):$phonearr[2];
+					$phonetwo=isset($phonearr[1])?$phonearr[1]:"";
+					$phonethree=isset($phonearr[2])?$phonearr[2]:"";
 				}else{
 					$phoneone=$phonenumber;$phonetwo="";$phonethree="";
 				}
@@ -168,8 +169,21 @@
 			for($i=0;$i<count($bplode);$i++){
 				$row['businessnaturedata'][$i]=$bplode[$i];
 			}
+
+			// for references
+			$references=isset($row['referees'])?$row['referees']:"";
+			$referencedata=array();
+			$referencedata=json_decode($references,true);
+			
+			if($references!==""&&strtolower(json_last_error_msg())=="no error"){
+				// echo "<br>jsoned<br>";
+				$row['referencedata']=$referencedata;
+				// var_dump($referencedata);
+			}
+
 			// period of time the business has provided said services
 			$spduration=$row['spduration'];
+			
 			$websiteurl=isset($row['websiteurl'])?$row['websiteurl']:"";
 			$websiteurltwo=$websiteurl;
 			if($websiteurl!==""){
@@ -364,8 +378,8 @@
 				$phonearr=explode("[|><|]", $phonenumber);
 				if(count($phonearr)>1){
 					$phoneone=strlen($phonearr[0])==11?substr($phonearr[0], 1,9):$phonearr[0];
-					$phonetwo=isset($phonearr[1])&&strlen($phonearr[1])==11?substr($phonearr[1], 1,9):$phonearr[1];
-					$phonethree=isset($phonearr[2])&&strlen($phonearr[2])==11?substr($phonearr[2], 1,9):$phonearr[2];
+					$phonetwo=isset($phonearr[1])?$phonearr[1]:"";
+					$phonethree=isset($phonearr[2])?$phonearr[2]:"";
 				}else{
 					$phoneone=$phonenumber;$phonetwo="";$phonethree="";
 				}
@@ -1307,6 +1321,10 @@
 			$orderout="ORDER BY id DESC";
 			$qout.=" $qcat regdate='$typeval' ";
 
+		}else if($type=="hotline"){
+			$orderout="ORDER BY id DESC";
+			$qout.=" $qcat phonenumber LIKE '%[|><|]%' ";
+
 		}else if($type=="businessnature"){
 			$orderout="ORDER BY businessname";
 			$qout.=" $qcat businessnature='$typeval' AND activationstatus='active'";
@@ -1458,6 +1476,17 @@
 				$outvar=getSingleUser($row['id']);
 				// for plain user acc
 				$outvartwo=getSingleUserPlain($row['id']);
+				// create element for highlighting emergency contact service providers
+				$emergencydata="";
+				
+				if(strpos($row['phonenumber'], "[|><|]")){
+					$emergencydata='<div class="ecelement"></div>';
+
+				}
+				
+				if($type=="hotline"){
+					$emergencydata="";
+				}
 
 				// get client profile and cac reg
 				$clientprofile='<a href="##">none</a>';
@@ -1516,6 +1545,7 @@
 									<td>'.$outvartwo['activationstatus'].'</td>
 									<td>'.$outvartwo['status'].'</td>
 									<td name="trcontrolpoint">
+										'.$emergencydata.'
 										<a href="#&id='.$outvartwo['id'].'" name="edit" data-type="editsingleclientaccadmin" data-oname="View" data-divid="'.$outvartwo['id'].'">View</a>
 									</td>
 								</tr>
@@ -1532,6 +1562,7 @@
 				$adminoutput2.='<tr data-id="'.$outvartwo['id'].'">
 									<td>'.$outvartwo['nameout'].'</td><td>'.$outvartwo['gender'].'</td><td>'.$outvartwo['age'].'</td><td>'.$outvartwo['email'].'</td><td>'.$outvartwo['phonenumber'].'</td><td>'.$outvartwo['regdate'].'</td><td>'.$outvartwo['status'].'</td>
 									<td name="trcontrolpoint">
+										'.$emergencydata.'
 										<a href="#&id='.$outvartwo['id'].'" data-oname="View" 
 										name="edit" data-type="editsingleuseraccadmin" 
 										data-divid="'.$outvartwo['id'].'">View</a>

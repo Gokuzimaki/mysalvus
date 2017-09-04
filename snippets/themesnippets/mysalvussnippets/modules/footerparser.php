@@ -84,10 +84,12 @@
             	<h4 class="module-title2">Privacy and Usage</h4>
                 
                 <ul class="link-list-1">
-                    <li><a href="#">
+                    <li><a href="<?php echo $host_addr;?>terms.php">
                     	<i class="fa fa-angle-double-right"></i>Terms of Use</a></li>
-                    <li><a href="#">
+                    <li><a href="<?php echo $host_addr;?>privacy.php">
                     	<i class="fa fa-angle-double-right"></i>Privacy</a></li>
+                    <li><a href="#">
+                    	<i class="fa fa-angle-double-right"></i>Resources</a></li>
                 </ul>
                 
             </div>

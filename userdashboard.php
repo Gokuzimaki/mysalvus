@@ -244,7 +244,7 @@ if(!isset($panelcontrolstyle)){
 		              <ul class="treeview-menu plain">
 		                <li>
 				            <a href="#" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="editsingleuseracc" appdata-fa='<i class="fa fa-user"></i>' appdata-pcrumb="Profile">
-				                <i class="fa fa-gear "></i> <span>Edit</span>
+				                <i class="fa fa-gear "></i> <span>View</span>
 				            </a>
 				        </li>
 		               
@@ -256,13 +256,19 @@ if(!isset($panelcontrolstyle)){
 		              </a>
 		              <ul class="treeview-menu plain">
 		                <li><a href="#Create Incidents" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="userincidents" appdata-fa='<i class="fa fa-user-circle"></i>' appdata-pcrumb="Incidents  > Incident Report "><i class="fa fa-plus"></i> New Incident</a></li>
-		                <li><a href="#Create/Edit Incidents" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="edituserincidents" appdata-fa='<i class="fa fa-user-circle"></i>' appdata-pcrumb="Incidents  > Edit Incident Report "><i class="fa fa-gears"></i> View Previous</a></li>
+		                <li><a href="#Create/Edit Incidents" appdata-otype="sublink" 
+		                	appdata-type="menulinkitem" 
+		                	appdata-name="edituserincidents" 
+		                	appdata-fa='<i class="fa fa-user-circle"></i>' 
+		                	appdata-pcrumb="Incidents  > Edit Incident Report "
+		                	><i class="fa fa-gears"></i> My Reports</a></li>
+					    
 					    <li><a href="#Edit Saved Incidents" appdata-otype="sublink" 
 					    	appdata-type="menulinkitem" 
 					    	appdata-name="editsaveduserincidents" 
 					    	appdata-fa='<i class="fa fa-user-circle"></i>' 
 					    	appdata-pcrumb="Incidents > Edit Saved Incidents">
-					    	<i class="fa fa-save"></i> Edit Saved</a></li>
+					    	<i class="fa fa-save"></i> My Saved Reports</a></li>
 		              </ul>
 		            </li>
 		            <li class="treeview">
@@ -270,7 +276,12 @@ if(!isset($panelcontrolstyle)){
 		                <i class="fa fa-universal-access"></i> <span>Get Support</span> <i class="fa fa-angle-left pull-right"></i>
 		              </a>
 		              <ul class="treeview-menu plain">
-		                <li><a href="#Get Support" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="usercases" appdata-fa='<i class="fa fa-universal-access"></i>' appdata-pcrumb="Get Support > Case Request "><i class="fa fa-search"></i> Get Help</a></li>
+		                <li><a href="#Get Support" appdata-otype="sublink" 
+		                	appdata-type="menulinkitem" 
+		                	appdata-name="usercases" 
+		                	appdata-fa='<i class="fa fa-universal-access"></i>' 
+		                	appdata-pcrumb="Get Support > Case Request "
+		                	><i class="fa fa-search"></i> Get Help</a></li>
 		              </ul>
 		            </li>
 		            <li class="treeview">

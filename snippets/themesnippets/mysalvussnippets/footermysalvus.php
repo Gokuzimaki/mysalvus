@@ -51,7 +51,9 @@
 							<p class="copyright">
 								&copy;  <?php echo date('Y');?> 
 								<a href="http://hacey.org">HACEY Health Initiative.</a>
-								All Rights Reserved</p>
+								All Rights Reserved. My Salvus is an initiative of Hacey 
+                                Health Initiative with support from the Stars Foundation 
+                                Girl Award and EMpower.</p>
 					<?php
 						}
 					?>

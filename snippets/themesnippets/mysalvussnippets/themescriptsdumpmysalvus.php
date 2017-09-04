@@ -138,7 +138,7 @@
     
     <!-- for Retina Graphics -->
     <!-- // <script type="text/javascript" src="<?php echo $host_addr;?>scripts/themescripts/mysalvusscripts/retina.js"></script>  -->
-<?php
+	<?php
 		if(isset($mpagetitle)){
 			echo $mpagescriptextras;
 			echo $mpagemaps;

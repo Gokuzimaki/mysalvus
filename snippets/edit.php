@@ -4049,6 +4049,10 @@ if($entryvariant=="editbooking"){
 	$pword=mysql_real_escape_string($_POST['pword']);
 	genericSingleUpdate("users","pword","$pword","id","$entryid");
 	$phonenumber=mysql_real_escape_string($_POST['phonenumber']);
+	$phonetwo=isset($_POST['phonetwo'])?mysql_real_escape_string($_POST['phonetwo']):"";
+	if($phonetwo!==""&&str_replace(" ", "", $phonetwo)!==""){
+		$phonenumber.="[|><|]$phonetwo";
+	}
 	genericSingleUpdate("users","phonenumber","$phonenumber","id","$entryid");
 	$contactname=mysql_real_escape_string($_POST['fullname']);
 	genericSingleUpdate("users","fullname","$contactname","id","$entryid");
@@ -4056,6 +4060,10 @@ if($entryvariant=="editbooking"){
 	genericSingleUpdate("users","contactemail","$contactemail","id","$entryid");
 	$contactphonenumber=mysql_real_escape_string($_POST['contactphonenumber']);
 	genericSingleUpdate("users","contactphone","$contactphonenumber","id","$entryid");
+
+	$emergency=isset($_POST['emergency'])?
+	mysql_real_escape_string($_POST['emergency']):"";
+	genericSingleUpdate("users","emergency","$emergency","id","$entryid");
 
 	$businessnature=mysql_real_escape_string($_POST['businessnature']);
 	$businessnature2=isset($_POST['businessnature2'])?
@@ -4095,10 +4103,30 @@ if($entryvariant=="editbooking"){
 
 	$references=isset($_POST['references'])?
 	mysql_real_escape_string($_POST['references']):"";
+	if(isset($_POST['refereedatacount'])&&$_POST['refereedatacount']>0){
+		$refereedata=array();
+		$refereedata['total']=$_POST['refereedatacount'];
+		for($i=1;$i<=$_POST['refereedatacount'];$i++){
+			$t=$i-1;
+			if(isset($_POST['refereeorgname'.$i.''])){
+				$reforgname=$_POST['refereeorgname'.$i.''];
+				$reforgemail=$_POST['refereeemail'.$i.''];
+				$reforgphone=$_POST['refereephone'.$i.''];
+				$refcontactname=$_POST['refereename'.$i.''];
+
+				$refereedata['data'][$t]['reforgname']=$reforgname;
+				$refereedata['data'][$t]['reforgemail']=$reforgemail;
+				$refereedata['data'][$t]['reforgphone']=$reforgphone;
+				$refereedata['data'][$t]['refcontactname']=$refcontactname;
+			}
+		}
+		$references=json_encode($refereedata);
+	}
 	if($references!==""){
 		genericSingleUpdate("users","referees","$references","id","$entryid");
 
 	}
+
 	$spduration=mysql_real_escape_string($_POST['spduration']);
 	genericSingleUpdate("users","spduration","$spduration","id","$entryid");
 	$state=mysql_real_escape_string($_POST['state']);

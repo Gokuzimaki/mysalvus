@@ -57,7 +57,13 @@ $formtruetype="useraccform";
 	    <div class="container">
 
 	  		<div class="row content" id="signup">
-
+	  			<div class="col-md-12 _salvus-intro-container">
+	  				
+	  				<div class="salvus-intro-content text-left">
+	  					By creating a user account, you can save or report incidents of sexual violence/assault either as a survivor or as a witness of sexual violence/assault. Your story will not be shared until you want it to. You can also submit it immediately and get help if you wish.<br> 
+						To record the incident, create an account by filling the form below:
+	  				</div>
+				</div>
 				<h2 class="page-header">Create a Salvus User Account<br>
 				<small> After your account is created, you can start reporting incidents.</small>
 				</h2>	

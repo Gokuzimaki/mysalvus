@@ -38,7 +38,7 @@ if(file_exists("index.php")){
   <body class="skin-yellow login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="./index.php"><b>LOGIN TO MYSALVUS</b></a>
+        <a href="<?php echo $host_addr?>index.php"><b>LOGIN TO MYSALVUS</b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">User Login</p>
@@ -69,6 +69,11 @@ if(file_exists("index.php")){
             <div class="col-xs-4 pull-right">
               <input type="button" name="salvusreg" value="Register" <?php echo $proute;?>class="btn btn-success btn-block btn-flat"/>
             </div><!-- /.col -->
+            <div class="col-xs-12 text-center">
+              <a href="<?php echo $host_addr?>index.php" class="btn btn-success back_web">
+                Return to Salvus Website.
+              </a>
+            </div>
           </div>
         </form>
 

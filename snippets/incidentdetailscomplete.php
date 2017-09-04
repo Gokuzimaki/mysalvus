@@ -90,8 +90,7 @@ if(isset($userset)&&$userset=="true"&&$casecount>0){
 
 	                    <dt>Date Incident Reported on Platform</dt>
 	                    <dd><?php echo $incdata['eddatefancy'];?></dd>
-	                    <dt>Number of Abusers</dt>
-	                    <dd><?php echo $incdata['abusercount'];?></dd>
+
 	                    <dt>Number of Abusers</dt>
 	                    <dd><?php echo $incdata['abusercount'];?></dd>
 	                    <dt>Abuser Details</dt>
@@ -103,6 +102,14 @@ if(isset($userset)&&$userset=="true"&&$casecount>0){
 	                    ?>
 	                    <dt>Incident Nature Details</dt>
 	                    <dd><?php echo $incdata['incidentnaturedetails'];?></dd>
+	                    <?php 
+	                		}
+	                    ?>
+	                    <?php 
+	                    	if($incdata['rdetails']!==""){
+	                    ?>
+	                    <dt>Incident Details</dt>
+	                    <dd><?php echo $incdata['rdetails'];?></dd>
 	                    <?php 
 	                		}
 	                    ?>

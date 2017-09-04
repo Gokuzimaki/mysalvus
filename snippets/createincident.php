@@ -392,15 +392,11 @@
 							    	</div>
 							    	<?php
 							    		if(isset($userset)&&$userset=="true"){
+							    			// data for this section has been 
+							    			// relocated to the display.php file 
+							    			// in the block 'usercases' 
 							    	?>
-							    	<div class="col-md-12 disclaimer-section">
-							    		<h4 class="disclaimer-heading">
-						    				<?php echo $disclaimer_title;?>
-							    		</h4>
-							    		<p class="disclaimer-text">
-					    					<?php echo $disclaimer;?>
-							    		</p>
-							    	</div>
+							    	
 							    	<?php
 							    		}
 							    	?>
@@ -575,7 +571,7 @@
 							    <div class="col-md-12">
 							        <div class="col-md-4">
 							        	<div class="form-group">
-							              <label>Survivor Phone Number</label>
+							              <label>Survivor/Guardian Phone Number</label>
 							              <div class="input-group">
 							                  <div class="input-group-addon">
 							                    <i class="fa fa-phone"></i>
@@ -857,7 +853,11 @@
 			                    incidentnature-:-Choose the nature of the incident from the list.<|>
 			                    incidentnaturedetails-:-Please provide more details on the nature of the incident, since its not on the list presented<|>
 							    incidentdetails-:-State how the abuse was discovered<|>
-							    egroup|data-:-[Please Provide the abusers fullname>|<Choose the gender>|<Specify if the abuser is identifiable>|<Specify relationship to abuser>|<Please provide more details about the relationship]"/>
+							    egroup|data-:-[Please Provide the abusers fullname>|<
+							    Choose the gender>|<
+							    Specify if the abuser is identifiable>|<
+							    Specify relationship to abuser>|<
+							    Please provide more details about the relationship]"/>
 			                <div class="col-md-12 clearboth">
 				                <div class="box-footer">
 				                    <input type="button" class="btn btn-danger" name="incidentsubmit" data-formdata="<?php echo $formtruetype."tp";?>" onclick="submitCustom('<?php echo $formtruetype."tp";?>','complete')" value="Create Entry"/>

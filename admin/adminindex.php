@@ -288,6 +288,10 @@
 				              <ul class="treeview-menu">
 				                <li><a href="#Create Salvus ServiceProvider" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="serviceprovidersnew" appdata-fa='<i class="fa fa-briefcase"></i>' appdata-pcrumb="MySalvus Profiles > ServiceProviders "><i class="fa fa-plus"></i> New</a></li>
 				                <li><a href="#Edit Salvus ServiceProvider" appdata-otype="sublink" appdata-type="menulinkitem" appdata-name="serviceprovidersedit" appdata-fa='<i class="fa fa-briefcase"></i>' appdata-pcrumb="MySalvus Profiles > ServiceProviders "><i class="fa fa-gear"></i> View</a></li>
+				                <li><a href="#Create Salvus Emergency data" 
+				                	appdata-otype="sublink" 
+				                	appdata-type="menulinkitem" 
+				                	appdata-name="serviceprovidershotline" appdata-fa='<i class="fa fa-briefcase"></i>' appdata-pcrumb="MySalvus Profiles > ServiceProviders "><i class="fa fa-phone"></i>Emergency Contacts</a></li>
 				              </ul>
 				            </li>
 						</ul>
@@ -515,7 +519,8 @@
 						// echo $outsuser['age'];
 						// $pstrtest="";
 						// $flooz2=base64_decode('TSYqLzdTL-9MtUFglIFBaPzIsTDwuMlooLzEqRy0+KzYlSCgyNEdMSTsmSk46NihCKE4gR0dGUTU4USs1SQpNSCktQ1IqUjI4LlxTTDBQNF9LOzJIWkAqLjs6IUc+LEpDOlg2QyhOI0lQVVBeSlY1XFBNTzdQV0EtOldMCjJdTEkmWFw5MUVdNyc6WFNYWExITlJPUyIK');
-
+						$jsontest='{"total":"2","data":[{"reforgname":"Dairy Farm Nig. Ltf","reforgemail":"dairy@gma.co","reforgphone":"3456675643","refcontactname":"Segun Alabi"},{"reforgname":"ROI Big Investments","reforgemail":"roibiggest@gma.co","reforgphone":"3245342234","refcontactname":"Busola Sonekan"}]}';
+						// var_dump(json_decode($jsontest,true));
 	            	?>
 	            	<div class="row">
 	            		<div class="col-lg-12">

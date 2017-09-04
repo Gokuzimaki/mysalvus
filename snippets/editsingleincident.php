@@ -651,7 +651,7 @@
 			<div class="col-md-12">
 					<div class="col-md-4">
 						<div class="form-group">
-							<label>Survivor Phone Number</label>
+							<label>Survivor/Guardian Phone Number</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<i class="fa fa-phone"></i>
@@ -689,7 +689,7 @@
 			</div>
 			<div class="col-md-12">
 					<div class="form-group">
-						<label>Survivor Contact Address</label>
+						<label>Survivor/Guardian Contact Address</label>
 						<div class="input-group">
 							<div class="input-group-addon">
 								<i class="fa fa-map-marker"></i>
@@ -792,7 +792,7 @@
 								<div class="input-group-addon nopadding">                 
 									<a href="##" data-name="abusercount_addlink" data-i-type data-limit="20" 
 									onclick="multipleElGenerator('form[name=<?php echo $formtruetype;?>] a[data-name=abusercount_addlink]','','form[name=<?php echo $formtruetype;?>] div.abuser-field-hold._new',$('form[name=<?php echo $formtruetype;?>] div.abuser-field-hold._new .multi_content_hold').length,$('form[name=<?php echo $formtruetype;?>] input[name=abusercount]').val(),'form[name=<?php echo $formtruetype;?>] input[name=abusercount]')" class="bs-igicon blockdisplay bg-gradient-darkgreen background-color-darkgreen background-color-orangehover bg-orange-gradienthover color-white color-darkredhover">
-													<i class="fa fa-arrow-right"></i>
+										<i class="fa fa-arrow-right"></i>
 									</a>
 								</div>
 						</div>

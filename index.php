@@ -3,6 +3,55 @@ session_start();
 include('snippets/connection.php');
 // include('login.php');
 $activepage1="active";
+// setup page script lib entries
+$mpagelibscriptextras='<script src="'.$host_addr.'plugins/showbizpro/js/jquery.themepunch.showbizpro.min.js"></script>'; 
+$mpagelibscriptextras='<script src="'.$host_addr.'plugins/showbizpro/js/jquery.themepunch.showbizpro.min.js"></script>'; 
+$mpagelibscriptextras.='<script src="'.$host_addr.'plugins/showbizpro/js/jquery.themepunch.tools.min.js"></script>
+					<script src="'.$host_addr.'plugins/showbizpro/fancybox/jquery.fancybox.pack.js"></script>
+					<!--ACTIVATE THE SHOWBIZPRO START-->
+					<script type="text/javascript">
+
+						jQuery(document).ready(function() {
+
+							jQuery(\'#example1\').showbizpro({
+								dragAndScroll:"on",
+								visibleElementsArray:[3,3,2,1],
+								carousel:"off",
+								entrySizeOffset:0,
+								allEntryAtOnce:"off",
+								rewindFromEnd:"on",
+								autoPlay:"on",
+								delay:5000,						
+								speed:1200,
+								easing:\'Back.easeOut\'
+							});
+							
+							jQuery(\'#logos\').showbizpro({
+								dragAndScroll:"on",
+								visibleElementsArray:[5,3,2,1],
+								carousel:"on",
+								entrySizeOffset:0,
+								allEntryAtOnce:"off",
+								speed:1200,
+								autoPlay:"on",
+								rewindFromEnd:"on",
+								delay:5000,
+								easing:\'Back.easeOut\'
+							});
+
+							// THE FANCYBOX PLUGIN INITALISATION
+							// jQuery(".fancybox").fancybox();
+
+
+						});
+
+					</script>
+					<!--ACTIVATE THE SHOWBIZPRO END--> 
+'; 
+// $mpagelibstyleextras.=$host_addr.'plugins/showbizpro/css/fontello.css'; 
+$mpagelibstyleextras='<link rel="stylesheet" href="'.$host_addr.'plugins/showbizpro/css/settings.css"/>'; 
+$mpagelibstyleextras.='<link rel="stylesheet" href="'.$host_addr.'stylesheets/themestyles/mysalvuscss/style-showbizpro.css"/>'; 
+$mpagelibstyleextras.='<link rel="stylesheet" href="'.$host_addr.'plugins/showbizpro/fancybox/jquery.fancybox.css"/>'; 
 include($host_tpathplain.'themesnippets/mysalvussnippets/headcontentmysalvus.php');
 // pull the service provider data
 
@@ -68,7 +117,9 @@ if($bn['numrows']>0){
 		  				<div class="salvus-intro-content">
 		  					 Salvus, which means "<b>safe</b>", is an interactive sexual violence 
 		  					 reporting platform where cases of sexual violence can be reported 
-		  					 anonymously and survivors can access available support services.
+		  					 anonymously and survivors can access available support services.<br>
+		  					 My Salvus is an initiative of Hacey Health Initiative with support from the 
+		  					 Stars Foundation Girl Award and EMpower
 		  				</div>
   					</div>
   				</div>
@@ -109,6 +160,57 @@ if($bn['numrows']>0){
 		        </div>
 		    </div>
   		</div>
+  		<div class="row bottom50">
+ 			<div class="container">
+                <div class="style-title">Latest <strong>Blog</strong> Posts</div>
+                <div class="separator">
+                    <div class="separator-style"></div>
+                </div>
+                <div class="divide20"></div>
+                <!-- DEMO I. -->
+                <div id="example1" class="showbiz-container _homeblog">
+
+                    <!-- THE NAVIGATION -->
+                    <div class="showbiz-navigation center sb-nav-grey hidden">
+                      <a id="showbiz_left_1" class="sb-navigation-left"><i class="sb-icon-left-open"></i></a>
+                      <a id="showbiz_play_1" class="sb-navigation-play"><i class="sb-icon-play sb-playbutton"></i><i class="sb-icon-pause sb-pausebutton"></i></a>          
+                      <a id="showbiz_right_1" class="sb-navigation-right"><i class="sb-icon-right-open"></i></a>
+                      <div class="sbclear"></div>
+
+                    </div> <!-- END OF THE NAVIGATION -->
+
+                    <div class="divide20"></div>
+
+                    <!--  THE PORTFOLIO ENTRIES -->
+                    <div class="showbiz" data-left="#showbiz_left_1" data-right="#showbiz_right_1" data-play="#showbiz_play_1">
+
+                      <!-- THE OVERFLOW HOLDER CONTAINER, DONT REMOVE IT !! -->
+                      <div class="overflowholder">
+                        <!-- LIST OF THE ENTRIES -->
+                        <?php 
+							$b_options['pagination']=false;
+							$b_options['type']="maincontenthomeblog";
+
+							$b_options['blplimit']=10;
+
+                        ?>
+                        <ul>
+
+
+
+                          <?php 
+								include($host_tpathplain.'modules/blogpagemultipleparser.php');
+                          ?>
+
+                        </ul>
+                        <div class="sbclear"></div>
+                      </div> <!-- END OF OVERFLOWHOLDER -->
+                      <div class="sbclear"></div>
+                    </div>
+                </div>
+                <!-- END OF DEMO I. -->
+      		</div>
+ 		</div>
   		<section id="content-2-7" class="content-2-7 parallax" 
   		style="background-image: url('images/mysalvusimages/helping-hand.jpg');" 
   		data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
@@ -339,31 +441,114 @@ if($bn['numrows']>0){
 	        	</h2>
 	        </div>
 	                
-	        <div class="row client-row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-	            <div class="row-wrapper">
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://starsfoundation.org.uk/" target="_blank">
-		                    <img alt="Stars Foundation" 
-		                    src="<?php echo $host_addr?>images/mysalvusimages/stars-foundation-logo.png">
-		                </a>
-	                </div>
-	            
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://empowerweb.org/" target="_blank">
-		                    <img alt="Empower" 
-		                    src="<?php echo $host_addr?>images/mysalvusimages/empower-logo.jpg">
-		                </a>
-	                </div>
-	            
-	                <div class="col-md-4 col-sm-6 col-xs-12">
-	                    <a href="http://dsvrtlagos.org/" target="_blank">
-	                    	<img alt="DSVRT" 
-	                    	src="<?php echo $host_addr?>images/mysalvusimages/dsvrt.jpg">
-		                </a>
-	                </div>
-	            
+	        		
+	        <div class="divide20"></div>
+			<!-- Logos Start -->
+		     <div id="logos" class="showbiz-container"> 
+	 			<!-- THE NAVIGATION -->
+
+				<div class="showbiz-navigation center sb-nav-grey"> 
+				  	<a id="showbiz_left_2" class="sb-navigation-left">
+				  		<!--<i class="sb-icon-left-open"></i>-->
+				  	</a> 
+				  	<a id="showbiz_play_2" class="sb-navigation-play">
+				  		<!--<i class="sb-icon-play sb-playbutton"></i>
+				  		<i class="sb-icon-pause sb-pausebutton"></i>-->
+				  	</a> 
+				  	<a id="showbiz_right_2" class="sb-navigation-right">
+				  		<!--<i class="sb-icon-right-open"></i>-->
+				  	</a>
+
+				    <div class="sbclear"></div>
+
+				</div>
+
+
+	            <!--  THE PORTFOLIO ENTRIES -->
+	            <div class="showbiz _homebiz" data-left="#showbiz_left_1" data-right="#showbiz_right_1" data-play="#showbiz_play_1">
+
+	              <!-- THE OVERFLOW HOLDER CONTAINER, DONT REMOVE IT !! -->
+	              <div class="overflowholder">
+	                <!-- LIST OF THE ENTRIES -->
+	                <ul>
+	                  <!-- AN ENTRY HERE -->
+	                    <li class="sb-light-skin">
+	                        <div class="mediaholder ">
+	                          <div class="mediaholder_innerwrap">
+	                            <a href="http://starsfoundation.org.uk/" target="_blank"><img alt="" 
+	                            	src="<?php echo $host_addr?>images/mysalvusimages/stars-foundation-logo.png"></a>
+	                            <div class="hovercover" data-maxopacity="0.85">
+	                              <a href="http://starsfoundation.org.uk/" target="_blank"><div class="linkicon"><i class="sb-icon-link"></i></div></a>
+	                            </div>
+	                          </div>
+
+	                        </div>
+	                        
+	                  </li>
+
+	                  <!-- AN ENTRY HERE -->
+	                    <li class="sb-light-skin">
+	                        <div class="mediaholder ">
+	                          <div class="mediaholder_innerwrap">
+	                            <a href="http://empowerweb.org/" target="_blank"><img alt="" 
+	                            	src="<?php echo $host_addr?>images/mysalvusimages/empower-logo.jpg"></a>
+	                            <div class="hovercover" data-maxopacity="0.85">
+	                              <a href="http://empowerweb.org/" target="_blank"><div class="linkicon"><i class="sb-icon-link"></i></div></a>
+	                            </div>
+	                          </div>
+
+	                        </div>
+	                        
+	                  	</li>
+	                  	<!-- AN ENTRY HERE -->
+	                    <li class="sb-light-skin">
+	                        <div class="mediaholder ">
+	                          <div class="mediaholder_innerwrap">
+	                            <a href="http://dsvrtlagos.org/" target="_blank"><img alt="" 
+	                            	src="<?php echo $host_addr?>images/mysalvusimages/dsvrt.jpg"></a>
+	                            <div class="hovercover" data-maxopacity="0.85">
+	                              <a href="http://dsvrtlagos.org/" target="_blank"><div class="linkicon"><i class="sb-icon-link"></i></div></a>
+	                            </div>
+	                          </div>
+
+	                        </div>
+	                        
+	                  	</li>
+	                  	<!-- AN ENTRY HERE -->
+	                    <li class="sb-light-skin">
+	                        <div class="mediaholder ">
+	                          <div class="mediaholder_innerwrap">
+	                            <a href="##"><img alt="" 
+	                            	src="<?php echo $host_addr?>images/mysalvusimages/acces-logo.png"></a>
+	                            <div class="hovercover" data-maxopacity="0.85">
+	                              <a href="##"><div class="linkicon"><i class="sb-icon-link"></i></div></a>
+	                            </div>
+	                          </div>
+
+	                        </div>
+	                        
+	                  </li>
+	                  <!-- AN ENTRY HERE -->
+	                    <li class="sb-light-skin">
+	                        <div class="mediaholder ">
+	                          <div class="mediaholder_innerwrap">
+	                            <a href="##Lagos State Government"><img alt="" 
+	                            	src="<?php echo $host_addr?>images/mysalvusimages/laslogo.png"></a>
+	                            <div class="hovercover" data-maxopacity="0.85">
+	                              <a href="##Lagos State Government" target="_blank"><div class="linkicon"><i class="sb-icon-link"></i></div></a>
+	                            </div>
+	                          </div>
+
+	                        </div>
+	                        
+	                  </li>
+	                </ul>
+	                <div class="sbclear"></div>
+	              </div> <!-- END OF OVERFLOWHOLDER -->
+	              <div class="sbclear"></div>
 	            </div>
-	        </div><!-- /.row -->			
+			</div>
+
        	</section>
 	    <!-- Content End -->
 	    <?php

@@ -159,7 +159,8 @@ include('createtestimony.php');
 }elseif($displaytype=="users"||$displaytype=="usersnew"||$displaytype=="usersedit"){
 	// echo $displaytype;
 	include('createuseracc.php');
-}elseif($displaytype=="serviceproviders"||$displaytype=="serviceprovidersnew"||$displaytype=="serviceprovidersedit"){
+}elseif($displaytype=="serviceprovidershotline"||$displaytype=="serviceproviders"||
+	$displaytype=="serviceprovidersnew"||$displaytype=="serviceprovidersedit"){
 	// echo $displaytype;
 	include('createclientacc.php');
 }elseif($displaytype=="incidents"||$displaytype=="incidentsnew"
@@ -176,7 +177,33 @@ include('createtestimony.php');
 		$type[1]=$userid;
 		$outsdata=getAllIncidents("viewer","",$type,"","editsingleincidentcase");
 		$admindata="adminoutput2";
+		$disclaimer="<b>SALVUS</b> is a safe platform that serves 
+		    			mainly as a referral portal that connects 
+		    			those who need help with service providers, 
+		    			we do not provide any direct support services. 
+		    			By submitting this form you agree to have your 
+		    			details shared with our verified service 
+		    			providers who are registered under the 
+		    			Federal republic of Nigeria who may be able 
+		    			to help. <b>SALVUS</b> is committed to 
+		    			protecting the confidentiality of information 
+		    			shared with us; we are not liable for protecting 
+		    			information shared between you and the service 
+		    			provider.";
+		$disclaimer_title="Disclaimer";
+	
+	?>
+		<div class="col-md-12 disclaimer-section _plain">
+			<h4 class="disclaimer-heading">
+				<?php echo $disclaimer_title;?>
+			</h4>
+			<p class="disclaimer-text">
+				<?php echo $disclaimer;?>
+			</p>
+		</div>
+	<?php
 	}
+
 	echo $outsdata[''.$admindata.''];
 
 }elseif($displaytype=="incidents"||$displaytype=="userincidents"

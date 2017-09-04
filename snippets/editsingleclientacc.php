@@ -152,6 +152,39 @@
   }
   $bizarr=getAllBusinessTypes();
   $bizarrsec=getAllBusinessTypes("","WHERE type='secondary'");
+  // get referee data set if available
+  for($i=1;$i<=2;$i++){
+    $ron="reforgname$i";
+    $roe="reforgemail$i";
+    $rop="reforgphone$i";
+    $rcn="refcontactname$i";
+
+    $$ron="";
+
+    $$roe="";
+
+    $$rop="";
+
+    $$rcn="";
+
+  }
+  // var_dump(json_decode($edata['referees']));
+  if(isset($edata['referencedata'])&&is_array($edata['referencedata'])){
+    $refdata=$edata['referencedata'];
+    for($i=0;$i<$refdata['total'];$i++){
+      $t=$i+1;
+      $ron="reforgname$t";
+      $roe="reforgemail$t";
+      $rop="reforgphone$t";
+      $rcn="refcontactname$t";
+      if(isset($refdata['data'][$i]['reforgname'])){
+        $$ron=$refdata['data'][$i]['reforgname'];
+        $$roe=$refdata['data'][$i]['reforgemail'];
+        $$rop=$refdata['data'][$i]['reforgphone'];
+        $$rcn=$refdata['data'][$i]['refcontactname'];
+      }
+    }
+  }
 ?>
   <?php if($douser=="true"){
   ?>
@@ -253,18 +286,31 @@
               </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         	<div class="form-group">
               <label>Organisation Phone Number</label>
               <div class="input-group">
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-              	  <input type="text" class="form-control" name="phonenumber" value="<?php echo $edata['phonenumber'];?>" placeholder="Phone Number"/>
+              	  <input type="text" class="form-control" name="phonenumber" value="<?php echo $edata['phoneone'];?>" placeholder="Phone Number"/>
               </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
+          <div class="form-group">
+              <label>Organization Hotline <small>For emergencies</small></label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-phone"></i>
+                </div>
+                  <input type="text" class="form-control" 
+                  name="phonetwo" data-telvalidate="true" 
+                  placeholder="Phone Number" value="<?php echo $edata['phonetwo'];?>"/>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3">
         	<div class="form-group">
               <label>Contact Name</label>
               <div class="input-group">
@@ -275,7 +321,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         	<div class="form-group">
               <label>Contact Email</label>
               <div class="input-group">
@@ -345,45 +391,45 @@
                     <i class="fa fa-map-marker"></i>
                   </div>
                   <select name="state" id="state" class="form-control">
-						<option value="">Select State</option>
-						<option value="Abia">Abia</option>
-						<option value="Adamawa">Adamawa</option>
-						<option value="Akwa Ibom">Akwa Ibom</option>
-						<option value="Anambra">Anambra</option>
-						<option value="Bauchi">Bauchi</option>
-						<option value="Bayelsa">Bayelsa</option>
-						<option value="Benue">Benue</option>
-						<option value="Borno">Borno</option>
-						<option value="Cross River">Cross River</option>
-						<option value="Delta">Delta</option>
-						<option value="Ebonyi">Ebonyi</option>
-						<option value="Edo">Edo</option>
-						<option value="Ekiti">Ekiti</option>
-						<option value="Enugu">Enugu</option>
-						<option value="FCT">FCT</option>
-						<option value="Gombe">Gombe</option>
-						<option value="Imo">Imo</option>
-						<option value="Jigawa">Jigawa</option>
-						<option value="Kaduna">Kaduna</option>
-						<option value="Kano">Kano</option>
-						<option value="Kastina">Kastina</option>
-						<option value="Kebbi">Kebbi</option>
-						<option value="Kogi">Kogi</option>
-						<option value="Kwara">Kwara</option>
-						<option value="Lagos">Lagos</option>
-						<option value="Nasarawa">Nasarawa</option>
-						<option value="Niger">Niger</option>
-						<option value="Ogun">Ogun</option>
-						<option value="Ondo">Ondo</option>
-						<option value="Osun">Osun</option>
-						<option value="Oyo">Oyo</option>
-						<option value="Plateau">Plateau</option>
-						<option value="Rivers">Rivers</option>
-						<option value="Sokoto">Sokoto</option>
-						<option value="Taraba">Taraba</option>
-						<option value="Yobe">Yobe</option>
-						<option value="Zamfara">Zamfara</option>
-				  </select>
+        						<option value="">Select State</option>
+        						<option value="Abia">Abia</option>
+        						<option value="Adamawa">Adamawa</option>
+        						<option value="Akwa Ibom">Akwa Ibom</option>
+        						<option value="Anambra">Anambra</option>
+        						<option value="Bauchi">Bauchi</option>
+        						<option value="Bayelsa">Bayelsa</option>
+        						<option value="Benue">Benue</option>
+        						<option value="Borno">Borno</option>
+        						<option value="Cross River">Cross River</option>
+        						<option value="Delta">Delta</option>
+        						<option value="Ebonyi">Ebonyi</option>
+        						<option value="Edo">Edo</option>
+        						<option value="Ekiti">Ekiti</option>
+        						<option value="Enugu">Enugu</option>
+        						<option value="FCT">FCT</option>
+        						<option value="Gombe">Gombe</option>
+        						<option value="Imo">Imo</option>
+        						<option value="Jigawa">Jigawa</option>
+        						<option value="Kaduna">Kaduna</option>
+        						<option value="Kano">Kano</option>
+        						<option value="Kastina">Kastina</option>
+        						<option value="Kebbi">Kebbi</option>
+        						<option value="Kogi">Kogi</option>
+        						<option value="Kwara">Kwara</option>
+        						<option value="Lagos">Lagos</option>
+        						<option value="Nasarawa">Nasarawa</option>
+        						<option value="Niger">Niger</option>
+        						<option value="Ogun">Ogun</option>
+        						<option value="Ondo">Ondo</option>
+        						<option value="Osun">Osun</option>
+        						<option value="Oyo">Oyo</option>
+        						<option value="Plateau">Plateau</option>
+        						<option value="Rivers">Rivers</option>
+        						<option value="Sokoto">Sokoto</option>
+        						<option value="Taraba">Taraba</option>
+        						<option value="Yobe">Yobe</option>
+        						<option value="Zamfara">Zamfara</option>
+        				  </select>
               	  <textarea class="form-control" name="address" placeholder="Full address"><?php echo $edata['address'];?></textarea>
               </div>
             </div>
@@ -400,16 +446,43 @@
             </div>
         </div>
         <div class="col-md-12">
-          <div class="form-group">
-              <label>References</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-users"></i>
-                </div>
-                  <textarea class="form-control" rows="4" name="references" 
-                  placeholder="References" ><?php echo $edata['referees'];?></textarea>
-              </div>
+          <div class="col-md-6">
+            <input type="hidden" name="refereedatacount" value="2"/>
+            <div class="form-group">
+                  <label>References Data(1)</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-users"></i>
+                    </div>
+                    <input name="refereeorgname1" type="text" class="form-control" placeholder="Orgainsation Name"
+                    value="<?php echo $reforgname1;?>">
+                    <input name="refereeemail1" type="text" data-evalidate="true"
+                    value="<?php echo $reforgemail1;?>" class="form-control" placeholder="Email Address">
+                    <input name="refereephone1" type="text" 
+                    value="<?php echo $reforgphone1;?>" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+                    <input name="refereename1" type="text" 
+                    value="<?php echo $refcontactname1;?>" class="form-control" placeholder="Contact Name">
+                  </div>
             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+                  <label>References Data(2)</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-users"></i>
+                    </div>
+                    <input name="refereeorgname2" type="text" 
+                    value="<?php echo $reforgname2;?>" class="form-control" placeholder="Orgainsation Name">
+                    <input name="refereeemail2" type="text" data-evalidate="true" 
+                    value="<?php echo $reforgemail2;?>" class="form-control" placeholder="Email Address">
+                    <input name="refereephone2" type="text" 
+                    value="<?php echo $reforgphone2;?>" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+                    <input name="refereename2" type="text" 
+                    value="<?php echo $refcontactname2;?>" class="form-control" placeholder="Contact Name">
+                  </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
         	<div class="form-group">
@@ -448,7 +521,7 @@
               	  <input type="hidden" class="form-control" name="orgcacid" value="<?php echo $edata['bizcacid']?>"/>
               	  <input type="file" class="form-control" name="orgcac" data-edittype="true" placeholder="Organisation CAC"/>
               </div>
-            </div>
+          </div>
         </div>
         <?php echo $profileactivation;echo $statusmanagement;?>
         <input type="hidden" name="formdata" value="<?php echo $formtruetype;?>"/>
@@ -465,7 +538,12 @@
           address-:-textarea<|>
           bio-:-textarea<|>
           orgprofile-:-input|image,office,pdf<|>
-          orgcac-:-input|image,office,pdf"/>
+          orgcac-:-input|image,office,pdf<|>
+          egroup|data-:-[refereedatacount>|<
+          refereeorgname-|-input>|<
+          refereeemail-|-input>|<
+          refereephone-|-input>|<
+          refereename-|-input]-:-groupfall[1,2,3,4]"/>
         <input type="hidden" name="errormap" value="businessname-:-Please provide Organisation name<|>
             email-:-Provide a valid email address<|>
             pword-:-Provide a good password of at least 8 characters in length.<|>
@@ -479,7 +557,11 @@
             address-:-Please Provide an address.<|>
             bio-:-Please give a short detailed description of the organisation<|>
             orgprofile-:-Choose a valid image file containing the organisation profile<|>
-            orgcac-:-Choose a valid image file containing the organisation cac certificate"/>
+            orgcac-:-Choose a valid image file containing the organisation cac certificate<|>
+            egroup|data-:-[Please Provide the reference organisation name>|<
+            Please Provide the reference organisation email>|<
+            Please Provide the reference organisation phone number>|<
+            Please Provide the reference organisation contact Person]"/>
         <div class="col-md-12 clearboth">
             <div class="box-footer">
                 <input type="button" class="btn btn-danger" name="user" data-formdata="<?php echo $formtruetype;?>" onclick="submitCustom('<?php echo $formtruetype;?>','complete')" value="Update"/>

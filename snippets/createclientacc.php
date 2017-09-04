@@ -1,7 +1,7 @@
 <?php 
 
 	$formtruetype="serviceprovideraccform";
-	$outsdata=getAllUsers("admin","","serviceprovider","adminoutputtwo3");
+	
 	if(!isset($evar)){
 		$evar="createclientaccadmin";	
 	}
@@ -18,6 +18,13 @@
 	}else if($displaytype=="serviceprovidersedit"){
 		$hidenew="hidden";
 		$editin="in";
+		$outsdata=getAllUsers("admin","","serviceprovider","adminoutputtwo3");
+	}else if($displaytype=="serviceprovidershotline"){
+		$hidenew="hidden";
+		$editin="in";
+		$outsdata=getAllUsers("admin","","serviceprovider","adminoutputtwo3","hotline");
+	}else{
+		$outsdata=getAllUsers("admin","","serviceprovider","adminoutputtwo3");
 	}
 
 	$bizarr=getAllBusinessTypes();
@@ -87,7 +94,7 @@
 		                      </div>
 		                    </div>
 		                </div>
-		                <div class="col-md-4">
+		                <div class="col-md-3">
                         	<div class="form-group">
 		                      <label>Organisation Phone Number</label>
 		                      <div class="input-group">
@@ -98,7 +105,21 @@
 		                      </div>
 		                    </div>
 		                </div>
-		                <div class="col-md-4">
+		                <!-- Organisation Hotline -->
+		                <div class="col-md-3">
+		                	<div class="form-group">
+		                      <label>Organization Hotline <small>For emergencies</small></label>
+		                      <div class="input-group">
+			                      <div class="input-group-addon">
+			                        <i class="fa fa-phone"></i>
+			                      </div>
+		                      	  <input type="text" class="form-control" 
+		                      	  name="phonetwo" data-telvalidate="true" 
+		                      	  placeholder="Phone Number"/>
+		                      </div>
+		                    </div>
+		                </div>
+		                <div class="col-md-3">
                         	<div class="form-group">
 		                      <label>Contact Name</label>
 		                      <div class="input-group">
@@ -109,7 +130,7 @@
 		                      </div>
 		                    </div>
 		                </div>
-		                <div class="col-md-4">
+		                <div class="col-md-3">
                         	<div class="form-group">
 		                      <label>Contact Email</label>
 		                      <div class="input-group">
@@ -236,15 +257,34 @@
 		                    </div>
 		                </div>
 		                <div class="col-md-12">
-		                	<div class="form-group">
-		                      <label>References</label>
-		                      <div class="input-group">
-			                      <div class="input-group-addon">
-			                        <i class="fa fa-users"></i>
-			                      </div>
-		                      	  <textarea class="form-control" rows="4" name="references" 
-		                      	  placeholder="References" ></textarea>
-		                      </div>
+		                	<div class="col-md-6">
+		                		<input type="hidden" name="refereedatacount" value="2"/>
+			                	<div class="form-group">
+			                      	<label>References Data(1)</label>
+			                      	<div class="input-group">
+				                      <div class="input-group-addon">
+				                        <i class="fa fa-users"></i>
+				                      </div>
+				                      <input name="refereeorgname1" type="text" class="form-control" placeholder="Orgainsation Name">
+				                      <input name="refereemail1" type="text" class="form-control" placeholder="Email Address">
+				                      <input name="refereephone1" type="text" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+				                      <input name="refereename1" type="text" class="form-control" placeholder="Contact Name">
+			                      	</div>
+			                	</div>
+		                    </div>
+		                    <div class="col-md-6">
+			                	<div class="form-group">
+			                      	<label>References Data(2)</label>
+			                      	<div class="input-group">
+				                      <div class="input-group-addon">
+				                        <i class="fa fa-users"></i>
+				                      </div>
+				                      <input name="refereeorgname2" type="text" class="form-control" placeholder="Orgainsation Name">
+				                      <input name="refereemail2" type="text" class="form-control" placeholder="Email Address">
+				                      <input name="refereephone2" type="text" class="form-control" data-telvalidate="true" placeholder="Organisation Phone">
+				                      <input name="refereename2" type="text" class="form-control" placeholder="Contact Name">
+			                      	</div>
+			                	</div>
 		                    </div>
 		                </div>
 		                <div class="col-md-4">
@@ -295,7 +335,12 @@
 	                      address-:-textarea<|>
 	                      bio-:-textarea<|>
 	                      orgprofile-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]<|>
-	                      orgcac-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]"/>
+	                      orgcac-:-input|image,office,pdf-:-[group-|-businessnature-|-select-|-*any*]<|>
+		                  egroup|data-:-[refereedatacount>|<
+						  refereeorgname-|-input>|<
+						  refereeemail-|-input>|<
+						  refereephone-|-input>|<
+						  refereename-|-input]-:-groupfall[1,2,3,4]"/>
 	                    <input type="hidden" name="errormap" value="businessname-:-Please provide Organisation name<|>
 		                    email-:-Provide a valid email address<|>
 		                    pword-:-Provide a good password of at least 8 characters in length.<|>
@@ -309,7 +354,11 @@
 		                    address-:-Please Provide an address.<|>
 		                    bio-:-Please give a short detailed description of the organisation<|>
 		                    orgprofile-:-Choose a valid image file containing the organisation profile<|>
-		                    orgcac-:-Choose a valid image file containing the organisation cac certificate"/>
+		                    orgcac-:-Choose a valid image file containing the organisation cac certificate<|>
+				            egroup|data-:-[Please Provide the reference organisation name>|<
+				            Please Provide the reference organisation email>|<
+				            Please Provide the reference organisation phone number>|<
+				            Please Provide the reference organisation contact Person]"/>
 		                <div class="col-md-12 clearboth">
 			                <div class="box-footer">
 			                    <input type="button" class="btn btn-danger" name="user" data-formdata="<?php echo $formtruetype;?>" onclick="submitCustom('<?php echo $formtruetype;?>','complete')" value="Create"/>

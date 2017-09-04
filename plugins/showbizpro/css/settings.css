@@ -153,6 +153,17 @@
 		.showbiz-title a:visited,
 		.showbiz-title a:hover			{	color:#555; font-family: 'Open Sans', sans-serif; font-size:14px; text-transform:uppercase;  text-decoration: none; font-weight:700;}
 
+._homeblog h4.showbiz-title {
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
+}
+
+._homeblog h4.showbiz-title
+ a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 		.showbiz-title.large,
 		.showbiz-title.large a,
 		.showbiz-title.large a:visited,
@@ -434,10 +445,41 @@
 																position:relative;
 														}
 
+.showbiz._homebiz .overflowholder li.sb-light-skin {
+    border: 0px;
+}
+
 
 		.showbiz .mediaholder							{ 	position:relative; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; background:transparent;padding:0px; border:none;}
+
+._homeblog .showbiz .mediaholder {}
+
+.showbiz._homebiz .mediaholder {
+    text-align: center;
+}
+
+.showbiz._homebiz .mediaholder a {}
 		.showbiz .mediaholder_innerwrap					{	position:relative; overflow:hidden; width:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+
+._homeblog .showbiz .mediaholder_innerwrap {
+    height: 263px;
+}
 		.showbiz .mediaholder img 						{	width:100%; position:relative; margin-bottom:-5px;}
+
+._homeblog .showbiz .mediaholder img {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.showbiz._homebiz .mediaholder img {
+    width: auto;
+    max-height: 90px;
+    max-width: 100%;
+}
+
+img {}
 
 
 		.showbiz .hovercover							{		width:100%;height:100%; position:absolute; top:0px; left:0px; background-color:#52bde9;background-color:rgba(82,189,233,0.85);
@@ -534,11 +576,20 @@
 																	border-radius:6px 6px 0px 0px;-moz-border-radius:6px 6px 0px 0px;-webkit-border-radius:6px 6px 0px 0px;
 																}
 
-		.sb-light-skin .hovercover								{	background:rgba(0,168,255,0.75);
-																	border-radius:6px 6px 0px 0px;
+.showbiz._homebiz .mediaholder_innerwrap {
+    min-height: 90px;
+}
+
+		.sb-light-skin .hovercover								{
+																	background: rgba(0, 166, 156, 0.63);
+																	/* border-radius:6px 6px 0px 0px; */
 																	-moz-border-radius:6px 6px 0px 0px;
-																	-webkit-border-radius:6px 6px 0px 0px;
+																	/* -webkit-border-radius:6px 6px 0px 0px; */
 																}
+
+._homebiz .sb-light-skin .hovercover {
+    border-radius: 0px!important;
+}
 
 		.sb-light-skin .reveal_wrapper							{	border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;
 																}

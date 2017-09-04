@@ -2622,38 +2622,56 @@ function doFAPicker(thea){
   }
 
 }
-function callTinyMCEInit(selector,data=[]){
-  theme=data['theme']!==""&&typeof data['theme']!=="undefined"?data['theme']:"modern";
-  toolbar1=data['toolbar1']!==""&&typeof data['toolbar1']!=="undefined"?data['toolbar1']:"";
-  toolbar2=data['toolbar2']!==""&&typeof data['toolbar2']!=="undefined"?data['toolbar2']:"";
-  width=data['width']!==""&&typeof data['width']!=="undefined"?data['width']:"100%";
-  height=data['height']!==""&&typeof data['height']!=="undefined"?data['height']:"250px";
-  filemanagertitle=data['filemanagertitle']!==""&&typeof data['filemanagertitle']!=="undefined"?data['filemanagertitle']:"Content Filemanager";
+function callTinyMCEInit(selector, data=[]) {
+    theme = data['theme'] !== "" && typeof data['theme'] !== "undefined" ? data['theme'] : "modern";
+    toolbar1 = data['toolbar1'] !== "" && typeof data['toolbar1'] !== "undefined" ? data['toolbar1'] : "";
+    toolbar1addon = data['toolbar1addon'] !== "" && typeof data['toolbar1addon'] !== "undefined" ? data['toolbar1addon'] : "";
+    toolbar2 = data['toolbar2'] !== "" && typeof data['toolbar2'] !== "undefined" ? data['toolbar2'] : "";
+    toolbar2addon = data['toolbar2addon'] !== "" && typeof data['toolbar2addon'] !== "undefined" ? data['toolbar2addon'] : "";
+    width = data['width'] !== "" && typeof data['width'] !== "undefined" ? data['width'] : "100%";
+    height = data['height'] !== "" && typeof data['height'] !== "undefined" ? data['height'] : "250px";
+    filemanagertitle = data['filemanagertitle'] !== "" && typeof data['filemanagertitle'] !== "undefined" ? data['filemanagertitle'] : "Content Filemanager";
 
-  toolbar1==""?toolbar1="undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect":toolbar1=toolbar1;
-  toolbar2==""?toolbar2="| link unlink anchor | emoticons":toolbar2=toolbar2;
-  // console.log("selector - ",selector," theme - ",theme," toolbar1 - ",toolbar1," toolbar2 - ",toolbar2," width - ",width," height - ",height," filemanagertitle - ",filemanagertitle);
-  tinyMCE.init({
-        theme : theme,
-        selector:selector,
-        menubar:false,
+    toolbar1 == "" ? toolbar1 = "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect" : toolbar1 = toolbar1;
+    toolbar2 == "" ? toolbar2 = "| link unlink anchor | emoticons " : toolbar2 = toolbar2;
+
+    // if you want to add content to the toolbar instead of replacing entirely
+    toolbar1+=toolbar1addon;
+    toolbar2+=toolbar2addon;
+    var rfmanager= typeof data['rfmanager']!=="undefined" ?data['rfmanager']:"responsivefilemanager";
+    // console.log("selector - ",selector," theme - ",theme," toolbar1 - ",toolbar1," toolbar2 - ",toolbar2," width - ",width," height - ",height," filemanagertitle - ",filemanagertitle);
+    var extpath="" + host_addr + "scripts/filemanager/";
+    var extplugin="filemanager";
+    var extpathplugin="" + host_addr + "scripts/filemanager/plugin.min.js";
+    var extdata={extplugin:extpathplugin};
+    if(rfmanager==""){
+        extplugins="filemanager";
+        extpath="";
+        
+        extdata="";
+    }   
+    tinyMCE.init({
+        theme: theme,
+        selector: selector,
+        menubar: false,
         statusbar: false,
-        plugins : [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-         "save table contextmenu directionality emoticons template paste textcolor responsivefilemanager"
+        plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker", 
+            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking", 
+            "save table contextmenu directionality emoticons template paste textcolor "+rfmanager+""
         ],
-        width:width,
-        height:height,
+        width: width,
+        height: height,
         toolbar1: toolbar1,
         toolbar2: toolbar2,
-        image_advtab: true ,
-        editor_css:""+host_addr+"stylesheets/mce.css?"+ new Date().getTime(),
-        content_css:""+host_addr+"stylesheets/mce.css?"+ new Date().getTime(),
-        external_filemanager_path:""+host_addr+"scripts/filemanager/",
-        filemanager_title:filemanagertitle ,
-        external_plugins: { "filemanager" : ""+host_addr+"scripts/filemanager/plugin.min.js"}
-  });
+        image_advtab: true,
+        editor_css: "" + host_addr + "stylesheets/mce.css?" + new Date().getTime(),
+        content_css: "" + host_addr + "stylesheets/mce.css?" + new Date().getTime(),
+        external_filemanager_path: extpath,
+        filemanager_title: filemanagertitle,
+        external_plugins: extdata
+        
+    });
 }
 
 // for contentpreviewoptions options click 
